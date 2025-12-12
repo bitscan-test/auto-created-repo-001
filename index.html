@@ -1,0 +1,697 @@
+<?php require_once('./_cms/wp-load.php'); ?>		<!DOCTYPE html>
+<html lang="ja">
+<?php include_once(__DIR__."/init.php"); ?>
+<script src="https://webfont.fontplus.jp/accessor/script/fontplus.js?zRicjqTQ7cc%3D&box=nmn9AmAO85Q%3D&aa=1&ab=2"></script>
+
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+	<?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		<?= $init['meta']['home']['title'] ?>
+	</title>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+	<meta name="description" content="<?= $init['meta']['home']['description'] ?>">
+	<meta name="keywords" content="<?= $init['meta']['home']['keyword'] ?>">
+	<meta property="og:title" content="<?= $init['meta']['home']['title'] ?>">
+	<meta property="og:description" content="<?= $init['meta']['home']['description'] ?>">
+	<meta property="og:url" content="<?= $init['clinic']['url'] ?>">
+	<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/cmn/pic_ogp.jpg">
+	<meta property="og:type" content="website">
+	<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+	<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			}
+		</script>
+</head>
+
+<body id="p-home">
+	<div class="wrapper" id="wrapper">
+		<?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+		<main class="main__contents" id="main">
+			<!-- headding-->
+			<h1 class="headding">
+				<?= $init['meta']['home']['h1'] ?>
+			</h1>
+			<!-- mainvisual-->
+			<section class="main_visual">
+				<div class="main_visual__image">
+					<picture>
+						<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/main_visual01_sp.jpg">
+						<img src="/<?= $dir; ?>assets/images/main/main_visual01.jpg" alt="">
+					</picture>
+					<picture>
+						<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/main_visual02_sp.jpg">
+						<img src="/<?= $dir; ?>assets/images/main/main_visual02.jpg" alt="">
+					</picture>
+					<picture>
+						<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/main_visual03_sp.jpg">
+						<img src="/<?= $dir; ?>assets/images/main/main_visual03.jpg" alt="">
+					</picture>
+					<picture>
+						<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/main_visual04_sp.jpg">
+						<img src="/<?= $dir; ?>assets/images/main/main_visual04.jpg" alt="">
+					</picture>
+					<picture>
+						<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/main_visual05_sp.jpg">
+						<img src="/<?= $dir; ?>assets/images/main/main_visual05.jpg" alt="">
+					</picture>
+				</div>
+				<p class="main_visual__lead animation fadeInRgt">
+					<img src="/<?= $dir; ?>assets/images/kitagawa_catch1.png" alt="">
+				</p>
+				<div class="table__schedule animation fadeInUp">
+					<table>
+						<thead>
+							<tr>
+								<th>診療時間</th>
+								<th>月</th>
+								<th>火</th>
+								<th>水</th>
+								<th>木</th>
+								<th>金</th>
+								<th>土</th>
+								<th>日</th>
+								<th>祝</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>9:00～13:00</th>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td class="color_black">／</td>
+								<td>●</td>
+								<td>●</td>
+								<td class="color_black">／</td>
+								<td class="color_black">／</td>
+							</tr>
+							<tr>
+								<th>14:30～19:00</th>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td class="color_black">／</td>
+								<td>●</td>
+								<td>★</td>
+								<td class="color_black">／</td>
+								<td class="color_black">／</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="table__note">
+						<span>★：土曜午後：14:00〜16:00</span><span>休診日：木曜・日曜・祝日</span><span>※祝日がある週の木曜日は診療いたします</span>
+					</p>
+				</div>
+			</section>
+			<!-- opening-->
+			<?php if($openFlg || $preFlg):?>
+			<section class="opening">
+				<div class="container">
+					<div class="opening__inner">
+						<p class="is-en animation fadeInUp">OPENING</p>
+						<?php if($openFlg):?>
+						<h2 class="is-jp animation fadeInUp">開院のお知らせ</h2>
+						<p class="letter letter02 animation fadeInUp show">
+							<span class="view_timer" data-end-date="2023/05/16 09:00">2023年5月16日（火）<br>新規開院</span>
+						</p>
+
+						<p class="letter animation fadeInUp">
+							<!-- <span class="view_timer" data-end-date="2023/05/16 09:00">2023年5月16日(火）新規開院</span> -->
+							<br>鳥栖市村田町に新規開院のきたがわ歯科クリニックです。
+							<br>むし歯・歯周病はもちろん、小児歯科から入れ歯作製までおまかせください。
+							<br>どうぞよろしくお願いいたします。
+						</p>
+						<?php endif; ?>
+						<?php if($preFlg):?>
+						<div class="opening__notice animation fadeInUp">
+							<h2 class="opening__notice__ttl">内覧会のお知らせ</h2>
+							<p class="opening__notice__txt">開院に先がけて、下記の日程で内覧会(院内の無料見学会)を行います。ぜひ皆さまでお気軽にお越しください。</p>
+							<p class="opening__notice__time">内覧会開催日時<br>
+								<span>5月12日（金）</span><!-- <span>00時～00時</span> -->
+								<span>5月13日（土）</span><!-- <span>00時～00時</span> -->
+								<span>5月14日（日）</span><br><span>各日　11:00～17:00</span>
+						</div>
+						<?php endif; ?>
+					</div>
+				</div>
+			</section>
+			<?php endif; ?>
+
+			<div class="banner__recruit">
+					<div class="container banner__recruit__inner">
+						<p class="banner__recruit__title">スタッフ募集中</p>
+						<p class="banner__recruit__text">一緒に働くスタッフを募集しています。詳しくは下記のリンクをご確認ください。</p>
+						<ul>
+							<li><a href="https://www.hellowork.mhlw.go.jp/kensaku/GECA110010.do?screenId=GECA110010&action=dispDetailBtn&kJNo=4105001407151&kJKbn=1&jGSHNo=Z3QwmzRRmV2dsG9DrirQnw%3D%3D&fullPart=1&iNFTeikyoRiyoDtiID=&kSNo=&newArrived=&tatZngy=1&shogaiKbn=0" target="_blank">歯科衛生士<span>（フルタイム）</span></a></li>
+							<li><a href="https://www.hellowork.mhlw.go.jp/kensaku/GECA110010.do?screenId=GECA110010&action=dispDetailBtn&kJNo=4105002133351&kJKbn=1&jGSHNo=Z3QwmzRRmV2dsG9DrirQnw%3D%3D&fullPart=2&iNFTeikyoRiyoDtiID=&kSNo=&newArrived=&tatZngy=1&shogaiKbn=0" target="_blank">歯科衛生士<span>（パート）</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+			<section class="news">
+				<div class="container">
+					<div class="news__head">
+						<h2 class="sub_ttl animation fadeInLft">新着情報</h2>
+						<p class="is-en animation fadeInLft">NEWS</p>
+					</div>
+					<div class="news__inner animation fadeInUp">
+						<div class="news__cnt">
+							<ul class="news__cnt__tab">
+
+								<?php $args = array( 'post_type' => 'news',  'showposts' => 3
+								); ?>
+								<?php $query = new WP_Query( $args ); ?> <?php if( $query->have_posts() ) : ?>
+								<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+								<li id="post-6" class="post-6 type-news status-publish hentry" data-aos-anchor=".c-blog .c-blog_list" data-offset="400" data-aos-delay="150">
+									<p class="date"><?php the_time("Y/m/d"); ?></p>
+									<p class="label">お知らせ</p>
+									<div class="link"><?php the_content(); ?>
+									</div>
+								</li>
+	<?php endwhile; ?>
+<?php endif; ?>
+<?php wp_reset_postdata(); ?>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- calendar-->
+			<section class="calendar">
+				<div class="container">
+					<div class="calendar__inner">
+						<div class="calendar__ttl">
+							<h2 class="sub_ttl animation fadeInLft">診療カレンダー</h2>
+							<p class="is-en animation fadeInLft">CALENDAR</p>
+						</div>
+						<div class="calendar__cnt">
+							<div class="calendar__col animation fadeInLft" id="calendar_1"></div>
+							<div class="calendar__col animation fadeInRgt pc_only" id="calendar_2"></div>
+						</div>
+						<div class="see_more align_rgt"><a class="btn__arrow"
+								href="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showTabs=0&showCalendars=0&showTz=0&showPrint=0&src=ZDhiYTI0MDBmOTVlMGZjYzE1OTZjNTgwZGEzNWMxZTkzYWEyZjA1NzQyZjhmYmJjOGM0ZjA2MzAzNzRjNTYwYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NmMxYTNlNTg4MzMyNmUzMDA2Zjg5NzhkZTlkNDY3MWI0ODhmMzU0ZjUwYzI0MDhlOWVkZmRiNmM1ZjczZTJlNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F09300&color=%23039BE5&color=%230B8043"
+								target="_blank">カレンダーはこちら</a></div>
+					</div>
+				</div>
+			</section>
+			<!-- reservation-->
+			<section class="address">
+					<div class="container">
+						<div class="address__inner" style="justify-content: center;">
+							<div class="address__col animation fadeInUp">
+								<p class="address__ttl">お電話でのご予約</p>
+								<p class="address__phone"><a class="js-tap is-tel" href="tel:<?= $init['clinic']['tel_num'] ?>"><?= $init['clinic']['tel_num'] ?></a></p>
+								<p class="address__time"><span>受付時間   9:00～13:00/14:30～19:00
+									<br>土曜午後は14:00〜16:00</span><span>木曜、日曜、祝日は除く</span></p>
+							</div>
+						<div class="address__col animation fadeInDown">
+								<p class="address__ttl">インターネットでご予約</p>
+								<p class="address__qrcode"><span>スマートフォンをご利用の方は</span><span><a href="<?= $init['clinic']['webform'] ?>" target="_blank">QRコードの読み込みからもご予約できます。</a></span></p>
+								<p class="address__btn">
+									<a class="js-tap is-web" href="<?= $init['clinic']['webform'] ?>" target="_blank">ご予約はこちら</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			<!-- policy-->
+			<section class="message">
+				<div class="section__ttl align_rgt">
+					<div class="container">
+						<p class="pc__mb__0 animation fadeInLft"><div class="title_pc pc_only">MESSAGE</div></p>
+						<p class="pc__mb__0 animation fadeInLft"><div class="title_sp sp_only">MESSAGE</div></p>
+						<h2 class="is-en sub_ttl animation fadeInRgt">メッセージ</h2>
+					</div>
+				</div>
+				<div class="message__inner">
+					<div class="container">
+						<div class="message__cnt">
+							<div class="message__cnt__img animation fadeInLft">
+								<picture>
+									<source media="(max-width:750px)"
+										srcset="/<?= $dir; ?>assets/images/main/message_img_sp.png"><img
+										src="/<?= $dir; ?>assets/images/main/message_img.jpg" alt="">
+								</picture>
+							</div>
+							<div class="message__cnt__txt animation fadeInRgt">
+								<!-- <p class="message__cnt__ttl">診療理念</p>-->
+								<p class="text">
+									大切な歯を守るためには、歯が悪くなる前に予防することが大切です。そのため当院では、予防ケアを積極的に行っております。それでも歯を失ってしまった患者さまには、院長が得意とする快適な入れ歯製作で、お口を健康な状態に保つお手伝いをいたします。また、「見てわかりやすい説明」で、安心して治療を受けていただけるよう心がけております。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- greeting-->
+			<section class="introduce">
+				<div class="container">
+					<div class="introduce__row">
+						<div class="section__ttl align_lft sp_top_pos">
+							<p class="pc__mb__0 animation fadeInLft"><div class="title_pc pc_only">GREETING</div></p>
+							<p class="pc__mb__0 animation fadeInLft"><div class="title_sp sp_only">GREETING</div></p>
+							<h2 class="is-en sub_ttl animation fadeInLft">ごあいさつ</h2>
+						</div>
+						<div class="introduce__row__inner introduce__row__inner--r150">
+							<div class="introduce__text pc__pt__40 pc__pr__15">
+								<div class="introduce__col__ttl animation fadeInUp sp_align_center">丁寧なご説明で安心できる診療を
+								</div>
+								<div class="introduce__col__cnt animation fadeInUp">
+									<p>皆さま、はじめまして。 <br>
+										鳥栖市の【きたがわ歯科クリニック】院長の北川幸郎です。<br><br>
+
+										当院では、インフォームドコンセント（説明を受け納得したうえでの同意）を大切にしております。 <br>
+										治療前に患者さまからお話をしっかりとうかがい、治療計画について視覚素材を用いてきちんと説明いたします。 <br>
+										そして、しっかりご理解・ご納得いただいた上で治療を始めていきたいと思います。 <br>
+										また、必要に応じ、治療ついての説明を記載した用紙をお渡ししておりますのでご自宅でゆっくりご確認いただけます。<br>
+										患者さまに信頼していただける診療に努めますので、よろしくお願いいたします。<br>
+									</p>
+									<p>略歴
+										<br>昭和53年生まれ
+										<br>長崎県出身
+										<br>・北海道医療大学歯学部卒業
+										<br>・長崎大学病院義歯補綴治療室入局
+										<br>・長崎大学大学院医歯薬総合研究科博士課程修了
+										<br>・佐賀県、福岡県内の歯科医院にて勤務
+										<br>きたがわ歯科クリニック開業。
+									</p>
+								</div>
+								<div class="caption sp_only">院長<span class="txt_big">北川 幸郎</span></div>
+							</div>
+							<div class="introduce__img animation fadeInRgt">
+								<figure class="introduce__mask introduce__mask--mtop30"><img
+										src="/<?= $dir; ?>assets/images/doc.jpg" alt="greeting">
+									<figcaption class="pc__pl__85">院長<span class="txt_big">北川 幸郎</span></figcaption>
+								</figure>
+							</div>
+						</div>
+						<div class="introduce__news animation fadeInUp">
+							<div class="news__view_more"><a href="/<?= $dir; ?>staff/">院長紹介はこちら</a></div>
+						</div>
+					</div>
+
+					<div class="introduce__row">
+						<div class="section__ttl align_rgt pc__mb__90 sp__mb__60">
+							<p class="pc__mb__0 animation fadeInLft"><div class="title_pc pc_only">FEATURES</div></p>
+							<p class="pc__mb__0 animation fadeInLft"><div class="title_sp sp_only">FEATURES</div></p>
+							<h2 class="is-en sub_ttl animation fadeInLft">当院の特徴</h2>
+						</div>
+						<div class="introduce__row__inner">
+							<div class="introduce__text animation fadeInLft">
+								<div class="introduce__col__number"><span>01</span></div>
+								<div class="introduce__col__ttl introduce__col__ttl--fz24">見てわかりやすいご説明
+								</div>
+								<div class="introduce__col__cnt">
+									<p>当院では、インフォームドコンセントを徹底しております。治療前に症状やお悩みをしっかりうかがい、的確な治療を心がけています。また、お口の中の画像やレントゲン画像などを画面に映し、症状や治療経過を患者さまとご一緒に確認しながら、視覚的にもわかりやすくご説明いたします。治療後は、イラストや写真つきの診断書を製作するので、お口の中の状態を患者さまにしっかりと把握していただけます。
+									</p>
+								</div>
+							</div>
+							<div class="introduce__img animation fadeInRgt">
+								<figure class="introduce__mask"><img class="mask_small" src="/<?= $dir; ?>assets/images/main/feature_01.jpg" alt="greeting"></figure>
+							</div>
+						</div>
+						<div class="introduce__row__inner">
+							<div class="introduce__img animation fadeInUp">
+								<figure class="introduce__mask"><img class="mask_small" src="/<?= $dir; ?>assets/images/main/feature_02.jpg" alt="greeting"></figure>
+							</div>
+							<div class="introduce__text animation fadeInDown">
+								<div class="introduce__col__number"><span>02</span></div>
+								<div class="introduce__col__ttl introduce__col__ttl--fz24">幼少期からの予防ケアに注力
+								</div>
+								<div class="introduce__col__cnt">
+									<p>当院では、お子さまの予防ケアに力を入れております。幼少期から歯科医院に通う習慣を身につけておくと、大人になっても健康なお口を維持しやすくなります。ご家族皆さまで通っていただけるよう、土曜診療、WEB予約の導入、全室個室の診療室、駐車場完備、バリアフリー設計、ファミリールームの設置、など、便利な設備とサービスでお待ちしております。</p>
+								</div>
+								<div class="news__view_more"><a href="/<?= $dir; ?>child/">小児歯科について詳しく</a></div>
+							</div>
+						</div>
+						<div class="introduce__row__inner">
+							<div class="introduce__text animation fadeInLft">
+								<div class="introduce__col__number"><span>03</span></div>
+								<div class="introduce__col__ttl introduce__col__ttl--fz24">快適な入れ歯を製作
+								</div>
+								<div class="introduce__col__cnt">
+									<p>健康なお口を維持して、いつまでもご自身の歯で暮らせることは大切です。ですが、歯を失った場合にも、当院では高水準の入れ歯をご提供して、生活の質を落とさないお手伝いをいたします。当院の院長は、入れ歯などの「補綴治療」を得意としております。「ゴシックアーチ法」というかみ合わせを考慮した方法で、使い勝手のよい入れ歯を製作しますので、いつでもご相談ください。
+									</p>
+								</div>
+								<div class="news__view_more"><a href="/<?= $dir; ?>dentures/">入れ歯について詳しくはこちら</a></div>
+							</div>
+							<div class="introduce__img animation fadeInRgt">
+								<figure class="introduce__mask"><img class="mask_small" src="/<?= $dir; ?>assets/images/main/service04.jpg" alt="greeting"></figure>
+							</div>
+						</div>
+						<div class="introduce__row__inner">
+							<div class="introduce__img animation fadeInUp">
+								<figure class="introduce__mask"><img class="mask_small" src="/<?= $dir; ?>assets/images/main/feature_04.jpg" alt="greeting"></figure>
+							</div>
+							<div class="introduce__text animation fadeInDown">
+								<div class="introduce__col__number"><span>04</span></div>
+								<div class="introduce__col__ttl introduce__col__ttl--fz24">クリーンな診療環境を整備</div>
+								<div class="introduce__col__cnt">
+									<p>歯科治療は患者さまのお口の中に直接触れる治療が多いため、当院では衛生管理を徹底しております。治療に使う器具は、ミーレ社のジェットウォッシャーで洗浄後、世界的高水準のクラスB滅菌器で滅菌。また、口腔外バキュームやオゾン水生成器の導入など、常にクリーンな環境で診療を受けていただけます。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+				<!-- service-->
+				<section class="service">
+					<div class="container">
+						<div class="section__ttl align_lft">
+							<p class="pc__mb__0 animation fadeInLft"><div class="title_pc pc_only">SERVICE</div></p>
+							<p class="pc__mb__0 animation fadeInLft"><div class="title_sp sp_only">SERVICE</div></p>
+							<h2 class="is-en sub_ttl animation fadeInLft">診療メニュー</h2>
+						</div>
+						<div class="service__cnt animation fadeInUp">
+							<p class="align_center">当院の診療内容をご案内します。幅広い<br class="sp_only">診療で、症状、お悩みを解決いたします。</p>
+							<ul class="service__list">
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_1">むし歯</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_2">根管治療</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_3">歯周病</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_4">入れ歯(義歯)</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_5">小児歯科</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_6">予防・クリーニング</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_7">歯科口腔外科</a></li>
+<?php /*				<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_8">インプラント</a></li> */ ?>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_9">審美治療</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_10">ホワイトニング</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_11">各種マウスピース<br>製作</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_12">マタニティ歯科診療</a></li>
+								<li><a class="btn__arrow" href="/<?= $dir; ?>services/#service_13">各種歯科検診</a></li>
+							</ul>
+							<div class="see_more align_rgt"><a class="btn__arrow" href="/<?= $dir; ?>services/">診療案内</a></div>
+						</div>
+					</div>
+				</section>
+
+			<!-- facillities-->
+			<section class="gallery">
+				<div class="container">
+					<div class="section__ttl align_rgt">
+						<p class="pc__mb__0 animation fadeInLft"><div class="title_pc pc_only">CLINIC</div></p>
+						<p class="pc__mb__0 animation fadeInLft"><div class="title_sp sp_only">CLINIC</div></p>
+						<h2 class="is-en sub_ttl animation fadeInLft">院内・設備紹介</h2>
+					</div>
+					<div class="gallery__inner animation fadeInUp">
+						<div class="gallery__slider">
+							<div class="gallery__item">
+								<p class="gallery__img"><img src="/<?= $dir; ?>assets/images/faci1.jpg"
+										alt="受付"></p>
+								<p class="gallery__ttl"><a href="#">受付</a></p>
+								<p class="gallery__txt">スタッフが明るく笑顔でお迎えいたします。</p>
+							</div>
+							<div class="gallery__item">
+								<p class="gallery__img"><img src="/<?= $dir; ?>assets/images/faci2.jpg"
+										alt="待合室/ キッズスペース"></p>
+								<p class="gallery__ttl"><a href="#">待合室/ キッズスペース</a></p>
+								<p class="gallery__txt">待合室の一角にキッズスペースを設置しました。</p>
+							</div>
+							<div class="gallery__item">
+								<p class="gallery__img"><img src="/<?= $dir; ?>assets/images/faci5.jpg"
+										alt="ファミリールーム"></p>
+								<p class="gallery__ttl"><a href="#">ファミリールーム</a></p>
+								<p class="gallery__txt">ご家族皆さまでお入りいただける広い診療室です。</p>
+							</div>
+							<div class="gallery__item">
+								<p class="gallery__img"><img src="/<?= $dir; ?>assets/images/equ1.jpg"
+										alt="CT/ デジタルレントゲン"></p>
+								<p class="gallery__ttl"><a href="#">CT/ デジタルレントゲン</a></p>
+								<p class="gallery__txt">歯や顎の状態を立体映像で鮮明に映し出します。</p>
+							</div>
+							<div class="gallery__item">
+								<p class="gallery__img"><img src="/<?= $dir; ?>assets/images/equ2.jpg"
+										alt="クラスB滅菌器"></p>
+								<p class="gallery__ttl"><a href="#">クラスB滅菌器</a></p>
+								<p class="gallery__txt">複雑な器具も滅菌できる高水準の滅菌器です。</p>
+							</div>
+							<div class="gallery__item">
+								<p class="gallery__img"><img src="/<?= $dir; ?>assets/images/equ7.jpg"
+										alt="説明用モニター/DentalX"></p>
+								<p class="gallery__ttl"><a href="#">説明用モニター/DentalX</a></p>
+								<p class="gallery__txt">視覚的にもわかりやすいご説明を行います。</p>
+							</div>
+						</div>
+						<div class="see_more align_rgt">
+							<div><a class="btn__arrow" href="/<?= $dir; ?>facilities/">院内紹介</a></div>
+							<div><a class="btn__arrow" href="/<?= $dir; ?>equipments/">設備紹介</a></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="section section--infomation">
+				<div class="container padding-mobile" style=" padding-bottom:0px !important;">
+
+
+				  <div class="introduce__row">
+					
+					<div class="section__ttl align_lft sp_top_pos">
+						<p class="pc__mb__0 animation fadeInLft"></p><div class="title_pc pc_only">COLUMN</div><p></p>
+						<p class="pc__mb__0 animation fadeInLft"></p><div class="title_sp sp_only">COLUMN</div><p></p>
+						<h2 class="is-en sub_ttl animation fadeInLft show">コラム</h2>
+					</div>
+
+				  <ul id="col_ul" style="padding-bottom: 50px;">
+
+
+					<?php $args = array( 'post_type' => 'post',  'showposts' => 3
+					); ?>
+					<?php $query = new WP_Query( $args ); ?> <?php if( $query->have_posts() ) : ?>
+					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+					  <li>
+
+					  <div class="ica_waku"><span class="top_cate"><?php the_category(', ');?></span>
+					<?php if (has_post_thumbnail()): ?>
+					<span class="ica"><?php the_post_thumbnail('post-thumbnails'); ?></span>
+					<?php else: ?>
+					<span class="ica"><img src="/assets/images/noimage.jpg" /></span>
+					<?php endif; ?></div><!--ica_waku-->
+
+					  <p class="wow fadeIn tit"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+					</li>
+
+
+					<?php endwhile; wp_reset_postdata(); ?> <?php else : ?>
+					Not Found. <?php endif; ?>
+
+					  </ul>
+
+
+
+
+						  <div class="news__view_more" style="padding-bottom: 30px;position: static;width: fit-content;margin: auto;"><a href="/<?= $dir; ?>_cms/">コラム一覧</a></div>
+
+				</div>
+			  </section>
+
+
+
+
+
+			<!-- clinic-info-->
+			<section class="information">
+				<div class="container">
+					<div class="information__inner">
+						<div class="information__table">
+							<div class="information__cnt animation fadeInLft">
+								<table>
+									<tbody>
+										<tr>
+											<th>医院名</th>
+											<td>
+												<?= $init['clinic']['clinic_name'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>院長</th>
+											<td>
+												<?= $init['clinic']['staff_name'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>住所</th>
+											<td>〒
+												<?= $init['clinic']['postal'].'<br>'.$init['clinic']['address'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>電話番号</th>
+											<td><a class="js-tap is-tel" href="tel:<?= $init['clinic']['tel_num'] ?>">
+													<?= $init['clinic']['tel_num'] ?>
+												</a></td>
+										</tr>
+										<tr>
+											<th>MAIL</th>
+											<td><p><a href="mailto:info.kdc@kitagawa-shika.jp">info.kdc@kitagawa-shika.jp</a></p></td>
+										</tr>
+										<tr>
+											<th>URL</th>
+											<td>
+												<?= $init['clinic']['url'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>診療内容</th>
+											<td>むし歯／根管治療／歯周病／入れ歯(義歯)／小児歯科／予防・クリーニング／歯科口腔外科／<?php /* インプラント／ */ ?>審美治療／ホワイトニング／各種マウスピース製作／マタニティ歯科診療／各種歯科検診
+											</td>
+										</tr>
+										<tr>
+											<th>概要</th>
+											<td>鳥栖市村田町、土曜も診療の歯医者【きたがわ歯科クリニック】では幼少期からの予防ケアに注力。歯を失った方には快適な入れ歯を製作します。また、「見てわかりやすい説明」で、安心して治療を受けていただけるよう心がけます。
+											</td>
+										</tr>
+										<tr>
+											<th>施設基準</th>
+											<td>当医院は、以下の施設基準等に適合している旨、厚生労働省地方(支)局に届出を行っています。
+												<br><a href="/<?= $dir; ?>assets/pdf/kijun.pdf?<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/assets/pdf/kijun.pdf') ?>" target="_blank" style="text-decoration: underline;">詳しくはこちら＞</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="information__img animation fadeInRgt">
+								<div class="information__img_inside"><img
+										src="/<?= $dir; ?>assets/images/nap.jpg"></div>
+							</div>
+						</div>
+						<div class="information__case">
+							<div class="information__case__item animation fadeInDown">
+								<h3 class="information__case__ttl">各種保険取り扱い</h3>
+								<p class="information__case__txt">保険診療を主軸に診療を行っています。
+									<br>自由診療は選択肢の一環としてご説明し、ご希望の方に行います。
+									</p>
+							</div>
+							<div class="information__case__item animation fadeInUp">
+								<h3 class="information__case__ttl">予約優先診療</h3>
+								<p class="information__case__txt">待ち時間軽減のため<br>ご予約はお電話(<a
+										class="js-tap is-tel" href="tel:<?= $init['clinic']['tel_num'] ?>">
+										<?= $init['clinic']['tel_num'] ?>
+									</a>)にてご連絡ください。</p>
+							</div>
+							<div class="information__case__item animation fadeInDown">
+								<h3 class="information__case__ttl">急患随時受付</h3>
+								<p class="information__case__txt">
+									柔軟に対応しております。混雑している場合はお待たせすることもございますので、ご来院いただく前に一度お電話(<a class="js-tap is-tel"
+										href="tel:<?= $init['clinic']['tel_num'] ?>">
+										<?= $init['clinic']['tel_num'] ?>
+									</a>)にてお問い合わせください。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="banner">
+				<div class="service_list__ttl">
+					<h2 class="animation fadeInUp">連携している医療機関</h2>
+				</div>
+			<div class="container">
+				<ul>
+					<li class="animation fadeInUp"><a href="https://www.med.kurume-u.ac.jp/med/oral/index.html" target="_blank"><img src="/<?= $dir; ?>assets/images/main/banner_f_01.png" alt=""></a></li>
+					<li class="animation fadeInDown"><a href="https://www.st-mary-med.or.jp/shinryo_ka/section2/s_syonishika.html#page1/" target="_blank"><img src="/<?= $dir; ?>assets/images/main/banner_f_02.png" alt=""></a></li>
+				</ul>
+			</div>
+		</section>
+			<!-- sns-->
+			<section class="social social--mbt390">
+				<div class="container">
+					<div class="section__ttl pc__mb__65 sp__mb__30">
+						<p class="pc__mb__0 animation fadeInLft"><div class="title_pc pc_only">SNS</div></p>
+						<p class="pc__mb__0 animation fadeInLft"><div class="title_sp sp_only">SNS</div></p>
+						<h2 class="is-en sub_ttl animation fadeInLft">FOLLOW US</h2>
+					</div>
+					<div class="social__btn">
+						<ul class="social__list">
+							<li class="animation fadeInLft"><a href="https://www.instagram.com/kitagawa_dentalclinic/?igshid=YmMyMTA2M2Y%3D">
+								<svg class="bi bi-instagram" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+									<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+								</svg><span>Instagram</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- end Content-->
+		</main>
+		<?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+	</div>
+	<?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+	<script>
+		// mainvisual
+		if ($('.main_visual__image').length) {
+			$('.main_visual__image').slick({
+				autoplay: true,
+				dots: false,
+				autoplaySpeed: 6000,
+				arrows: false,
+				pauseOnFocus: false,
+				pauseOnHover: false,
+				fade: true
+			});
+		}
+		// Gallery Index
+		if ($('.gallery .gallery__slider').length) {
+			$('.gallery .gallery__slider').slick({
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				autoplay: true,
+				dots: true,
+				autoplaySpeed: 4000,
+				prevArrow: '<p  class="slick-prev"><button type="button">Previous</button></p>',
+				nextArrow: '<p  class="slick-next"><button type="button">next</button></p>',
+				responsive: [
+					{
+						breakpoint: 750,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							centerMode: true,
+							centerPadding: '50px',
+							infinite: true,
+							dots: true
+						}
+					},
+				]
+			});
+			$('.gallery .slick-dots').wrap('<div class="slick-control"></div>')
+			$('.gallery .slick-control').prepend($('.gallery .slick-prev'));
+			$('.gallery .slick-control').append($('.gallery .slick-next'));
+		}
+		window.onload = googleCalendarSet;
+		function googleCalendarSet() {
+			var calendarCode1 = '<iframe src="https://calendar.google.com/calendar/embed?';
+			var calenderCode2 = 'height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showTabs=0&showCalendars=0&showTz=0&showPrint=0&src=ZDhiYTI0MDBmOTVlMGZjYzE1OTZjNTgwZGEzNWMxZTkzYWEyZjA1NzQyZjhmYmJjOGM0ZjA2MzAzNzRjNTYwYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NmMxYTNlNTg4MzMyNmUzMDA2Zjg5NzhkZTlkNDY3MWI0ODhmMzU0ZjUwYzI0MDhlOWVkZmRiNmM1ZjczZTJlNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F09300&color=%23039BE5&color=%230B8043" style="border: 0" width="480" height="501" frameborder="0" scrolling="no"></iframe>'
+			var today = new Date;
+			var myYear = today.getFullYear();
+			var myMonth = today.getMonth() + 1;
+			var nextMonth = myMonth + 1;
+			if (nextMonth > 12) { nextMonth -= 12; myYear += 1; };
+			if (nextMonth < 10) { nextMonth = "0" + nextMonth; };
+			var dates = "dates=" + String(myYear) + String(nextMonth) + "01/" + String(myYear) + String(nextMonth) + "01&amp;";
+			document.getElementById("calendar_2").innerHTML = calendarCode1 + dates + calenderCode2;
+			document.getElementById("calendar_1").innerHTML = calendarCode1 + calenderCode2;
+		}
+	</script>
+</body>
+
+</html>
