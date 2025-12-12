@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['404']['title'] ?></title> 
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['404']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['404']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['404']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['404']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>_error/404.html">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article"> 
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-error">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['404']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="is-en animation fadeInLft">NOT FOUND</p>
+						<p class="sub_ttl animation fadeInLft">ページが見つかりません</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　 ページが見つかりません
+						</p>
+					</div>
+				</div>
+				<section class="error">
+					<div class="container">
+						<div class="section__ttl pc__mb__55 sp__mb__30">
+							<h2 class="error_ttl animation fadeInLft">お探しのページが見つかりませんでした</h2>
+						</div>
+						<p class="error-text pc__mb__55 sp__mb__30">誠に申し訳ございませんが、アクセスいただいたURLが見つかりません。<br>移動もしくは削除された可能性があります。</p>
+						<div class="see_more align_center pc__mb__55 sp__mb__30"><a class="btn__arrow" href="/<?= $dir; ?>">TOPページへ戻る</a></div>
+					</div>
+				</section>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script></script>
+	</body>
+</html>
