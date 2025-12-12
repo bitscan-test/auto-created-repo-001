@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['periodontal']['title'] ?></title>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['periodontal']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['periodontal']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['periodontal']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['periodontal']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>periodontal/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article">
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<link rel='stylesheet' href='/<?= $dir; ?>assets/css/style_subs_v02.css'>
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "https://hoge.com",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "https://hoge.com/periodontal/",
+							"name": "<?= $init['meta']['periodontal']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-pattern">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['periodontal']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="animation fadeInLft">歯周病</p>
+						<p class="is-en sub_ttl animation fadeInLft">PERIODONTAL</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a href="/<?= $dir; ?>">top > </a> 歯周病 </p>
+					</div>
+				</div>
+				<!-- type-->
+				<div class="endpart">
+					<div class="container">
+						<section class="block-cnt no-order">
+							<div class="section__ttl pc__mb__20 sp__mb__30">
+								<p class="is-jp animation fadeInLft">歯周病とは</span></p>
+							</div>
+							<div class="blog__row pc__mb__105 sp__mb__50 sp__pt__20">
+								<div class="blog__img animation fadeInLft custom_order_2">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/periodontal/img01.jpg" width="450">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pl__0 animation fadeInRgt">
+									<p>歯周病は、歯茎や歯を支える骨、そして歯周組織に炎症が起こる病気です。<br>
+この炎症が進行すると、歯が抜け落ちる可能性があります。<br>
+炎症は通常、プラーク（歯垢）の蓄積によって引き起こされ、これが放置されると歯周ポケットが深くなり、最終的には歯の喪失につながる可能性があります。</p>
+								</div>
+
+							</div>
+						</section>
+					</div>
+
+<!--
+					<section class="service_list pc__mb__205">
+						<div class="container">
+							<div class="service_list__cnt animation fadeInUp show">
+								<ul class="is-three">
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_1">入れ歯が必要な理由</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_2">入れ歯の種類</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_3">快適な入れ歯を製作するために</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_4">入れ歯製作の流れ</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+-->
+
+					<div class="container">
+						<section class="block-cnt sp__pt__50" id="block_1">
+							<h2 class="block-cnt__ttl align_center">歯周病は予防と早期発見・<br class="pc_none">早期治療が重要</h2>
+							<div class="blog__row pc__mb__85 sp__pt__30">
+								<div class="pc__pr__50 pl__0 animation fadeInLft">
+									<p>歯周病は初期段階では症状が少ないため、自覚症状がないまま進行することが多いです。<br>
+そのため、定期的な歯科検診で早期に発見し、必要な治療を行うことが重要です。</p>
+								</div>
+
+							</div>
+						</section>
+
+
+            <section class="block-cnt pt__40 pc__mb__180 sp__mb__80 sp__pt__50" id="block_2">
+							<h2 class="block-cnt__ttl align_center">歯周病と全身疾患との関連性</h2>
+
+<section class="ucolumnSec mt_50">
+<div class="ucolumnFlex">
+  <div class="photo left"><img src="/<?= $dir; ?>assets/images/periodontal/img02.jpg" /></div>
+  <div class="txt">
+    <h3 class="border06 mb_20">心臓病との関連性</h3>
+    <p>歯周病が進行すると、口内の炎症が全身に広がる可能性があります。<br>
+この炎症が血管に影響を与えると、動脈硬化のリスクが高まり、それが心臓病につながる可能性があります。<br>
+一部の研究では、歯周病が心臓病のリスクを高めると指摘されています。</p>
+
+    <h3 class="border06 mt_30 mb_20">糖尿病との関連性</h3>
+    <p>歯周病と糖尿病は相互に影響を与え合います。<br>
+歯周病が進行すると、炎症によってインスリンの働きが阻害され、血糖値がコントロールしにくくなる可能性があります。<br>
+逆に、糖尿病がコントロールされていないと、歯周病が進行しやすくなります。</p>
+  </div>
+</div>
+<div class="ucolumnFlex mt_30">
+  <div class="txt">
+    <h3 class="border06 mb_20">高血圧との関連性</h3>
+    <p>歯周病が高血圧（高血圧症）と関連している可能性も研究で指摘されています。<br>
+歯周病による炎症が血管に影響を与えることで、血圧が上昇しやすくなると考えられています。</p>
+    <h3 class="border06 mt_30 mb_20">全身の健康管理への影響</h3>
+    <p>歯周病の予防と治療は、これらの全身疾患のリスクを低減するためにも重要です。
+口内環境を健康に保つことで、炎症が全身に広がるリスクを減らし、心臓病、糖尿病、高血圧などの疾患の予防にも寄与します。<br>
+<br>
+以上のように、歯周病は全身の健康にも深く関わっています。<br>
+定期的な歯科検診と適切な口内ケアで、歯周病を予防し、全身の健康を守りましょう。</p>
+
+	</div>
+</div>
+</section>
+
+
+
+				<section class="block-cnt pc__mb__130 sp__pt__50 mt_100" id="">
+							<h2 class="block-cnt__ttl align_center">ステージごとの症状と治療方法</h2>
+<!--							<p class="block-cnt__desc align_center pc__mb__50">Flow</p> -->
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">1</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/periodontal/img03.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<!--<p class="introduce__col__number"><span></span></p>-->
+									<h3 class="sub__ttl --no-line">歯肉炎<br>～歯周病の入り口～</h3>
+									<p>歯肉炎は歯周病の初期段階で、この時点では主に歯茎が炎症を起こしています。<br>
+歯茎が赤く膨れ上がり、磨いたり触れたりすると出血しやすくなるのが特徴です。<br>幸い、この段階では適切な口内ケアによって症状が改善できます。</p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">2</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/periodontal/img04.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<!--<p class="introduce__col__number"><span></span></p>-->
+									<h3 class="sub__ttl --no-line">初期歯周病<br>～症状が広がり始める～</h3>
+									<p>歯肉炎が進行すると、歯と歯茎の間にある「歯周ポケット」が深くなり、歯茎が歯から引き離れてきます。<br>
+このフェーズでは、歯を支える骨が徐々に減少し、歯が動き始める可能性が出てきます。<br>
+しかし、この段階でも、適切な治療とケアを行えば、歯周病の進行を阻止できます。</p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">3</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/periodontal/img05.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<!--<p class="introduce__col__number"><span></span></p>-->
+									<h3 class="sub__ttl --no-line">進行性歯周病<br>～深刻なダメージが生じる～</h3>
+									<p>歯周病がさらに進行すると、歯を固定している骨や組織が大きく損傷を受けます。<br>
+歯が不安定になり、噛む際に痛みを感じることもあります。<br>
+このステージでは、歯の喪失が現実的な問題となり、さらには全身の健康にも影響を与える可能性が高まります。</p>
+								</div>
+							</div>
+
+
+						</section>
+
+
+
+						<section class="block-cnt sp__pt__50" id="block_1">
+							<h2 class="block-cnt__ttl align_center">歯周病の予防方法</h2>
+
+
+<section class="ucolumnSec mt_70">
+
+<h3 class="border05 mb_20">1.定期的な歯科検診<br class="pc_none">～早期発見と早期治療の第一歩～</h3>
+<div class="ucolumnFlex">
+  <div class="photo left"><img src="/<?= $dir; ?>assets/images/periodontal/img06.jpg" /></div>
+  <div class="txt">
+    <p>歯周病は、初期段階では症状がほとんどないため、自分自身で気づくのは難しいです。<br>
+そのため、半年に一度は歯科検診を受けることを推奨します。<br>
+定期検診では、専門の歯科医が口内全体を詳細に診察し、歯周病の兆候を早期にキャッチします。<br>
+これにより、必要な場合はすぐに治療を開始でき、病状の悪化を防ぐことができます。</p>
+  </div>
+</div>
+
+<h3 class="border05 mt_50 mb_20">2.歯科医院でのプロフェッショナルクリーニング<br class="pc_none">～専門家の手による徹底的なケア～</h3>
+<div class="ucolumnFlex">
+  <div class="photo left"><img src="/<?= $dir; ?>assets/images/periodontal/img07.jpg" /></div>
+  <div class="txt">
+    <p>自宅でのブラッシングやフロッシングだけでは、歯の隙間や歯茎の奥まで完全にクリーニングするのは難しいです。<br>
+歯科医院でのプロフェッショナルクリーニングでは、専用の器具と技術を用いて、歯垢や歯石を徹底的に除去します。<br>
+これにより、歯周病の原因となる細菌の繁殖を抑制できます。</p>
+  </div>
+</div>
+
+<h3 class="border05 mt_50 mb_20">3.正しいブラッシングとフロッシング<br class="pc_none">～日常の基本ケア～</h3>
+<div class="ucolumnFlex">
+  <div class="photo left"><img src="/<?= $dir; ?>assets/images/periodontal/img08.jpg" /></div>
+  <div class="txt">
+    <p>歯垢と歯石は歯周病の主要な原因です。<br>
+これらを効果的に除去するためには、正確なブラッシングとフロッシングの技術が必要です。<br>
+特に、歯の裏側や歯と歯の間など、歯ブラシが届きにくい部分にも注意を払いましょう。<br>
+<br>
+当院では、患者さまが日常生活で正確なブラッシングとフロッシングができるように、個別に指導を行っております。<br>
+適切なケア方法を身につけることで、ご自宅でも歯周病予防が可能です。</p>
+  </div>
+</div>
+
+<h3 class="border05 mt_50 mb_20">4.バランスの良い食事<br class="pc_none">～口内環境にも影響を与える～</h3>
+<div class="ucolumnFlex">
+  <div class="photo left"><img src="/<?= $dir; ?>assets/images/periodontal/img09.jpg" /></div>
+  <div class="txt">
+    <p>食事の内容は、口内環境に大きな影響を与えます。<br>
+砂糖や酸性食品は、細菌の増殖を促し、歯周病のリスクを高める可能性があります。<br>
+そのため、これらの食品の摂取を控え、ビタミンCやカルシウムを豊富に含む食品（例えば、緑黄色野菜や魚、乳製品）を摂ることが推奨されます。<br>
+これらの栄養素は、歯茎や歯を健康に保つために不可欠です。<br>
+<br>
+当院では、歯周病予防のための生活習慣アドバイスも行っています。</p>
+  </div>
+</div>
+
+
+<p class="mt_50">以上の4つのポイントをしっかりと実践することが、歯周病予防につながります。<br>
+健康な口内環境は、全身の健康にも寄与するためケアを怠らないようにしましょう。<br>
+<br>
+歯周病は、放置すると重症化し、さらには全身の健康にも影響を与える可能性があります。<br>
+早期発見と適切な治療が非常に重要です。<br>
+<br>
+きたがわ歯科クリニックでは、そのための全面的なサポートを提供しています。<br>
+ご一緒に歯周病予防と早期治療に取り組み、健康で快適な日常生活を送りましょう。</p>
+
+</section>
+
+
+						</section>
+
+
+
+
+
+
+							</div>
+						</section>
+					</div>
+					<!-- end Content-->
+				</div>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script></script>
+	</body>
+</html>
