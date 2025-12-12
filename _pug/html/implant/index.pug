@@ -1,0 +1,46 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'implant'
+	- en = 'IMPLANT'
+	- jp = 'インプラント'
+	- pageUrl = '/implant/'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-pattern'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['implant']['h1'] ?>
+
+	header.banner_sub
+		.banner_sub__img
+			picture
+				source(media='(max-width:750px)' srcset='')
+				img(src!='/<?= $dir; ?>assets/images/implant/header.jpg')
+		.banner_sub__ttl
+			p.is-en.animation.fadeInLft #{en}
+			p.sub_ttl.animation.fadeInLft #{jp}
+
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	// link
+	//- include ../../_inc/_parts/_implant/_link
+	// type
+	include ../../_inc/_parts/_implant/_type
+
+	// end Content
+						
+block script
+	script.

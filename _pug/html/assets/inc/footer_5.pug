@@ -1,0 +1,106 @@
+#pnavi
+  .ptop
+    a(href='#wrapper')
+      img(src!='/<?= $dir; ?>assets/images/main/btn_top_<?= str_replace("style_", "", $init["color"]); ?>.png')
+footer.footer
+  .container
+    #footer_block.footer__inner
+      .footer__left
+        .footer__logo.animation.fadeInUp
+          a(href!='/<?= $dir; ?>')
+            picture
+              source(media='(max-width:1024px)' srcset!='/<?= $dir; ?>assets/images/header/logo.svg' )
+              img(src!='/<?= $dir; ?>assets/images/header/logo.svg' width='271' alt!="<?= $init['clinic']['clinic_name'] ?>")
+        .footer__address.animation.fadeInUp
+          address
+            p
+              | 〒<?= $init['clinic']['postal'].'<br>'.$init['clinic']['address'] ?>
+        .footer__contact.animation.fadeInLft
+          .footer__contact__ttl ご予約はこちらから
+          .footer__contact__number
+            a.js-tap.is-tel(href!="tel:<?= $init['clinic']['tel_num'] ?>") <?= $init['clinic']['tel_num'] ?>
+          .footer__contact__link
+            a(href!="<?= $init['clinic']['webform'] ?>" target="_blank") ＷEB予約はこちら
+      .footer__right
+        .table__schedule.animation.fadeInDown
+          table
+            thead
+              tr
+                th 診療時間
+                th 月
+                th 火
+                th 水
+                th 木
+                th 金
+                th 土
+                th 日
+            tbody
+              tr
+                th 09:00～12:30
+                td ●
+                td ●
+                td.color_black ／
+                td ●
+                td ●
+                td.color_black ／
+                td.color_black ／
+              tr
+                th 14:00～18:00
+                td ●
+                td ●
+                td.color_black ／
+                td ●
+                td ★
+                td.color_black ／
+                td.color_black ／
+          p.table__note
+            span 休診日：水曜、土曜、日曜
+            span ★：午後は17:00まで診療
+        .footer__map.animation.fadeInRgt
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.171420474734!2d139.70870861555113!3d35.697399036691955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188de9417cfe37%3A0xcea426e6dade82c5!2zS0RY5paw5a6_5YWt5LiB55uu44OT44Or!5e0!3m2!1sen!2s!4v1624525155574!5m2!1sja!2s' style='border:0;' allowfullscreen='' loading='lazy' width='542' height='332')
+  .footer__bottom
+    .footer__fnavi.animation.fadeInUp
+      ul
+        li: a.line(href!='/<?= $dir; ?>') トップ
+        li: a.line(href!='/<?= $dir; ?>services/') 診療案内
+        li: a.line(href!='/<?= $dir; ?>staff/') 院長・スタッフ
+        li: a.line(href!='/<?= $dir; ?>facilities/') 院内・設備
+        li: a.line(href!='/<?= $dir; ?>access/') アクセス
+        //- li: a.line(href!='/<?= $dir; ?>pattern/') パターン
+        li: a.line(href!='/<?= $dir; ?>mushiba/') むし歯
+        li: a.line(href!='/<?= $dir; ?>konkan/') 根管治療
+        li: a.line(href!='/<?= $dir; ?>shisyu/') 歯周病
+        li: a.line(href!='/<?= $dir; ?>dentures/') 入れ歯
+        li: a.line(href!='/<?= $dir; ?>child/') 小児歯科
+        li: a.line(href!='/<?= $dir; ?>prevention/') 予防・クリーニング
+        li: a.line(href!='/<?= $dir; ?>visit') 訪問歯科診療
+        li: a.line(href!='/<?= $dir; ?>kyosei/') 矯正歯科
+        li: a.line(href!='/<?= $dir; ?>beauty/') 審美治療
+        li: a.line(href!='/<?= $dir; ?>whitening/') ホワイトニング
+        li: a.line(href!='/<?= $dir; ?>implant/') インプラント
+        li: a.line(href='#') お知らせ
+    .footer__copyright
+      .footer__social.animation.fadeInLft
+        .social__btn.social__btn--blue
+          ul
+            li
+              a(href='https://www.instagram.com/visca_design/')
+                svg.bi.bi-instagram(xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='currentColor' viewBox='0 0 16 16')
+                  path(d='M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z')
+            li
+              a(href='https://www.facebook.com/%E6%97%A5%E6%9C%AC%E3%83%93%E3%82%B9%E3%82%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-341352426001932/')
+                svg.bi.bi-facebook(xmlns='http://www.w3.org/2000/svg' width='26' height='26' fill='currentColor' viewBox='0 0 16 16')
+                  path(d='M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z')
+            li
+              a(href='https://twitter.com/Hpseisaku_VISCA')
+                svg.bi.bi-twitter(xmlns='http://www.w3.org/2000/svg' width='30' height='25' fill='currentColor' viewBox='0 0 16 16')
+                  path(d='M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z')
+      p.copyright.animation.fadeInRgt Copyright © 20XX VISCA.All Rights Reserved.
+  .footer__btn_contact.sp_only
+    ul
+      li
+        a.js-tap.is-tel(href!="tel:<?= $init['clinic']['tel_num'] ?>") 電話する
+      li
+        a.js-tap.is-web(href!="<?= $init['clinic']['webform'] ?>" target="_blank") WEB予約
+      li
+        a.js-tap.is-line(href='#') LINE予約

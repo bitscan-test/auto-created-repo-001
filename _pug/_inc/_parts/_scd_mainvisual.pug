@@ -1,0 +1,8 @@
+header.banner_sub
+	.banner_sub__img
+		picture
+			source(media='(max-width:1024px)' srcset!='/<?= $dir; ?>assets/images/main/banner_1_sp.jpg')
+			img(src!='/<?= $dir; ?>assets/images/main/banner_1.jpg')
+	.banner_sub__ttl
+		p.is-en.animation.fadeInLft #{en}
+		p.sub_ttl.animation.fadeInLft #{jp}

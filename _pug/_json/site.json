@@ -1,0 +1,6 @@
+{
+	"name": "WP template",
+	"description": "サイトの概要",
+	"url": "<?= $init['clinic']['url'] ?>",
+	"ogImage": "images/common/og-image.jpg"
+}

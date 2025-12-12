@@ -1,0 +1,44 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'staff'
+	- en = 'STAFF'
+	- jp = '院長・スタッフ'
+	- pageUrl = '/staff/'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-staff'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['staff']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	// philosophy
+	include ../../_inc/_parts/_staff/_philosophy
+	// director
+	include ../../_inc/_parts/_staff/_director
+	// doctor
+	include ../../_inc/_parts/_staff/_doctor
+	// member
+	include ../../_inc/_parts/_staff/_member
+	// recruit
+	include ../../_inc/_parts/_staff/_recruit
+
+						
+block script
+	script.

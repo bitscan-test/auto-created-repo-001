@@ -1,0 +1,107 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'home'
+	- pageUrl = '/'
+	- pageDir = ''
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-home'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['home']['h1'] ?>
+	// mainvisual
+	include ./../_inc/_parts/_home/_mainvisual
+
+	// opening
+	include ./../_inc/_parts/_home/_opening
+	include ./../_inc/_parts/_home/_banner
+	include ./../_inc/_parts/_home/_news
+	//- include ./../_inc/_parts/_home/_blog
+	// calendar
+	include ./../_inc/_parts/_home/_calendar
+	// reservation
+	//- include ../_inc/_parts/_reservation
+	include ../_inc/_parts/_home/_clinic-reservation
+	// policy
+	include ./../_inc/_parts/_home/_policy
+	// greeting
+	include ./../_inc/_parts/_home/_greeting
+	// service
+	include ./../_inc/_parts/_home/_service
+	// facillities
+	include ./../_inc/_parts/_home/_facillities
+
+	// clinic-info
+	include ./../_inc/_parts/_home/_clinic-info
+	// sns
+	include ./../_inc/_parts/_home/_sns
+	// end Content
+	
+						
+block script
+	script.
+		// mainvisual
+		if($('.main_visual__image').length) {
+				$('.main_visual__image').slick({
+						autoplay: true,
+						dots: false,
+						autoplaySpeed: 6000,
+						arrows: false,
+						pauseOnFocus: false,
+						pauseOnHover: false,
+						fade: true
+				});
+		}
+		// Gallery Index
+		if($('.gallery .gallery__slider').length) {
+				$('.gallery .gallery__slider').slick({
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						autoplay: true,
+						dots: true,
+						autoplaySpeed: 4000,
+						prevArrow: '<p  class="slick-prev"><button type="button">Previous</button></p>',
+						nextArrow: '<p  class="slick-next"><button type="button">next</button></p>',
+						responsive: [
+								{
+									breakpoint: 750,
+									settings: {
+										slidesToShow: 1,
+										slidesToScroll: 1,
+										centerMode: true,
+										centerPadding: '50px',
+										infinite: true,
+										dots: true
+									}
+								},
+						]
+				});
+				$('.gallery .slick-dots').wrap('<div class="slick-control"></div>')
+				$('.gallery .slick-control').prepend($('.gallery .slick-prev'));
+				$('.gallery .slick-control').append($('.gallery .slick-next'));
+		}
+		window.onload = googleCalendarSet;
+		function googleCalendarSet(){
+			var calendarCode1 = '<iframe src="https://calendar.google.com/calendar/embed?';
+			var calenderCode2 = 'height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=aHQzamxmYWFjNWxmZDYyNjN1bGZoNHRxbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23B39DDB&amp;color=%230B8043&amp;showTitle=0&amp;title=VISCA%20CLINIC%20%E3%81%AE%E8%A8%BA%E7%99%82%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC&amp;showTabs=0&amp;showPrint=0&amp;showTz=0&amp;showCalendars=0&amp;showNav=0&amp;showDate=1" style="border: 0" width="480" height="501" frameborder="0" scrolling="no"></iframe>'
+			var today = new Date;
+			var myYear = today.getFullYear();
+			var myMonth = today.getMonth()+1;
+			var nextMonth = myMonth+1;
+			if(nextMonth>12){nextMonth-=12;myYear+=1;};
+			if(nextMonth<10){nextMonth = "0"+nextMonth;};
+			var dates = "dates="+String(myYear)+String(nextMonth)+"01/"+String(myYear)+String(nextMonth)+"01&amp;";
+			document.getElementById("calendar_2").innerHTML = calendarCode1+dates+calenderCode2;
+			document.getElementById("calendar_1").innerHTML = calendarCode1+calenderCode2;
+		}

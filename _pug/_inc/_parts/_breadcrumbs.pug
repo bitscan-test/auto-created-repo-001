@@ -1,0 +1,14 @@
+.pankuzu
+	.container
+		p
+			a.line(href!='/<?= $dir; ?>') TOP
+			| 　>　
+			//- |  #{jp}
+			//- 第2階層以下
+			each val, index in dirArray
+				if typeof meta[val] !== 'undefined' && meta[val].pagetype !== 'home'
+					if (index === dirArray.length - 1)
+						|  #{jp}
+					else
+						a.line(href= val)= meta[val].pageName
+						| 　>　

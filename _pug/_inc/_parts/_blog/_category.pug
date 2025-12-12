@@ -1,0 +1,21 @@
+.m-blog_main
+	h2.m-blog_archiveTtl
+		span.sub_ttl.animation.fadeInLft 新着情報
+		span.is-en.animation.fadeInLft CATEGORY
+	h2.m-blog_archiveTtl
+		span.sub_ttl.animation.fadeInLft 2020年8月
+		span.is-en.animation.fadeInLft ARCHIVE
+	.m-blog_article
+		- for (var i = 0; i < 16; i++)
+			article
+				a.m-blog_frame(href="./detail.html")
+					p.m-blog_pic: img(src!='/<?= $dir; ?>assets/images/subject_06.jpg' alt="記事タイトル")
+					.m-blog_cont
+						.m-blog_option
+							p.m-blog_category: span コラム
+							time.m-blog_date: span 2020-08-28
+						h2.m-blog_title [ #{i} ] ---- 記事タイトル記事タイトル記事タイトル記事
+						p.m-blog_text [ #{i} ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト
+
+	nav.m-pagination
+		.js-smartpaginator.m-pagination_list

@@ -1,0 +1,40 @@
+//-
+	---------------------------------------------------------
+	ページ共通の変数を定義
+	---------------------------------------------------------
+block setVar
+	- var pageUrl
+	- var layout
+	- var imgPath = "/assets/images"
+	- var bodyAttributes = {}
+include ../_function/_create_dir_array
+
+//-
+	---------------------------------------------------------
+	html
+	---------------------------------------------------------
+doctype html
+html(lang="ja")
+	include _head
+	body&attributes(bodyAttributes)
+
+
+		
+		
+		div#contents
+			//-
+				---------------------------------------------------------
+				コンテンツ
+				---------------------------------------------------------
+			main
+				block main
+
+
+
+		//-
+			---------------------------------------------------------
+			Javascript
+			---------------------------------------------------------
+		block scriptBefore
+		| <?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		block script

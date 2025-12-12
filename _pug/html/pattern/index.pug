@@ -1,0 +1,39 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'pattern'
+	- en = 'pattern'
+	- jp = 'パターン'
+	- pageUrl = '/pattern/'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-pattern'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['pattern']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	// link
+	include ../../_inc/_parts/_pattern/_link
+	// type
+	include ../../_inc/_parts/_pattern/_type
+
+	// end Content
+						
+block script
+	script.

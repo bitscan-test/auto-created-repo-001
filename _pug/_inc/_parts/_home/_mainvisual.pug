@@ -1,0 +1,49 @@
+section.main_visual
+	.main_visual__image
+		picture
+			source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/main_visual01_sp.jpg')
+			img(src!='/<?= $dir; ?>assets/images/main/main_visual01.jpg' alt='')
+		picture
+			source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/main_visual02_sp.jpg')
+			img(src!='/<?= $dir; ?>assets/images/main/main_visual02.jpg' alt='')
+		picture
+			source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/main_visual03_sp.jpg')
+			img(src!='/<?= $dir; ?>assets/images/main/main_visual03.jpg' alt='')
+		picture
+			source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/main_visual04_sp.jpg')
+			img(src!='/<?= $dir; ?>assets/images/main/main_visual04.jpg' alt='')
+	p.main_visual__lead.animation.fadeInRgt 患者さまに寄り添い、<br>お口の健康をサポートします
+	.table__schedule.animation.fadeInUp
+		table
+			thead
+				tr
+					th 診療時間
+					th 月
+					th 火
+					th 水
+					th 木
+					th 金
+					th 土
+					th 日
+			tbody
+				tr
+					th 09:00～12:30
+					td ●
+					td ●
+					td.color_black ／
+					td ●
+					td ●
+					td.color_black ／
+					td.color_black ／
+				tr
+					th 14:00～18:00
+					td ●
+					td ●
+					td.color_black ／
+					td ●
+					td ★
+					td.color_black ／
+					td.color_black ／
+		p.table__note
+			span 休診日：水曜、土曜、日曜
+			span ★：午後は17:00まで診療

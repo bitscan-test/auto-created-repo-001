@@ -1,0 +1,148 @@
+{
+  "/": {
+    "siteName": "WP プレーン",
+    "pageName": "HOME",
+    "pagetype": "home",
+    "title":"<?= $init['meta']['home']['title'] ?>",
+    "description":"<?= $init['meta']['home']['description'] ?>",
+    "keyword":"<?= $init['meta']['home']['keyword'] ?>",
+    "twitterId":"",
+    "ogImage":"<?= $init['clinic']['url'] ?>images/cmn/pic_ogp.jpg"
+  },
+  "/_error/404.html": {
+    "pagetype": "normal",
+    "pageName": "ページが見つかりません",
+    "title": "<?= $init['meta']['404']['title'] ?>",
+    "description": "<?= $init['meta']['404']['description'] ?>",
+    "keyword": "<?= $init['meta']['404']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/services/": {
+    "pagetype": "normal",
+    "pageName": "診療案内",
+    "title": "<?= $init['meta']['services']['title'] ?>",
+    "description": "<?= $init['meta']['services']['description'] ?>",
+    "keyword": "<?= $init['meta']['services']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/staff/": {
+    "pagetype": "normal",
+    "pageName": "院長・スタッフ",
+    "title": "<?= $init['meta']['staff']['title'] ?>",
+    "description": "<?= $init['meta']['staff']['description'] ?>",
+    "keyword": "<?= $init['meta']['staff']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/facilities/": {
+    "pagetype": "normal",
+    "pageName": "院内紹介",
+    "title": "<?= $init['meta']['facilities']['title'] ?>",
+    "description": "<?= $init['meta']['facilities']['description'] ?>",
+    "keyword": "<?= $init['meta']['facilities']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/facilities_5/": {
+    "pagetype": "normal",
+    "pageName": "院内・設備",
+    "title": "<?= $init['meta']['facilities']['title'] ?>",
+    "description": "<?= $init['meta']['facilities']['description'] ?>",
+    "keyword": "<?= $init['meta']['facilities']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/equipments/": {
+    "pagetype": "normal",
+    "pageName": "設備紹介",
+    "title": "<?= $init['meta']['equipments']['title'] ?>",
+    "description": "<?= $init['meta']['equipments']['description'] ?>",
+    "keyword": "<?= $init['meta']['equipments']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/access/": {
+    "pagetype": "normal",
+    "pageName": "アクセス",
+    "title": "<?= $init['meta']['access']['title'] ?>",
+    "description": "<?= $init['meta']['access']['description'] ?>",
+    "keyword": "<?= $init['meta']['access']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/blog/": {
+    "pagetype": "normal",
+    "pageName": "ブログ",
+    "title": "<?= $init['meta']['blog']['title'] ?>",
+    "description": "<?= $init['meta']['blog']['description'] ?>",
+    "keyword": "<?= $init['meta']['blog']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/blog/detail.html": {
+    "pagetype": "normal",
+    "pageName": "ブログ詳細",
+    "title": "<?= $init['meta']['blog']['title'] ?>",
+    "description": "<?= $init['meta']['blog']['description'] ?>",
+    "keyword": "<?= $init['meta']['blog']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/blog/category.html": {
+    "pagetype": "normal",
+    "pageName": "ブログアーカイブ",
+    "title": "<?= $init['meta']['blog']['title'] ?>",
+    "description": "<?= $init['meta']['blog']['description'] ?>",
+    "keyword": "<?= $init['meta']['blog']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/pattern/": {
+    "pagetype": "normal",
+    "pageName": "パターン",
+    "title": "<?= $init['meta']['pattern']['title'] ?>",
+    "description": "<?= $init['meta']['pattern']['description'] ?>",
+    "keyword": "<?= $init['meta']['pattern']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/implant/": {
+    "pagetype": "normal",
+    "pageName": "インプラント",
+    "title": "<?= $init['meta']['implant']['title'] ?>",
+    "description": "<?= $init['meta']['implant']['description'] ?>",
+    "keyword": "<?= $init['meta']['implant']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/whitening/": {
+    "pagetype": "normal",
+    "pageName": "ホワイトニング",
+    "title": "<?= $init['meta']['whitening']['title'] ?>",
+    "description": "<?= $init['meta']['whitening']['description'] ?>",
+    "keyword": "<?= $init['meta']['whitening']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/mushiba/": {
+    "pagetype": "normal",
+    "pageName": "虫歯",
+    "title": "<?= $init['meta']['mushiba']['title'] ?>",
+    "description": "<?= $init['meta']['mushiba']['description'] ?>",
+    "keyword": "<?= $init['meta']['mushiba']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/mushiba/": {
+    "pagetype": "normal",
+    "pageName": "矯正歯科",
+    "title": "<?= $init['meta']['mushiba']['title'] ?>",
+    "description": "<?= $init['meta']['mushiba']['description'] ?>",
+    "keyword": "<?= $init['meta']['mushiba']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/konkan/": {
+    "pagetype": "normal",
+    "pageName": "根管治療",
+    "title": "<?= $init['meta']['konkan']['title'] ?>",
+    "description": "<?= $init['meta']['konkan']['description'] ?>",
+    "keyword": "<?= $init['meta']['konkan']['keyword'] ?>",
+    "ogImage": ""
+  },
+  "/shisyu/": {
+    "pagetype": "normal",
+    "pageName": "歯周病治療",
+    "title": "<?= $init['meta']['shisyu']['title'] ?>",
+    "description": "<?= $init['meta']['shisyu']['description'] ?>",
+    "keyword": "<?= $init['meta']['shisyu']['keyword'] ?>",
+    "ogImage": ""
+  }
+}

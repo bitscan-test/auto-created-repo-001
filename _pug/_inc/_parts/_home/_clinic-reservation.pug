@@ -1,0 +1,19 @@
+section.address
+	.container
+		.address__inner
+			.address__col.animation.fadeInUp
+				p.address__ttl お電話でのご予約
+				p.address__phone
+					a.js-tap.is-tel(href!="tel:<?= $init['clinic']['tel_num'] ?>") <?= $init['clinic']['tel_num'] ?>
+				p.address__time
+					span 受付時間   9:00 ～18:00
+					span 水曜、土曜、日曜は除く
+			.address__col.animation.fadeInDown
+				p.address__ttl インターネットでご予約
+				p.address__qrcode
+					span スマートフォンをご利用の方は
+					span
+						a(href='https://www.visca.co.jp/') QRコードの読み込みからもご予約できます。
+				p.address__btn
+					a.js-tap.is-web(href!="<?= $init['clinic']['webform'] ?>" target="_blank") 初診の方はこちら
+					a(href='#') 再診の方はこちら

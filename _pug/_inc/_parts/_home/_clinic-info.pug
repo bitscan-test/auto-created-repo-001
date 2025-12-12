@@ -1,0 +1,41 @@
+section.information
+  .container
+    .information__inner
+      .information__table
+        .information__cnt.animation.fadeInLft
+          table
+            tbody
+              tr
+                th 医院名
+                td <?= $init['clinic']['clinic_name'] ?>
+              tr
+                th 所在地
+                td 〒<?= $init['clinic']['postal'].'<br>'.$init['clinic']['address'] ?>
+              tr
+                th 電話番号
+                td: a.js-tap.is-tel(href!="tel:<?= $init['clinic']['tel_num'] ?>") <?= $init['clinic']['tel_num'] ?>
+              tr
+                th URL
+                td <?= $init['clinic']['url'] ?>
+              tr
+                th 診療内容
+                td むし歯／根管治療／歯周病／入れ歯／小児歯科／予防・クリーニング／歯科口腔外科／インプラント／矯正歯科／小児矯正／審美治療／ホワイトニング
+        .information__img.animation.fadeInRgt
+          .information__img_inside
+            img(src!='/<?= $dir; ?>assets/images/main/nap_img.jpg')
+      .information__case
+        .information__case__item.animation.fadeInDown
+          h3.information__case__ttl 各種保険取り扱い
+          p.information__case__txt 保険診療と自由診療を取り扱っております。自由診療は選択肢の一環としてご説明し、ご希望の方に行います。
+        .information__case__item.animation.fadeInUp
+          h3.information__case__ttl 予約優先診療
+          p.information__case__txt
+            | 待ち時間軽減のため、原則予約制で診療しています。ご予約はお電話(
+            a.js-tap.is-tel(href!="tel:<?= $init['clinic']['tel_num'] ?>") <?= $init['clinic']['tel_num'] ?>
+            | )にてご連絡ください。
+        .information__case__item.animation.fadeInDown
+          h3.information__case__ttl 急患随時受付
+          p.information__case__txt
+            | 柔軟に対応しております。混雑している場合はお待たせすることもございますので、ご来院いただく前に一度お電話(
+            a.js-tap.is-tel(href!="tel:<?= $init['clinic']['tel_num'] ?>") <?= $init['clinic']['tel_num'] ?>
+            | )にてお問い合わせください。

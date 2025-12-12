@@ -1,0 +1,89 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'facilities'
+	- en = 'FACILITIES'
+	- jp = '院内紹介'
+	- pageUrl = '/facilities_5/'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-facilities'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['facilities']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	// inside
+	include ../../_inc/_parts/_facilities/_inside
+	// gairai
+	include ../../_inc/_parts/_facilities/_gairai
+	// device
+	include ../../_inc/_parts/_facilities/_device
+	// emergency
+	include ../../_inc/_parts/_facilities/_emergency
+
+	// end Content
+						
+block script
+	script.
+		// Gallery CLINIC
+		if($('.gallery_clinic__slider').length) {
+				$('.gallery_clinic__slider').slick({
+						adaptiveHeight: true,
+						asNavFor: '.gallery_clinic__cnt ul,.gallery_clinic__thumb ul',
+						dots: true,
+						fade: true,
+						prevArrow: '<p  class="slick-prev"><button type="button">Previous</button></p>',
+						nextArrow: '<p  class="slick-next"><button type="button">next</button></p>',
+
+				});
+				$('.gallery_clinic__slider .slick-dots').wrap('<div class="slick-control"></div>')
+				$('.gallery_clinic__slider .slick-control').prepend($('.gallery_clinic__slider .slick-prev'));
+				$('.gallery_clinic__slider .slick-control').append($('.gallery_clinic__slider .slick-next'));
+		}
+		if($('.gallery_clinic__cnt ul').length) {
+				$('.gallery_clinic__cnt ul').slick({
+						asNavFor: '.gallery_clinic__slider,.gallery_clinic__thumb ul',
+						dots: false,
+						fade: true,
+						arrows: false,
+						adaptiveHeight: true,
+				});
+		}
+		if($('.gallery_clinic__thumb ul').length) {
+				$('.gallery_clinic__thumb ul').slick({
+						slidesToShow: 5,
+						slidesToScroll: 1,
+						infinite: true,
+						adaptiveHeight: true,
+						asNavFor: '.gallery_clinic__slider,.gallery_clinic__cnt ul',
+						centerMode: true,
+						centerPadding: '0',
+						focusOnSelect: true,
+						dots: false,
+						arrows: false,
+						responsive: [
+								{
+									breakpoint: 750,
+									settings: {
+										slidesToShow: 3,
+									},
+								},
+						]
+				});
+		}

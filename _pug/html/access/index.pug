@@ -1,0 +1,45 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'access'
+	- en = 'ACCESS'
+	- jp = 'アクセス'
+	- pageUrl = '/access/'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-access'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['access']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	// illustmap
+	include ../../_inc/_parts/_access/_illustmap
+	// by
+	include ../../_inc/_parts/_access/_by
+	// clinc-info
+	include ../../_inc/_parts/_home/_clinic-info
+	// clinic-reservation
+	include ../../_inc/_parts/_home/_clinic-reservation
+	// root
+	include ../../_inc/_parts/_access/_root
+
+	// end Content
+						
+block script
+	script.

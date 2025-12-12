@@ -1,0 +1,42 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'services'
+	- en = 'SERVICES'
+	- jp = '診療案内'
+	- pageUrl = '/services/'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-services'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['services']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+
+	// menu
+	include ../../_inc/_parts/_services/_menu
+	// single
+	include ../../_inc/_parts/_services/_single
+	// banner
+	include ../../_inc/_parts/_services/_banner
+
+	// end Content
+						
+block script
+	script.

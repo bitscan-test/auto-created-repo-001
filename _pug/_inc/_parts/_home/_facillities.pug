@@ -1,0 +1,33 @@
+section.gallery
+	.container
+		.section__ttl.section__ttl--fz100.align_rgt
+			p.is-en.pc__mb__0.animation.fadeInLft CLINIC
+			h2.sub_ttl.animation.fadeInLft 院内・設備
+		.gallery__inner.animation.fadeInUp
+			.gallery__slider
+				.gallery__item
+					p.gallery__img
+						img(src!='/<?= $dir; ?>assets/images/main/clinic_slide_1.jpg' alt='診療室')
+					p.gallery__ttl
+						a(href='#') 診療室
+					p.gallery__txt まわりの方を気にすることなく治療を受けていただけます。
+				.gallery__item
+					p.gallery__img
+						img(src!='/<?= $dir; ?>assets/images/main/facility_01.jpg' alt='デジタルレントゲン')
+					p.gallery__ttl
+						a(href='#') デジタルレントゲン
+					p.gallery__txt 従来のレントゲンと比べて被ばく量が1/10ほどに抑えられるため、身体への負担が少なく済むことが特徴です。
+				.gallery__item
+					p.gallery__img
+						img(src!='/<?= $dir; ?>assets/images/main/facility_02.jpg' alt='滅菌器')
+					p.gallery__ttl
+						a(href='#') 滅菌器
+					p.gallery__txt お口に入る器具はすべてこの滅菌器を通した清潔なものを使い、患者さまごと・使用ごとに取り換え、院内感染防止に努めています。
+				.gallery__item
+					p.gallery__img
+						img(src!='/<?= $dir; ?>assets/images/main/clinic_slide_2.jpg' alt='待合室')
+					p.gallery__ttl
+						a(href='#') 待合室
+					p.gallery__txt 明るく清潔感のある空間づくりを心がけております。
+			.see_more.align_rgt
+				a.btn__arrow(href!='/<?= $dir; ?>facilities/') 院内・設備

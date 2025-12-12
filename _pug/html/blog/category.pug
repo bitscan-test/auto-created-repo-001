@@ -1,0 +1,37 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'blog'
+	- en = 'BLOG'
+	- jp = 'ブログ アーカイブ'
+	- pageUrl = '/blog/category.html'
+	- pageDir = layout + '/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-blog'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['blog']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	.container.m-single
+		include ../../_inc/_parts/_blog/_category
+		include ../../_inc/_parts/_blog/_navi
+	// end Content
+						
+block script
+	//- script.

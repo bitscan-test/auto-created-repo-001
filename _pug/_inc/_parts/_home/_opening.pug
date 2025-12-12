@@ -1,0 +1,34 @@
+| <?php if($openFlg || $preFlg):?>
+section.opening
+	.container
+		.opening__inner
+			p.is-en.animation.fadeInUp OPENING
+			| <?php if($openFlg):?>
+			h2.is-jp.animation.fadeInUp 開院のお知らせ
+			p.letter.animation.fadeInUp
+				| 新宿エリアに規開院する
+				br.sp_only
+				| ビスカ歯科クリニックです。
+				br
+				| むし歯・歯周病はもちろん、
+				br.sp_only
+				| インプラントや矯正などの専門的な治療もおまかせください。
+				br.sp_only
+				| どうぞ宜しくお願いいたします。
+			| <?php endif; ?>
+			| <?php if($preFlg):?>
+			.opening__notice.animation.fadeInUp
+				h2.opening__notice__ttl 内覧会のお知らせ
+				p.opening__notice__txt
+					| 開院に先がけて院内を見学いただける
+					br.sp_only
+					| 内覧会を開催いたします。
+					br
+					| ご予約不要ですので
+					br.sp_only
+					| お気軽にお越しください。
+				p.opening__notice__time
+					span 1/19(火) - 1/20(水)
+					span 10:00 ～ 20:00
+			| <?php endif; ?>
+| <?php endif; ?>

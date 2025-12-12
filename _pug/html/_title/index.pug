@@ -1,0 +1,105 @@
+extends /_pug/_inc/_layout_title
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'access'
+	- caps = 'ACCESS'
+	- pageUrl = '/access/'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-access'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+	
+	section.message(style="margin-top:200px")
+		.section__ttl.align_rgt
+			.container
+				p.is-en.animation.fadeInRgt MESSAGE
+				h2.sub_ttl.animation.fadeInRgt メッセージ
+		.message__inner
+			.container
+				.message__cnt
+					.message__cnt__img.animation.fadeInLft
+						picture
+							source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/message_img_sp.png')
+							img(src!='/<?= $dir; ?>assets/images/main/message_img.jpg' alt='')
+					.message__cnt__txt.animation.fadeInRgt
+						p.message__cnt__ttl
+							| コミュニケーションを重視し
+							br.sp_only
+							| 患者さまファーストな診療を
+						p.text
+							| 当院は父と私の２代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。
+							br
+							| おかげさまで３世代、４世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。
+							br
+							| 今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、
+							br
+							| ご期待以上の歯科治療をお届けできるように努めてまいります。
+
+			
+	section.message(style="margin-top:200px")
+		//- .section__ttl_type01.is-center.is-nomgbtm
+			h2.sub_ttl.animation.fadeInRgt メッセージ
+			p.is-en: span.animation.fadeInLft #[em M]ESSAG#[em E]
+		.section__ttl_type01.is-vertical
+			p.is-en: span.animation.fadeInLft #[em M]ESSAG#[em E]
+			h2.sub_ttl.animation.fadeInRgt メッセージ
+		.message__inner
+			.container
+				.message__cnt
+					.message__cnt__img.animation.fadeInLft
+						picture
+							source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/message_img_sp.png')
+							img(src!='/<?= $dir; ?>assets/images/main/message_img.jpg' alt='')
+					.message__cnt__txt.animation.fadeInRgt
+						p.message__cnt__ttl
+							| コミュニケーションを重視し
+							br.sp_only
+							| 患者さまファーストな診療を
+						p.text
+							| 当院は父と私の２代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。
+							br
+							| おかげさまで３世代、４世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。
+							br
+							| 今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、
+							br
+							| ご期待以上の歯科治療をお届けできるように努めてまいります。
+
+	section.message(style="margin-top:200px")
+		.section__ttl_type02
+			p.is-en.animation.fadeInLft: span MESSAGE
+			h2.sub_ttl: span.animation.fadeInRgt メッセージ
+		.message__inner
+			.container
+				.message__cnt
+					.message__cnt__img.animation.fadeInLft
+						picture
+							source(media='(max-width:750px)' srcset!='/<?= $dir; ?>assets/images/main/message_img_sp.png')
+							img(src!='/<?= $dir; ?>assets/images/main/message_img.jpg' alt='')
+					.message__cnt__txt.animation.fadeInRgt
+						p.message__cnt__ttl
+							| コミュニケーションを重視し
+							br.sp_only
+							| 患者さまファーストな診療を
+						p.text
+							| 当院は父と私の２代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。
+							br
+							| おかげさまで３世代、４世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。
+							br
+							| 今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、
+							br
+							| ご期待以上の歯科治療をお届けできるように努めてまいります。
+
+	.footer
+	// end Content
+						
+block script
+	script.

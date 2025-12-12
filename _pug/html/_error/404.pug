@@ -1,0 +1,42 @@
+extends /_pug/_inc/_layout
+
+//-
+	---------------------------------------------------------
+	ページ固有の変数を定義
+	---------------------------------------------------------
+append setVar
+	- layout = 'error'
+	- en = 'NOT FOUND'
+	- jp = 'ページが見つかりません'
+	- pageUrl = '/_error/404.html'
+	- pageDir = '_error/404.html'
+	- dirArray = createDirArray(pageUrl)
+	- bodyAttributes.id = 'p-error'
+	
+
+//-
+	---------------------------------------------------------
+	コンテンツ
+	---------------------------------------------------------
+block main
+
+	// headding
+	h1.headding <?= $init['meta']['404']['h1'] ?>
+
+	// mainvisual
+	include ../../_inc/_parts/_scd_mainvisual
+	// breadcrumbs
+	include ../../_inc/_parts/_breadcrumbs
+	
+	section.error
+		.container
+			.section__ttl.pc__mb__55.sp__mb__30
+				h2.error_ttl.animation.fadeInLft お探しのページが見つかりませんでした
+			p.error-text.pc__mb__55.sp__mb__30 誠に申し訳ございませんが、アクセスいただいたURLが見つかりません。<br>移動もしくは削除された可能性があります。
+			.see_more.align_center.pc__mb__55.sp__mb__30
+				a.btn__arrow(href!='/<?= $dir; ?>') TOPページへ戻る
+
+	// end Content
+						
+block script
+	script.
