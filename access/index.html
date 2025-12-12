@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include_once(__DIR__."/../init.php"); ?>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		<?= $init['meta']['access']['title'] ?>
+	</title>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+	<meta name="description" content="<?= $init['meta']['access']['description'] ?>">
+	<meta name="keywords" content="<?= $init['meta']['access']['keyword'] ?>">
+	<meta property="og:title" content="<?= $init['meta']['access']['title'] ?>">
+	<meta property="og:description" content="<?= $init['meta']['access']['description'] ?>">
+	<meta property="og:url" content="<?= $init['clinic']['url'] ?>access/">
+	<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+	<meta property="og:type" content="article">
+	<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+	<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>access/",
+							"name": "<?= $init['meta']['access']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+</head>
+
+<body id="p-access">
+	<div class="wrapper" id="wrapper">
+		<?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+		<main class="main__contents" id="main">
+			<!-- headding-->
+			<h1 class="headding">
+				<?= $init['meta']['access']['h1'] ?>
+			</h1>
+			<!-- mainvisual-->
+			<header class="banner_sub">
+				<div class="banner_sub__img">
+					<picture>
+						<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+					</picture>
+				</div>
+				<div class="banner_sub__ttl">
+					<p class="animation fadeInLft">アクセス</p>
+					<p class="is-en sub_ttl animation fadeInLft">ACCESS</p>
+				</div>
+			</header>
+			<!-- breadcrumbs-->
+			<div class="pankuzu">
+				<div class="container">
+					<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　 アクセス
+					</p>
+				</div>
+			</div>
+			<!-- illustmap-->
+			<section class="access">
+				<div class="container">
+					<div class="section__ttl pc__mb__110 sp__mb__30">
+						<p class="animation fadeInLft"><div class="title_pc pc_only">MAP</div></p>
+						<p class="animation fadeInLft"><div class="title_sp sp_only">MAP</div></p>
+						<h2 class="is-en sub_ttl animation fadeInLft">アクセスマップ</h2>
+					</div>
+
+						<div class="footer__map animation fadeInRgt">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6665.039457555334!2d130.47970557714225!3d33.35749493454292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541a5d0f0f4ab73%3A0x9d19f2f709399894!2z44GN44Gf44GM44KP5q2v56eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1671582390709!5m2!1sja!2sjp" width="600" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+
+					<div class="see_more align_center"><a class="btn__arrow" href="https://goo.gl/maps/EiahfUCaibSkmtQf7" target="_blank">Google Map</a></div>
+					<div class="blog__row pc__mb__200">
+						<div class="blog__col blog__col--md3 animation fadeInLft">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/acc1.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__col blog__col--md3 animation fadeInUp">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/acc2.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__col blog__col--md3 animation fadeInRgt">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/acc3.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="access__infor">
+						<h3 class="animation fadeInUp">交通情報</h3>
+						<ul class="animation fadeInUp">
+							<li>
+								<h4 class="icon_car">車でのアクセス</h4>
+								<p>専用駐車場10台完備</p>
+							</li>
+							<li>
+								<h4 class="icon_bus">バスでのアクセス</h4>
+								<p>旭地区循環線：鳥栖市ミニバス【村田郵便局前】バス停から徒歩3分
+									<br>西鉄バス【旭小学校前】バス停から徒歩3分
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- by-->
+			<!-- clinc-info-->
+			<section class="information">
+				<div class="container">
+					<div class="information__inner">
+						<div class="information__table">
+							<div class="information__cnt animation fadeInLft">
+								<table>
+									<tbody>
+										<tr>
+											<th>医院名</th>
+											<td>
+												<?= $init['clinic']['clinic_name'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>所在地</th>
+											<td>〒
+												<?= $init['clinic']['postal'].'<br>'.$init['clinic']['address'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>電話番号</th>
+											<td><a class="js-tap is-tel" href="tel:<?= $init['clinic']['tel_num'] ?>">
+													<?= $init['clinic']['tel_num'] ?>
+												</a></td>
+										</tr>
+										<tr>
+											<th>MAIL</th>
+											<td><p><a href="mailto:info.kdc@kitagawa-shika.jp">info.kdc@kitagawa-shika.jp</a></p></td>
+										</tr>
+										<tr>
+											<th>URL</th>
+											<td>
+												<?= $init['clinic']['url'] ?>
+											</td>
+										</tr>
+										<tr>
+											<th>診療内容</th>
+											<td>むし歯／根管治療／歯周病／入れ歯(義歯)／小児歯科／予防・クリーニング／歯科口腔外科／<?php /* インプラント／ */ ?>審美治療／ホワイトニング／各種マウスピース製作／マタニティ歯科診療／各種歯科検診
+											</td>
+										</tr>
+										<tr>
+											<th>施設基準</th>
+											<td>当医院は、以下の施設基準等に適合している旨、厚生労働省地方(支)局に届出を行っています。
+												<br><a href="/<?= $dir; ?>assets/pdf/kijun.pdf?<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/assets/pdf/kijun.pdf') ?>" target="_blank" style="text-decoration: underline;">詳しくはこちら＞</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="information__img animation fadeInRgt">
+								<div class="information__img_inside"><img
+										src="/<?= $dir; ?>assets/images/nap.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- root-->
+			<!-- end Content-->
+		</main>
+		<?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+	</div>
+	<?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+	<script></script>
+</body>
+
+</html>
