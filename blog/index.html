@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['blog']['title'] ?></title> 
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['blog']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['blog']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['blog']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['blog']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>blog/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article"> 
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>blog/",
+							"name": "<?= $init['meta']['blog']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-blog">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['blog']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="is-en animation fadeInLft">BLOG</p>
+						<p class="sub_ttl animation fadeInLft">ブログ</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　 ブログ
+						</p>
+					</div>
+				</div>
+				<div class="container m-single">
+					<div class="m-blog_main">
+						<div class="m-blog_article">
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 0 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 0 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 1 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 1 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 2 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 2 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 3 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 3 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 4 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 4 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 5 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 5 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 6 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 6 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 7 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 7 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 8 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 8 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 9 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 9 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 10 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 10 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 11 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 11 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 12 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 12 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 13 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 13 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 14 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 14 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+							<article><a class="m-blog_frame" href="./detail.html">
+									<p class="m-blog_pic"><img src="/<?= $dir; ?>assets/images/subject_06.jpg" alt="記事タイトル"></p>
+									<div class="m-blog_cont">
+										<div class="m-blog_option">
+											<p class="m-blog_category"><span>コラム</span></p>
+											<time class="m-blog_date"><span>2020-08-28</span></time>
+										</div>
+										<h2 class="m-blog_title">[ 15 ] ---- 記事タイトル記事タイトル記事タイトル記事</h2>
+										<p class="m-blog_text">[ 15 ] ---- 記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
+									</div></a></article>
+						</div>
+						<nav class="m-pagination">
+							<div class="js-smartpaginator m-pagination_list"></div>
+						</nav>
+					</div>
+					<aside class="m-blog_navi">
+						<section class="m-blog_naviBlk">
+							<h3 class="m-blog_naviTtl is-category">カテゴリ</h3>
+							<ul class="m-blog_naviList">
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">お知らせ <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">コラム <span>（00件）</span></a></li>
+							</ul>
+						</section>
+						<section class="m-blog_naviBlk">
+							<h3 class="m-blog_naviTtl is-archive">月別アーカイブ</h3>
+							<ul class="m-blog_naviList">
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年8月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年7月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年6月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年5月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年4月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2019年12月 <span>（00件）</span></a></li>
+							</ul>
+						</section>
+					</aside>
+				</div>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+	</body>
+</html>

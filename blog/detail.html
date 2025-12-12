@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['blog/detail.html']['title'] ?></title> 
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['blog/detail.html']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['blog/detail.html']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['blog/detail.html']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['blog/detail.html']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>blog/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article"> 
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>blog/",
+							"name": "<?= $init['meta']['blog/detail.html']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-blog">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['blog/detail.html']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="is-en animation fadeInLft">BLOG</p>
+						<p class="sub_ttl animation fadeInLft">ブログ 記事</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　<a class="line" href="/blog/">ブログ</a>　>　 ブログ 記事
+						</p>
+					</div>
+				</div>
+				<div class="container m-single">
+					<div class="m-blog_main">
+						<div class="m-blog_heading">
+							<div class="m-blog_option">
+								<p class="m-blog_category"><span>コラム</span></p>
+								<time class="m-blog_date"><span>2020-08-28</span></time>
+							</div>
+							<h1 class="m-blog_title">記事タイトル記事タイトル記事タイトル</h1>
+							<figure class="m-blog_catch"><img src="https://placehold.jp/600x400.png" alt=""></figure>
+						</div>
+						<div class="m-blog_body">
+							<div class="m-inner">
+								<h1>見出し1見出し1見出し1見出し1見出し1見出し1見出し1見出し1見出し1</h1>
+								<h2>見出し2見出し2見出し2見出し2見出し2見出し2見出し2見出し2見出し2見出し2見出し2</h2>
+								<h3>見出し3見出し3見出し3見出し3</h3>
+								<h4>見出し4</h4>
+								<h5>見出し5</h5>
+								<h6>見出し6</h6>
+								<ul>
+									<li><strong>ul テスト入力</strong></li>
+									<li><em>テスト入力２</em></li>
+								</ul>
+								<ol>
+									<li><strong>ol いいきいいう</strong></li>
+									<li>いいいいいい」</li>
+								</ol>
+								<p style="text-align: left;">左揃え</p>
+								<figure style="text-align: center;">中央揃え<img class="alignnone size-medium wp-image-26" src="https://placehold.jp/600x200.png" alt="テスト用です。"></figure>
+								<p style="text-align: right;">右揃え</p><a href="/news/17/">リンク</a>
+								<del>打消し線</del>
+								<hr><span style="color: #33cccc;">カラーフォント</span>テキストとしてペースト
+								<p style="padding-left: 40px;">インデント</p>
+								<iframe src="https://www.youtube.com/embed/4ytk_OgM9Dc" allowfullscreen="allowfullscreen" width="560" height="315" frameborder="0"></iframe>
+								<iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.171597490688!2d139.70870861525918!3d35.69739468019065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cc2c9de75ad%3A0xd3b769694c085d4!2z5pel5pys44OT44K544Kr5qCq5byP5Lya56S-!5e0!3m2!1sja!2sjp!4v1598422928478!5m2!1sja!2sjp" allowfullscreen="allowfullscreen" width="600" height="450" frameborder="0"></iframe>
+							</div>
+						</div>
+						<nav class="m-pager">
+							<ul class="m-pager_list">
+								<li class="m-pager_item is-prev"><a href="" rel="prev"><span>前の記事</span></a></li>
+								<li class="m-pager_item is-index"><a href="./"><span>一覧を見る</span></a></li>
+								<li class="m-pager_item is-disable"><a href="" rel="next"><span>次の記事</span></a></li>
+							</ul>
+						</nav>
+					</div>
+					<aside class="m-blog_navi">
+						<section class="m-blog_naviBlk">
+							<h3 class="m-blog_naviTtl is-category">カテゴリ</h3>
+							<ul class="m-blog_naviList">
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">お知らせ <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">コラム <span>（00件）</span></a></li>
+							</ul>
+						</section>
+						<section class="m-blog_naviBlk">
+							<h3 class="m-blog_naviTtl is-archive">月別アーカイブ</h3>
+							<ul class="m-blog_naviList">
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年8月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年7月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年6月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年5月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2020年4月 <span>（00件）</span></a></li>
+								<li><a class="line" href="/<?= $dir; ?>blog/category.html">2019年12月 <span>（00件）</span></a></li>
+							</ul>
+						</section>
+					</aside>
+				</div>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+	</body>
+</html>
