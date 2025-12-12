@@ -1,0 +1,747 @@
+/******************
+追加CSS
+各種サイトレイアウト用の汎用CSSセット
+説明：新旧テンプレート、セミオリジナル、プレミアム、他社制作サイトなどへのページ追加・修正時に、個別サイトのCSS逐次解析を回避、作業効率化の目的で以下定義するもの。
+クラス名が既存CSSと競合して問題となる場合など、適宜当該箇所調整の上使用。
+
+(URL for Local test only)
+http://localhost:81/web-test/experiment/ucolumn/
+
+設置例：
+<link rel='stylesheet' href='/<?= $dir; ?>css/style_subs_v02.css'>
+
+
+ 2023年1月4日 style_subs_v01.css
+ 2023年2月3日 style_subs_v02.css menu_btn追加
+ 2023年7月12日 style_subs_v02.css checklist flex-borderのレイアウト調整
+
+******************/
+
+
+/**********************************************************
+PC/SP 共用CSS
+**********************************************************/
+
+/** 共通カラー設定 **/
+:root {
+  --main-color: #345D7C;
+  --txt-color-on-bg: #fff; /* メインカラーを背景とした時のテキストカラー */
+}
+
+.mt_10  { margin-top:10px!important }
+.mt_20  { margin-top:20px!important }
+.mt_30  { margin-top:30px!important }
+.mt_50  { margin-top:50px!important }
+.mt_70  { margin-top:70px!important }
+.mt_100 { margin-top:100px!important }
+.mb_10  { margin-bottom:10px!important }
+.mb_20  { margin-bottom:20px!important }
+.mb_30  { margin-bottom:30px!important }
+.mb_50  { margin-bottom:50px!important }
+.mb_70  { margin-bottom:70px!important }
+.mb_100 { margin-bottom:100px!important }
+.center { text-align:center }
+.under  { border-bottom:1px solid #000 }
+.red    {color:#dc143c;}
+b {
+font-family:"Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+font-size:110%;
+}
+
+
+/* TITLE装飾 下線1色100px */
+.border01 {
+  position:relative;
+  line-height:1.3;
+  padding:0px;
+  text-align:center;
+  padding-bottom:10px;
+  }
+.border01:after {
+  position:absolute;
+  bottom:0;
+  left:calc(50% - 50px);
+  content: '';
+  width:100px;
+  border-bottom: 5px solid #ccc;
+  }
+
+/* TITLE装飾 下線2色100px */
+.border02 {
+  position:relative;
+  line-height:1.3;
+  padding:0px;
+  text-align:center;
+  padding-bottom:10px;
+  }
+.border02:before {
+  position:absolute;
+  bottom:0;
+  left:calc(50% - 50px);
+  content: '';
+  width:50px;
+  border-bottom: 5px solid #ccc;
+  }
+.border02:after {
+  position:absolute;
+  bottom:0;
+  left:50%;
+  content: '';
+  width:50px;
+  border-bottom: 5px solid var(--main-color);
+  }
+
+/* TITLE装飾 カギ括弧 */
+.border03 {
+  display:inline-block;
+  position:relative;
+  line-height:1.3;
+  padding:20px 30px;
+  text-align:center;
+  }
+.border03:before {
+  position:absolute;
+  top:0;
+  left:0;
+  content: '';
+  width:50px;
+  height:20px;
+  border-top: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+  }
+.border03:after {
+  position:absolute;
+  bottom:0;
+  right:0;
+  content: '';
+  width:50px;
+  height:20px;
+  border-right: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  }
+
+/* TITLE装飾 縦ラインマーカー */
+.border04{
+  border-left:5px solid var(--main-color);
+  padding-left:10px;
+  margin:0;
+  text-align:left;
+  }
+/* TITLE装飾 下線 */
+.border05{
+  border-bottom:1px solid #000;
+  }
+/* TITLE装飾 下線-inline- */
+.border06{
+  display:inline-block;
+  border-bottom:1px solid #000;
+  }
+/* TITLE装飾 横中央線 */
+.border07 {
+  display: flex;
+  align-items: center;
+  }
+.border07::before,.border07::after {
+  display: block;
+  content: ' ';
+  flex-grow: 1;
+  margin: 0 1em;
+  height: 2px;
+  background-color: var(--main-color);
+  }
+/* TITLE装飾 下線・ドット */
+.border08 {
+  background-image : linear-gradient(to right, var(--main-color) 4px, transparent 2px);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  }
+
+/**********************************************************
+media
+**********************************************************/
+
+@media screen and (min-width: 769px) {
+  .pc_none {display:none}
+  .wrap {	width:1024px; margin:0 auto;}
+  }
+@media screen and (max-width: 768px) {
+  .sp_none {display:none}
+  .wrap {	width:block;}
+  }
+
+
+/***************************************************************
+ucolumnSec (utility column section)
+各種サイトレイアウトに柔軟に設置・適応する為の汎用Sectionクラスセット
+
+■設置イメージ
+
+<section class="c-layout09">(←各サイトのレイアウトタグ例）
+  <div class="m-inner">(←各サイトのレイアウトタグ例）
+（この中に下のように設置）
+
+<section class="ucolumnSec">
+<div class="outerbox">
+<div class="numb">01</div>
+<div class="center mb_30"><h2>TITLE</h2></div>
+<div class="ucolumnFlex">
+  <div class="photo"><img src="" /></div>
+  <div class="txt">
+    <h3>TITLE</h3>
+    <p>説明文</p>
+  </div>
+</div>
+</div><!-- end outerbox -->
+</section>
+
+  </div>(←各サイトのレイアウトタグ例）
+</section>(←各サイトのレイアウトタグ例）
+
+■クラス説明
+
+・ucolumnSec：Section全体のクラス
+・outerbox：囲み枠、不要なら削除
+・numb：囲み枠右上に番号等、不要なら削除
+・ucolumnFlex：フレックス配置用
+  --- verticalクラス追加で縦配置、横長画像使用時等用
+  --- スマホ(max 768px）はdisplay:blockで縦配置
+・txt：説明文、そのほかを適宜配置
+  --- .txtをorder:2に指定
+・photo：画像用枠
+  --- 必ずright/leftクラスを指定
+  --- .photoの.leftをorder:1、.rightをorder:3に指定、.txtをorder:2に指定で左右表示分け
+  --- .txtの下に.photo配置でスマホ時H3や説明文の下に画像
+  --- .halfで半分サイズ
+****************************************************************/
+
+
+/*** h2 ***/
+.ucolumnSec h2{
+  margin-top:0;
+  font-size:30px;
+  }
+/*** h3 ***/
+.ucolumnSec h3{
+  font-size:21px;
+  margin-top:0;
+  }
+
+/*** outerbox 汎用囲み枠 ***/
+.outerbox {
+  border:1px solid #555;
+  padding:30px;
+  box-sizing:border-box;
+  position:relative;
+  }
+.outerbox .numb{
+  position:absolute;
+  top:-50px;
+  right:30px;
+  font-size:70px;
+  color:#ccc;
+  font-weight:700;
+  font-style:italic;
+  }
+
+/*** ucolumnFlex - Flex配置の画像とテキストボックス ***/
+.ucolumnFlex{
+  margin:0px auto;
+  padding:0;
+  max-width:100%;
+  display:flex;
+  }
+.ucolumnFlex .photo{
+  flex-basis: 40%;
+  }
+.ucolumnFlex .photo.half{
+  flex-basis: 20%;
+  /** display:block; margin:0 auto 20px!important; **/
+  }
+.ucolumnFlex .photo.left{
+  /** photo枠用のマージン **/
+  margin-left:0px;
+  margin-right:50px;
+  order:1;
+  }
+.ucolumnFlex .photo.right{
+  /** photo枠が右端のときのマージン **/
+  margin-left:50px;
+  margin-right:0px;
+  order:3;
+  }
+.ucolumnFlex .photo img{
+  width:100%;
+  }
+.ucolumnFlex.vertical {
+  /** verticalクラス、画像はオリジナルサイズの縦並びでセンタリング **/
+  display:block;
+  }
+.ucolumnFlex.vertical .photo{
+  width: 100%;
+  text-align:center;
+  margin-top:20px;
+  order:3;
+  }
+.ucolumnFlex.vertical .photo img{
+  max-width:100%;
+  width:auto;
+  }
+.ucolumnFlex .txt{
+  /** テキストボックス部分はリキッドレイアウト **/
+  flex: 1;
+  overflow:hidden;
+  order:2;
+  }
+.ucolumnFlex p{
+  line-height:1.7;
+  margin:0;
+  }
+
+/************ ucolumnSec スマホ ************/
+
+@media screen and (max-width: 768px) {
+
+.ucolumnSec {
+  padding:10px;
+  box-sizing:border-box;
+  }
+.ucolumnSec h2{
+  font-size:24px;
+  }
+.ucolumnSec h3{
+  font-size:18px;
+  }
+.ucolumnSec{
+  padding:10px;
+  box-sizing:border-box;
+  }
+.outerbox {
+  border:1px solid #555;
+  padding:10px;
+  box-sizing:border-box;
+  position:relative;
+  }
+.outerbox .numb{
+  position:absolute;
+  top:10px;
+  right:10px;
+  font-size:30px;
+  color:#ccc;
+  font-weight:700;
+  font-style:italic;
+  }
+
+.ucolumnFlex{
+  margin:0px auto;
+  padding:10px;
+  box-sizing:border-box;
+  max-width:100%;
+  display:block;
+  }
+.ucolumnFlex .photo,.ucolumnFlex .photo.left,.ucolumnFlex .photo.right{
+  width: 100%;
+  text-align:center;
+  margin:0 0 20px;
+  }
+.ucolumnFlex .photo img{
+  max-width:100%;
+  width:auto;
+  }
+.ucolumnFlex .photo.half img{
+  width: 50%;
+  }
+
+.ucolumnFlex .txt{
+  overflow:hidden;
+  margin-bottom:20px;
+  }
+.ucolumnFlex p{
+  line-height:1.7;
+  margin:0;
+  }
+
+}
+
+/************ ucolumnSec スマホ ここまで ************/
+/************ ucolumnSec        ここまで ************/
+
+
+
+/**********************************************************
+checklist
+・各種サイトレイアウトに柔軟に設置・適応する為の汎用リスト
+・従来のcheckbox2,checkbox3,checkbox4を統合
+・ul.checklist.xxxx クラス設定
+  circle:●を冒頭に表示
+  check:チェックボックスを冒頭に表示
+  num:連番
+  flex:要素数分横並び、スマホは解除
+  border:ボーダーで全体を囲む
+
+■設置イメージ
+<ul class="checklist circle flex border">
+<li><p>テストテストテスト</p></li>
+<li><p>テストテストテスト</p></li>
+</ul>
+**********************************************************/
+
+ul.checklist{
+  padding:0;
+  margin:0;
+  }
+ul.checklist.border{
+  padding:20px;
+  border:1px solid #555;
+  }
+ul.checklist.flex{
+  display:flex;
+  flex-wrap:wrap;
+  }
+ul.checklist.flex.border{
+  padding-bottom:30px;
+  }
+ul.checklist.flex li{
+  margin:0!important;
+  flex-basis:50%;
+  }
+ul.checklist li{
+  list-style:none;
+  margin:0 0 10px;
+  flex:1;
+  }
+ul.checklist li:last-child{
+  margin:0;
+  }
+ul.checklist li p{
+  padding:0 0 0 2em;
+  font-size:16px;
+  position:relative;
+  line-height:21px;
+  }
+ul.checklist.circle li p::before{
+  position:absolute;
+  left:0;
+  top:0;
+  content:"●";
+  font-size:21px;
+  color:var(--main-color);
+  }
+ul.checklist.check li p::before{
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  content:"";
+  width: 16px;
+  height: 16px;
+  border-radius:4px;
+  border:1px solid #492E12;
+  }
+ul.checklist.check li p::after{
+  position:absolute;
+  left:3px;
+  top:-5px;
+  bottom:0;
+  margin:auto;
+  content: '';
+  width: 14px;
+  height:5px;
+  border-top: 3px solid var(--main-color);
+  border-right: 3px solid var(--main-color);
+  transform: rotate(135deg);
+  }
+ul.checklist.num{
+  counter-reset: chapter;
+  }
+ul.checklist.num li {
+  margin-bottom:20px;
+  }
+ul.checklist.num li p{
+  padding-left:2.5em;
+  position:relative;
+  }
+ul.checklist.num li p::before{
+  position:absolute;
+  left:0;
+  top:-3px;
+  content: counter(chapter) "";
+  counter-increment: chapter;
+  display:inline-block;
+  width:30px;
+  height:30px;
+  border-radius:15px;
+  color:var(--txt-color-on-bg);
+  text-align:center;
+  background:var(--main-color);
+  line-height:30px;
+  font-size:21px;
+  margin-right:10px;
+  }
+
+@media screen and (max-width: 768px) {
+  ul.checklist.flex {
+  display:block;
+  }
+}
+
+
+
+/************ 横並びボックス list_box    ************/
+
+/***** ■設置例
+<ul class="list_box">
+<li><p class="title">サンプル</p><img src="img/img01.jpg" /><p>テストテスト</p></li>
+<li><p class="title">サンプル</p><img src="img/img01.jpg" /><p>テストテスト</p></li>
+<li><p class="title">サンプル</p><img src="img/img01.jpg" /><p>テストテスト</p></li>
+</ul>
+*****/
+
+.list_box{
+  width:100%;
+  max-width:100%;
+  margin:0 0 10px;
+  padding:20px;
+  box-sizing:border-box;
+  display:flex;
+  gap:20px;
+  }
+.list_box li{
+  display:block;
+  list-style:none;
+  margin-bottom:30px;
+  flex:1;
+  }
+.list_box li .title{
+  margin:0 0 10px;
+  text-align:center;
+  font-size:18px;
+  background:var(--main-color);
+  color:var(--txt-color-on-bg);
+  }
+.list_box li img{
+  flex-shrink: 1;
+  width:100%;
+  margin-bottom:20px;
+  }
+.list_box li p{
+  margin:0;
+  line-height:1.7;
+  }
+
+@media screen and (max-width:768px){
+  .list_box{
+  display:block;
+  }
+  }
+
+/************ 横並びボックス list_box ここまで      ************/
+
+
+/************ LINK BUTTON                           ************/
+/************ 設置例
+  <a href="" class="button01">ボタンデザイン</a>
+********************/
+
+.button01 {
+  display:block;
+  color: var(--txt-color-on-bg);
+  background-color: var(--main-color);
+  padding: 0.5rem 2rem;
+  box-sizing:border-box;
+  margin: 20px auto;
+  width: 500px;
+  max-width: calc(100% - 20px);
+  font-size: 16px;
+  text-decoration:none;
+  text-align:center;
+  position:relative;
+  }
+.button01:hover {
+  background-color: #bbbbbb;
+  transition:0.5s;
+  }
+.button01::after {
+  position:absolute;
+  right:2em;
+  top:0;
+  bottom:0;
+  margin:auto;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid var(--txt-color-on-bg);
+  border-right: 3px solid var(--txt-color-on-bg);
+  transform: rotate(45deg);
+}
+
+/************ LINK BUTTON ここまで                  ************/
+
+
+/************ DOWN ARROW                            ************/
+/************ 設置例
+<div class="arrow"></div>
+********************/
+
+.arrow{
+  margin:0 auto 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 100px 0 100px;
+  border-color: #cccccc transparent transparent transparent;
+  }
+
+/************ TABLE SAMPLE                          ************/
+/************ 設置例
+<table class="sample">
+<tr><th>テスト</th><td>テスト</td></tr>
+<tr><th>テスト</th><td>テスト</td></tr>
+<tr><th>テスト</th><td>テスト</td></tr>
+</table>
+********************/
+
+table.sample {
+  border-collapse:collapse;
+  width:100%;
+  }
+table.sample th,
+table.sample td{
+  padding:10px;
+  border:1px solid #000;
+  }
+table.sample th {
+  text-align:center;
+  background: var(--main-color);
+  color:var(--txt-color-on-bg);
+  }
+table.sample th:first-child {
+	width:100px;
+	}
+
+
+
+
+/*** _menu_btn ***/
+/*** 設置例
+<div class="menu_btn">
+	<button><a href="#service01">テスト</a></button>
+	<button><a href="#service02">テスト</a></button>
+	<button><a href="#service03">テスト</a></button>
+</div>
+***/
+
+.menu_btn{
+	margin:30px 0;
+	padding:0;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	gap:10px 2%;
+    }
+.menu_btn button{
+	width:32%;
+	border:none;
+	background:var(--main-color);
+	position:relative;
+	}
+.menu_btn button a{
+	display:block;
+	padding:10px 40px 10px 10px;
+	text-decoration:none;
+	color:#fff;
+	}
+.menu_btn button:hover{
+	background-color: #bbbbbb;
+	transition:0.5s;
+	}
+.menu_btn button a:after{
+	position:absolute;
+	right:10px;
+	top:0; /* 上下中央に */
+	bottom:0; /* 上下中央に */
+	margin:auto; /* 上下中央に */
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transform: rotate(45deg);
+	margin-right:10px;
+	}
+
+@media screen and (max-width:768px){
+
+ .menu_btn{
+	margin:30px 0;
+	padding:0;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	gap:10px 2%;
+    }
+ .menu_btn button{
+	width:100%;
+	border:none;
+	background:var(--main-color);
+	position:relative;
+	}
+ .menu_btn button a{
+	display:block;
+	padding:10px 40px 10px 10px;
+	text-decoration:none;
+	color:#fff;
+	}
+ .menu_btn button:hover{
+	background-color: #bbbbbb;
+	transition:0.5s;
+	}
+ .menu_btn button a:after{
+	position:absolute;
+	right:10px;
+	top:0; /* 上下中央に */
+	bottom:0; /* 上下中央に */
+	margin:auto; /* 上下中央に */
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-top: 3px solid #fff;
+	border-right: 3px solid #fff;
+	transform: rotate(45deg);
+	margin-right:10px;
+	}
+}
+
+
+
+/************ その他SAMPLES 適宜追加 ここから       ************
+
+-----DIRECT LINK ADJ-----
+[id^="service0"] { margin-top:-80px; padding-top:80px;}
+-----MINCHO-----
+font-family: "Times New Roman","YuMincho","Hiragino Mincho ProN","Yu Mincho","MS PMincho","Noto Serif JP",serif;
+-----CLEARFIX-----（不使用）
+.clearfix::after { content: "";	display: block;	clear: both;}
+-----MEDIA QUERY-----
+@media screen and (min-width: 769px) {
+  }
+@media screen and (max-width: 768px) {
+  }
+-----WRAP-----
+.wrap {	width:1024px; margin:0 auto;}
+-----COLOR-----
+.red {color:#dc143c;}
+-----arrow （横向き）-----
+.arrow{
+  width:50px;
+  margin:0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 50px 30px;
+  border-color: transparent transparent transparent #6AA7CD;
+  margin:100px 20px 0 20px;
+  }
+************ SAMPLES ここまで ************/
+

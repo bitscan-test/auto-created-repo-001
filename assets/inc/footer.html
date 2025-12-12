@@ -1,0 +1,131 @@
+<div id="pnavi">
+	<div class="ptop"><a href="#wrapper"><img src="/<?= $dir; ?>assets/images/main/btn_top_<?= str_replace(" style_", ""
+				, $init["color"]); ?>.png"></a></div>
+</div>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner" id="footer_block">
+			<div class="footer__left">
+				<div class="footer__logo animation fadeInUp"><a href="/<?= $dir; ?>">
+						<picture>
+							<source srcset="/<?= $dir; ?>assets/images/logo_sp.png"><img
+								src="/<?= $dir; ?>assets/images/logo.png" width="271"
+								alt="<?= $init['clinic']['clinic_name'] ?>">
+						</picture>
+					</a></div>
+				<div class="footer__address animation fadeInUp">
+					<address>
+						<p>〒
+							<?= $init['clinic']['postal'].'<br>'.$init['clinic']['address'] ?>
+						</p>
+					</address>
+				</div>
+				<div class="footer__contact animation fadeInLft">
+					<div class="footer__contact__ttl">ご予約はこちらから</div>
+					<div class="footer__contact__number"><a class="js-tap is-tel"
+							href="tel:<?= $init['clinic']['tel_num'] ?>">
+							<?= $init['clinic']['tel_num'] ?>
+						</a></div>
+					<div class="footer__contact__link"><a href="<?= $init['clinic']['webform'] ?>"
+							target="_blank">WEB予約はこちら</a></div>
+				</div>
+			</div>
+			<div class="footer__right">
+				<div class="table__schedule animation fadeInDown">
+					<table>
+						<thead>
+							<tr>
+								<th>診療時間</th>
+								<th>月</th>
+								<th>火</th>
+								<th>水</th>
+								<th>木</th>
+								<th>金</th>
+								<th>土</th>
+								<th>日</th>
+								<th>祝</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>9:00～13:00</th>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td class="color_black">／</td>
+								<td>●</td>
+								<td>●</td>
+								<td class="color_black">／</td>
+								<td class="color_black">／</td>
+							</tr>
+							<tr>
+								<th>14:30～19:00</th>
+								<td>●</td>
+								<td>●</td>
+								<td>●</td>
+								<td class="color_black">／</td>
+								<td>●</td>
+								<td>★</td>
+								<td class="color_black">／</td>
+								<td class="color_black">／</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="table__note">
+						<span>★：土曜午後：14:00〜16:00</span><span>休診日：木曜・日曜・祝日</span><span>※祝日がある週の木曜日は診療いたします</span>
+					</p>
+				</div>
+				<div class="footer__map animation fadeInRgt">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6665.039457555334!2d130.47970557714225!3d33.35749493454292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541a5d0f0f4ab73%3A0x9d19f2f709399894!2z44GN44Gf44GM44KP5q2v56eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1671582390709!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="footer__fnavi animation fadeInUp">
+			<ul>
+				<li><a class="line" href="/<?= $dir; ?>">トップ</a></li>
+				<li><a class="line" href="/<?= $dir; ?>services/">診療案内</a></li>
+				<li><a class="line" href="/<?= $dir; ?>child/">小児歯科</a></li>
+				<li><a class="line" href="/<?= $dir; ?>periodontal/">歯周病</a></li>
+				<li><a class="line" href="/<?= $dir; ?>dentures/">入れ歯</a></li>
+				<li><a class="line" href="/<?= $dir; ?>staff/">院長紹介</a></li>
+				<li><a class="line" href="/<?= $dir; ?>facilities/">院内紹介</a></li>
+				<li><a class="line" href="/<?= $dir; ?>equipments/">設備紹介</a></li>
+				<li><a class="line" href="/<?= $dir; ?>access/">アクセス</a></li>
+				<li><a class="line" href="/<?= $dir; ?>_cms/">コラム</a></li>
+				<li><a class="line" href="/<?= $dir; ?>sitemap/">サイトマップ</a></li>
+				<!-- <li><a class="line" href="/<?= $dir; ?>mushiba/">むし歯</a></li>
+				<li><a class="line" href="/<?= $dir; ?>konkan/">根管治療</a></li>
+				<li><a class="line" href="/<?= $dir; ?>shisyu/">歯周病</a></li>
+				<li><a class="line" href="/<?= $dir; ?>prevention/">予防・クリーニング</a></li>
+				<li><a class="line" href="/<?= $dir; ?>visit">訪問歯科診療</a></li>
+				<li><a class="line" href="/<?= $dir; ?>kyosei/">矯正歯科</a></li>
+				<li><a class="line" href="/<?= $dir; ?>beauty/">審美治療</a></li>
+				<li><a class="line" href="/<?= $dir; ?>whitening/">ホワイトニング</a></li>
+<?php /* 				<li><a class="line" href="/<?= $dir; ?>implant/">インプラント</a></li> */ ?>
+				<li><a class="line" href="/<?= $dir; ?>blog/">ブログ</a></li> -->
+			</ul>
+		</div>
+		<div class="footer__copyright">
+			<div class="footer__social animation fadeInLft">
+				<div class="social__btn social__btn--blue">
+					<ul>
+						<li><a href="https://www.instagram.com/kitagawa_dentalclinic/?igshid=YmMyMTA2M2Y%3D">
+							<svg class="bi bi-instagram" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+								<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+							</svg>
+						</a></li>
+					</ul>
+				</div>
+			</div>
+			<p class="copyright animation fadeInRgt">Copyright © 2023 きたがわ歯科クリニック.All Rights Reserved.</p>
+		</div>
+	</div>
+	<div class="footer__btn_contact sp_only">
+		<ul>
+			<li style="width:100%;"><a class="js-tap is-tel" href="tel:<?= $init['clinic']['tel_num'] ?>">電話する</a></li>
+			<li><a class="js-tap is-web" href="<?= $init['clinic']['webform'] ?>" target="_blank">WEB予約</a></li>
+		</ul>
+	</div>
+</footer>
