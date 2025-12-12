@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['pattern']['title'] ?></title> 
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['pattern']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['pattern']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['pattern']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['pattern']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>pattern/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article"> 
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>pattern/",
+							"name": "<?= $init['meta']['pattern']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-pattern">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['pattern']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="is-en animation fadeInLft">pattern</p>
+						<p class="sub_ttl animation fadeInLft">パターン</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　 パターン
+						</p>
+					</div>
+				</div>
+				<!-- link-->
+				<section class="service_list pc__mb__205">
+					<div class="container">
+						<div class="service_list__ttl">
+							<h2 class="animation fadeInUp show">パターン 1</h2>
+						</div>
+						<div class="service_list__cnt animation fadeInUp show">
+							<ul>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_1">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_2">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_3">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_4">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_5">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_6">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_7">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_8">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_9">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_10">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_11">テキストテキスト</a></li>
+								<li><a class="btn__arrow btn__arrow--circle" href="#block_12">テキストテキスト</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- type-->
+				<div class="endpart">
+					<div class="container">
+						<section class="block-cnt no-order" id="block_1">
+							<div class="section__ttl pc__mb__20 sp__mb__30">
+								<p class="is-en animation fadeInLft">PATTERN 2</p>
+								<h2 class="sub_ttl animation fadeInLft">パターン 2</h2>
+							</div>
+							<div class="blog__row pc__mb__105 sp__mb__50 sp__pt__20">
+								<div class="blog__img animation fadeInLft">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pl__0 animation fadeInRgt">
+									<ul class="blog__cnt__list mb__25">
+										<li>テキストテキストテキストテキストテキスト</li>
+										<li>テキストテキストテキストテキストテキスト</li>
+										<li>テキストテキストテキストテキストテキスト</li>
+										<li>テキストテキストテキストテキストテキスト</li>
+									</ul>
+									<ul class="blog__cnt__list --dot">
+										<li>テキストテキストテキストテキストテキスト</li>
+										<li>テキストテキストテキストテキストテキスト</li>
+										<li>テキストテキストテキストテキストテキスト</li>
+										<li>テキストテキストテキストテキストテキスト</li>
+									</ul>
+								</div>
+								<div class="blog__notice">
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt" id="block_2">
+							<h2 class="block-cnt__ttl align_center">パターン 3</h2>
+							<p class="block-cnt__desc align_center">PATTERN 3</p>
+							<div class="blog__row pc__mb__85 sp__pt__30">
+								<div class="blog__cnt pc__pr__50 pl__0 animation fadeInLft">
+									<h3 class="sub__ttl">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+								<div class="blog__img pc__pl__50 pr__0 animation fadeInRgt">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt pc__mb__245 sp__mb__100" id="block_3">
+							<div class="blog__row">
+								<div class="blog__img pt__20 pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<h2 class="block-cnt__ttl">パターン 4</h2>
+									<p class="block-cnt__desc pc__mb__35">PATTERN 4</p>
+									<h3 class="sub__ttl">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt pc__mb__130" id="block_4">
+							<h2 class="block-cnt__ttl align_center">パターン 5</h2>
+							<p class="block-cnt__desc align_center pc__mb__50">PATTERN 5</p>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">1</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 01</span></p>
+									<h3 class="sub__ttl --no-line">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">2</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 02</span></p>
+									<h3 class="sub__ttl --no-line">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">3</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 03</span></p>
+									<h3 class="sub__ttl --no-line">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt pb__40 pt__50 pc__mb__215 sp__mb__50" id="block_5">
+							<h2 class="block-cnt__ttl align_center">パターン 6</h2>
+							<p class="block-cnt__desc align_center mb__30">PATTER 6</p>
+							<div class="block-cnt__table">
+								<table>
+									<thead>
+										<tr>
+											<th></th>
+											<th>
+												<p>ex.入れ歯</p>
+											</th>
+											<th>
+												<p>ex.ブリッジ</p>
+											</th>
+											<th>
+												<p>ex.インプラント</p>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>審美面</th>
+											<td>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+											<td>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+											<td>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+										</tr>
+										<tr>
+											<th>機能面</th>
+											<td>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+											<td>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+											<td>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+										</tr>
+										<tr>
+											<th>特徴</th>
+											<td>
+												<p class="align_center"><img src="/<?= $dir; ?>assets/images/main/table_dummy.png" alt="" width="" height=""></p>
+											</td>
+											<td>
+												<p class="align_center"><img src="/<?= $dir; ?>assets/images/main/table_dummy.png" alt="" width="" height=""></p>
+											</td>
+											<td>
+												<p class="align_center"><img src="/<?= $dir; ?>assets/images/main/table_dummy.png" alt="" width="" height=""></p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+						<section class="block-cnt pt__40 pc__mb__180 sp__mb__80" id="block_6">
+							<h2 class="block-cnt__ttl align_center">パターン 7</h2>
+							<p class="block-cnt__desc align_center pc__mb__55">PATTER 7</p>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">テキストテキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキス</p>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt --background-blue pc__pt__70 pc__mb__200 sp__mb__100" id="block_7">
+							<h2 class="block-cnt__ttl align_center">パターン 8</h2>
+							<p class="block-cnt__desc align_center mb__10">PATTER 8</p>
+							<div class="blog__row sp__pt__30 mb__0 pb__0">
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">テキストテキストテキスト</h3>
+										<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md3 animation fadeInUp show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">テキストテキストテキスト</h3>
+										<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md3 animation fadeInRgt show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">テキストテキストテキスト</h3>
+										<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt mb__0" id="block_8">
+							<h2 class="block-cnt__ttl align_center">パターン 9</h2>
+							<p class="block-cnt__desc align_center">PATTER 9</p>
+							<div class="blog__row sp__pt__30">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft show">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="450" height="281">
+										</picture>
+									</div>
+									<div class="blog__img__mask --radius45 --sub_img">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="228" height="143">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__140 pr__0 pc__pt__20 sp__pt__50 animation fadeInRgt show">
+									<h3 class="sub__ttl --no-line mb__15">テキストテキストテキスト</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt mb__0 no-order" id="block_9">
+							<div class="blog__row pt__10">
+								<div class="blog__img --full pr__0 pl__0 animation fadeInLft show">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_full.jpg" width="1000" height="300">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt--full --position-top animation fadeInRgt show">
+									<h3 class="align_center blog__ttl mb__15">パターン 10</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt --background-blue pc__pt__80 pc__mb__160" id="block_10">
+							<h2 class="block-cnt__ttl align_center mb__20">パターン 11</h2>
+							<p class="align_center pc__mb__45">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br> テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+							<ul class="blog__cnt__list --flex">
+								<li class="fz20">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+								<li class="fz20">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+								<li class="fz20">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+								<li class="fz20">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+							</ul>
+						</section>
+						<section class="block-cnt --background-blue --no-radius pc__mb__200 sp__mb__100" id="block_11">
+							<div class="blog__row sp__pt__0 sp__pb__50">
+								<div class="blog__cnt --block-custom animation fadeInRgt">
+									<h3 class="sub__ttl --no-line --blue pb__0 mb__20">パターン 12</h3>
+									<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+								</div>
+								<div class="blog__img --block-custom animation fadeInLft">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/dummy_1.jpg" width="320" height="200">
+										</picture>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!-- end Content-->
+				</div>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script></script>
+	</body>
+</html>
