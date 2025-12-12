@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['facilities']['title'] ?></title> 
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['facilities']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['facilities']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['facilities']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['facilities']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>facilities/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article"> 
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>facilities/",
+							"name": "<?= $init['meta']['facilities']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-facilities">
+		<div class="wrapper" id="wrapper">
+			<?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding">
+					<?= $init['meta']['facilities']['h1'] ?>
+				</h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="animation fadeInLft">院内紹介</p>
+						<p class="is-en sub_ttl animation fadeInLft">FACILITIES</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　 院内紹介
+						</p>
+					</div>
+				</div>
+				<!-- inside-->
+				<section class="gallery_clinic">
+					<div class="container">
+						<div class="gallery_clinic__gallery gallery animation fadeInUp">
+							<div class="gallery_clinic__slider mask_image">
+								<p><img src="/<?= $dir; ?>assets/images/faci1.jpg" alt=""></p>
+								<p><img src="/<?= $dir; ?>assets/images/faci2.jpg" alt=""></p>
+								<p><img src="/<?= $dir; ?>assets/images/faci3.jpg" alt=""></p>
+								<p><img src="/<?= $dir; ?>assets/images/faci4.jpg" alt=""></p>
+								<p><img src="/<?= $dir; ?>assets/images/faci5.jpg" alt=""></p>
+							</div>
+						</div>
+						<div class="gallery_clinic__cnt animation fadeInUp">
+							<ul>
+								<li>
+									<h3><span>受付</span></h3>
+									<p class="align_center">スタッフが明るく丁寧な対応を心がけております。<br>何かありましたら、気軽にお声がけください。</p>
+								</li>
+								<li>
+									<h3><span>待合室/キッズスペース</span></h3>
+									<p class="align_center">明るく清潔感のある空間づくりを心がけています。<br>待合室の一角には、お子さま連れの方も通いやすいよう、キッズスペースを設置しております。</p>
+								</li>
+								<li>
+									<h3><span>ウォッシュルーム</span></h3>
+									<p class="align_center">段差のないバリアフリーですので、車いすやベビーカーのまま気軽にご利用いただけます。<br>診療前後の歯磨きやお化粧直しなどにご利用いただけます。</p>
+								</li>
+								<li>
+									<h3><span>診療室(個室)</span></h3>
+									<p class="align_center">診療室は個室となっておりますので、まわりを気にすることなく、<br>リラックスして治療を受けていただけます。</p>
+								</li>
+								<li>
+									<h3><span>ファミリールーム</span></h3>
+									<p class="align_center">ベビーカーや車いすのまま入室でき、ご家族や付き添いの方がご一緒でもゆとりのあるお部屋です。<br>天井にテレビが設置してあり、お子さまにも好きな動画を観ながら楽しく診療を受けていただけます。</p>
+								</li>
+							</ul>
+						</div>
+						<div class="gallery_clinic__thumb animation fadeInUp">
+							<ul>
+								<li><a href="javascript:void(0)"><span class="mask_small"><img src="/<?= $dir; ?>assets/images/main/faci1.jpg" alt=""></span></a></li>
+								<li><a href="javascript:void(0)"><span class="mask_small"><img src="/<?= $dir; ?>assets/images/main/faci2.jpg" alt=""></span></a></li>
+								<li><a href="javascript:void(0)"><span class="mask_small"><img src="/<?= $dir; ?>assets/images/main/faci3.jpg" alt=""></span></a></li>
+								<li><a href="javascript:void(0)"><span class="mask_small"><img src="/<?= $dir; ?>assets/images/main/faci4.jpg" alt=""></span></a></li>
+								<li><a href="javascript:void(0)"><span class="mask_small"><img src="/<?= $dir; ?>assets/images/main/faci5.jpg" alt=""></span></a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- gairai-->
+				<!-- device-->
+				<!-- emergency-->
+				<!-- end Content-->
+			</main>
+			<?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div>
+		<?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script>
+			// Gallery CLINIC
+			if ($('.gallery_clinic__slider').length) {
+				$('.gallery_clinic__slider').slick({
+					adaptiveHeight: true,
+					asNavFor: '.gallery_clinic__cnt ul,.gallery_clinic__thumb ul',
+					dots: true,
+					fade: true,
+					prevArrow: '<p  class="slick-prev"><button type="button">Previous</button></p>',
+					nextArrow: '<p  class="slick-next"><button type="button">next</button></p>',
+
+				});
+				$('.gallery_clinic__slider .slick-dots').wrap('<div class="slick-control"></div>')
+				$('.gallery_clinic__slider .slick-control').prepend($('.gallery_clinic__slider .slick-prev'));
+				$('.gallery_clinic__slider .slick-control').append($('.gallery_clinic__slider .slick-next'));
+			}
+			if ($('.gallery_clinic__cnt ul').length) {
+				$('.gallery_clinic__cnt ul').slick({
+					asNavFor: '.gallery_clinic__slider,.gallery_clinic__thumb ul',
+					dots: false,
+					fade: true,
+					arrows: false,
+					adaptiveHeight: true,
+				});
+			}
+			if ($('.gallery_clinic__thumb ul').length) {
+				$('.gallery_clinic__thumb ul').slick({
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					adaptiveHeight: true,
+					asNavFor: '.gallery_clinic__slider,.gallery_clinic__cnt ul',
+					centerMode: true,
+					centerPadding: '0',
+					focusOnSelect: true,
+					dots: false,
+					arrows: false,
+					responsive: [
+						{
+							breakpoint: 750,
+							settings: {
+								slidesToShow: 3,
+							},
+						},
+					]
+				});
+			}
+		</script>
+	</body>
+</html>
