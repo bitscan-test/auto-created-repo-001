@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['access']['title'] ?></title> 
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['access']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['access']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['access']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['access']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>undefined">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article"> 
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>undefined",
+							"name": "<?= $init['meta']['access']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-access">
+		<div id="contents">
+			<main>
+				<section class="message" style="margin-top:200px">
+					<div class="section__ttl align_rgt">
+						<div class="container">
+							<p class="is-en animation fadeInRgt">MESSAGE</p>
+							<h2 class="sub_ttl animation fadeInRgt">メッセージ</h2>
+						</div>
+					</div>
+					<div class="message__inner">
+						<div class="container">
+							<div class="message__cnt">
+								<div class="message__cnt__img animation fadeInLft">
+									<picture>
+										<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/message_img_sp.png"><img src="/<?= $dir; ?>assets/images/main/message_img.jpg" alt="">
+									</picture>
+								</div>
+								<div class="message__cnt__txt animation fadeInRgt">
+									<p class="message__cnt__ttl">コミュニケーションを重視し<br class="sp_only">患者さまファーストな診療を</p>
+									<p class="text">当院は父と私の２代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。<br>おかげさまで３世代、４世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。<br>今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、<br>ご期待以上の歯科治療をお届けできるように努めてまいります。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="message" style="margin-top:200px">
+					<div class="section__ttl_type01 is-vertical">
+						<p class="is-en"><span class="animation fadeInLft"><em>M</em>ESSAG<em>E</em></span></p>
+						<h2 class="sub_ttl animation fadeInRgt">メッセージ</h2>
+					</div>
+					<div class="message__inner">
+						<div class="container">
+							<div class="message__cnt">
+								<div class="message__cnt__img animation fadeInLft">
+									<picture>
+										<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/message_img_sp.png"><img src="/<?= $dir; ?>assets/images/main/message_img.jpg" alt="">
+									</picture>
+								</div>
+								<div class="message__cnt__txt animation fadeInRgt">
+									<p class="message__cnt__ttl">コミュニケーションを重視し<br class="sp_only">患者さまファーストな診療を</p>
+									<p class="text">当院は父と私の２代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。<br>おかげさまで３世代、４世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。<br>今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、<br>ご期待以上の歯科治療をお届けできるように努めてまいります。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="message" style="margin-top:200px">
+					<div class="section__ttl_type02">
+						<p class="is-en animation fadeInLft"><span>MESSAGE</span></p>
+						<h2 class="sub_ttl"><span class="animation fadeInRgt">メッセージ</span></h2>
+					</div>
+					<div class="message__inner">
+						<div class="container">
+							<div class="message__cnt">
+								<div class="message__cnt__img animation fadeInLft">
+									<picture>
+										<source media="(max-width:750px)" srcset="/<?= $dir; ?>assets/images/main/message_img_sp.png"><img src="/<?= $dir; ?>assets/images/main/message_img.jpg" alt="">
+									</picture>
+								</div>
+								<div class="message__cnt__txt animation fadeInRgt">
+									<p class="message__cnt__ttl">コミュニケーションを重視し<br class="sp_only">患者さまファーストな診療を</p>
+									<p class="text">当院は父と私の２代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。<br>おかげさまで３世代、４世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。<br>今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、<br>ご期待以上の歯科治療をお届けできるように努めてまいります。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="footer"></div>
+				<!-- end Content-->
+			</main>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script></script>
+	</body>
+</html>
