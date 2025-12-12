@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include_once(__DIR__."/../init.php"); ?>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		<?= $init['meta']['services']['title'] ?>
+	</title>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+	<meta name="description" content="<?= $init['meta']['services']['description'] ?>">
+	<meta name="keywords" content="<?= $init['meta']['services']['keyword'] ?>">
+	<meta property="og:title" content="<?= $init['meta']['services']['title'] ?>">
+	<meta property="og:description" content="<?= $init['meta']['services']['description'] ?>">
+	<meta property="og:url" content="<?= $init['clinic']['url'] ?>services/">
+	<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+	<meta property="og:type" content="article">
+	<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+	<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>services/",
+							"name": "<?= $init['meta']['services']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+</head>
+
+<body id="p-services">
+	<div class="wrapper" id="wrapper">
+		<?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+		<main class="main__contents" id="main">
+			<!-- headding-->
+			<h1 class="headding">
+				<?= $init['meta']['services']['h1'] ?>
+			</h1>
+			<!-- mainvisual-->
+			<header class="banner_sub">
+				<div class="banner_sub__img">
+					<picture>
+						<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+					</picture>
+				</div>
+				<div class="banner_sub__ttl">
+					<p class="animation fadeInLft">診療案内</p>
+					<p class="is-en sub_ttl animation fadeInLft">SERVICES</p>
+				</div>
+			</header>
+			<!-- breadcrumbs-->
+			<div class="pankuzu">
+				<div class="container">
+					<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　診療案内
+					</p>
+				</div>
+			</div>
+			<!-- menu-->
+			<section class="service_list">
+				<div class="container">
+					<div class="service_list__ttl">
+						<h2 class="animation fadeInUp">当院で行っている診療</h2>
+					</div>
+					<div class="service_list__cnt animation fadeInUp">
+						<ul>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_1">むし歯</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_2">根管治療</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_3">歯周病</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_4">入れ歯(義歯)</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_5">小児歯科</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_6">予防・クリーニング</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_7">歯科口腔外科</a></li>
+							<?php /* <li><a class="btn__arrow btn__arrow--circle" href="#service_8">インプラント</a></li> */ ?>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_9">審美治療</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_10">ホワイトニング</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_11">各種マウスピース製作</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_12">マタニティ歯科診療</a></li>
+							<li><a class="btn__arrow btn__arrow--circle" href="#service_13">各種歯科検診</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- single-->
+			<section class="service_blog">
+				<div class="container">
+					<div class="blog__row" id="service_1">
+						<div class="blog__cnt animation fadeInLft">
+							<h3>むし歯</h3>
+							<ul class="blog__cnt__list">
+								<li>歯が痛い</li>
+								<li>歯が黒ずんでいる</li>
+								<li>食べ物や飲み物がしみる　など</li>
+							</ul>
+							<p>むし歯は、お口の中に感染してすみついたむし歯菌によって引き起こされる病気です。治療ではむし歯菌の作る酸によって溶かされ悪くなった部分を削り取ることになりますが、一度削ってしまった歯は二度と元の姿には戻りません。また、むし歯は再発しやすく、治療を繰り返すと歯そのものを失うことになります。そのため、可能な限り「削らない・抜かない」治療を心がけ、治療後は再発しないように「予防」にも力を入れています。
+							</p>
+						</div>
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service01.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="blog__row" id="service_2">
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service02.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInRgt">
+							<h3>根管治療</h3>
+							<ul class="blog__cnt__list">
+								<li>歯がズキズキと痛む</li>
+								<li>歯の根の治療がなかなか終わらない</li>
+								<li>できるなら歯を残したい　など</li>
+							</ul>
+							<p>根管治療とは、歯根の治療です。むし歯は重症化すると、歯根にまでむし歯菌の感染が広がって炎症を起こし、強い痛みが出ます。根管治療では、むし歯菌に感染した歯根を通る神経を取り除き、神経のあった管の中を殺菌し、薬剤を詰めて密閉することで無菌に近い状態にします。この治療により、抜歯せずに歯を残せる場合もあります。
+							</p>
+						</div>
+					</div>
+					<div class="blog__row" id="service_3">
+						<div class="blog__cnt animation fadeInLft">
+							<h3>歯周病</h3>
+							<ul class="blog__cnt__list">
+								<li>歯ぐきが腫れている</li>
+								<li>歯ぐきから血や膿が出る</li>
+								<li>口臭がきつくなった　など</li>
+							</ul>
+							<p>歯周病は、歯ぐきや歯を支える骨が、歯周病菌によって炎症を起こす病気です。進行すると顎の骨が溶かされて歯がグラつき、最悪の場合には歯が抜け落ちてしまいます。治療には定期検診やクリーニング、毎日の丁寧な歯磨きが欠かせません。また、誤嚥性肺炎や糖尿病、心疾患や脳疾患などの重篤な疾患の要因にもなりますので、気になる症状がありましたらお早めにご相談ください。
+							</p>
+							<div class="see_more align_rgt">
+								<div><a class="btn__arrow" href="/<?= $dir; ?>periodontal/">詳しくはこちら</a></div>
+							</div>
+						</div>
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service03.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="blog__row blog__row02" id="service_4">
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service04.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInRgt">
+							<h3>入れ歯(義歯)</h3>
+							<ul class="blog__cnt__list">
+								<li>入れ歯を作りたい</li>
+								<li>入れ歯を直したい</li>
+								<li>入れ歯を調整したい　など</li>
+							</ul>
+							<p>作った入れ歯が合わず、痛みや違和感のあるまま使い続けていませんか？
+								当院は、入れ歯の製作・調整を多く手がけております。「ゴシックアーチ法」という、顎の前後左右の動きや動かし方を計測して、適切なかみ合わせの位置を確認し、噛み癖や顎のズレを補正した入れ歯製作を行っています。見た目やご予算などに応じて快適な入れ歯を製作しますので、いつでもご相談ください。
+							</p>
+							<div class="see_more align_rgt">
+								<div><a class="btn__arrow" href="/<?= $dir; ?>dentures/">詳しくはこちら</a></div>
+							</div>
+						</div>
+						<!-- <div class="news__view_more"><a href="/<?= $dir; ?>dentures/">詳しくはこちら</a></div> -->
+					</div>
+
+
+					<div class="blog__row" id="service_5">
+						<div class="blog__cnt animation fadeInLft">
+							<h3>小児歯科</h3>
+							<ul class="blog__cnt__list">
+								<li>子どものむし歯を治療したい</li>
+								<li>子どものむし歯を予防したい</li>
+								<li>子どものむし歯が気になる　など</li>
+							</ul>
+							<p>乳歯や生え替わったばかりの永久歯は柔らかいため弱く、むし歯の進行も早いことが特徴です。乳歯のむし歯を放っておくと、永久歯もむし歯になる・まっすぐ生えてこないなど、将来的にも悪影響を及ぼします。むし歯かな？と思ったら早めに治療しましょう。また当院では、お子さまの予防ケアに力を入れております。定期検診や歯磨き指導を通じて、お子さまのお口の健康の基礎づくりをお手伝いいたします。
+							</p>
+								<div class="see_more align_rgt">
+									<div><a class="btn__arrow" href="/<?= $dir; ?>child/">詳しくはこちら</a></div>
+								</div>
+						</div>
+						
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service05.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+
+						<div class="blog__thumb animation fadeInUp">
+							<div class="blog__thumb__cnt">
+								<h3>楽しく通っていただける工夫</h3>
+								<p>当院ではお子さまが「歯医者さんは怖くない」と思えるよう、明るい雰囲気づくりをしています。いきなり治療を始めるのではなく、診療台に座る、口を開けてみる、など段階を踏んでできることを増やしていきます。天井にテレビを設置したので、お好きな動画を観ながら楽しく診療を受けることができ、終わったらガチャガチャもご用意しています。難症例に関しては、大学病院と連携しながらの治療も可能ですので、まずは当院までご相談ください。</p>
+							</div>
+							<div class="blog__thumb__img">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/service_colum1.jpg">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="blog__row" id="service_6">
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service06.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInRgt">
+							<h3>予防・クリーニング</h3>
+							<ul class="blog__cnt__list">
+								<li>むし歯・歯周病から歯を守りたい</li>
+								<li>いつまでも自分の歯で過ごしたい</li>
+								<li>お口から全身の健康を守りたい　など</li>
+							</ul>
+							<p>むし歯や歯周病は、歯が「悪くなってから治療する」のではなく「悪くなる前に予防する」ことが大切です。予防・クリーニングでは、むし歯や歯周病を防ぐための治療やケアを行っています。ご自分のお口に合った適切な歯磨きの習慣を身につけることはもちろん、定期的な検診やクリーニング、歯質を強くするフッ素塗布によって、お口の健康を守っていきましょう。
+							</p>
+						</div>
+					</div>
+					<div class="blog__row" id="service_7">
+						<div class="blog__cnt animation fadeInLft">
+							<h3>歯科口腔外科</h3>
+							<ul class="blog__cnt__list">
+								<li>口周りをケガした</li>
+								<li>口の中にできもの、白いものがある</li>
+								<li>親知らずが痛む　など</li>
+							</ul>
+							<p>歯科口腔外科では、歯ぐきの奥深くに埋まっている親知らずの抜歯をはじめ、口腔内のケガや歯の周辺組織の炎症、顎の骨折、腫瘍、口腔がんなどの診断と治療を行います。出血を伴う手術を行うことも多いため、有病者の患者さまに対しては、お身体の状態を考慮しながら症状の改善をめざします。お口の中の違和感や顎の痛み、親知らずが気になる場合は、早めにご相談ください。
+							</p>
+						</div>
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service07.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<?php /* <div class="blog__row" id="service_8">
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service08.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					 <div class="blog__cnt animation fadeInRgt">
+							<h3>インプラント<span class="label">自由診療</span></h3>
+							<ul class="blog__cnt__list">
+								<li>入れ歯が合わない</li>
+								<li>本物の歯と同じようにしっかり噛みたい</li>
+								<li>機能も見た目も優れた義歯にしたい　など</li>
+							</ul>
+							<p>インプラントは、ご自分の歯と同じような機能と見た目を再現できる義歯です。歯を失った部分の顎の骨に、チタン製の人工歯根を埋め込み、その上からセラミックの人工歯を装着します。顎に直接固定するため、ご自分の歯のようにお食事や会話を楽しむことができ、入れ歯が合わないという方にもおすすめです。メンテナンスをしっかり行うことで、長期的に使用していただけます。ご興味のある方は当院までお気軽にご相談ください。
+								<br><br>※自由診療です　　
+								<br>※定期的なメンテナンスが必要です。
+							</p>
+						</div>
+					</div> */ ?>
+					<div class="blog__row" id="service_9">
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service09.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInLft">
+							<h3>審美治療<span class="label">自由診療</span></h3>
+							<ul class="blog__cnt__list">
+								<li>金属の詰め物、被せ物を白くしたい</li>
+								<li>詰め物、被せ物の金属アレルギーが気になる</li>
+								<li>歯の欠け、大きさ、隙間をきれいに整えたい　など</li>
+							</ul>
+							<p>お顔全体の印象は、口元で決まります。当院では、見た目の美しさはもちろん、噛む・話すといった機能面も重視して、できる限り自然で健康的な仕上がりをめざしています。症状やライフスタイル、ご予算などに応じて治療方法をご提案いたしますので、金属の詰め物や被せ物を白くしたい、歯の隙間が気になるなど、まずはご希望をお聞かせください。
+								<br><br>※自由診療です　
+								<br>※白いセラミック素材は、過度な力が加わると破損の可能性があります。
+							</p>
+						</div>
+					</div>
+					<div class="blog__row" id="service_10">
+						<div class="blog__cnt animation fadeInRgt">
+							<h3>ホワイトニング<span class="label">自由診療</span></h3>
+							<ul class="blog__cnt__list">
+								<li>歯を白くしたい</li>
+								<li>歯の黄ばみが気になる</li>
+								<li>できるだけ早く歯を白くしたい　など</li>
+							</ul>
+							<p>歯の黄ばみは、加齢や遺伝、食生活など、さまざまな影響で起こります。ホワイトニングは、歯の黄ばみを削ることなく、専用の薬剤で歯を漂白して、白さを取り戻す治療です。当院では歯科医院で行う「オフィスホワイトニング」と、ご自宅で行う「ホームホワイトニング」があり、ご希望の白さや歯の状態、ライフスタイルによってお選びいただいています。歯の色が気になる方はお気軽にご相談ください。
+								<br><br>※自由診療です
+								<br>※ホワイトニングは口腔内の状態が安定していることが必要です。むし歯・歯周病などがある場合は、治療完了後に行います。
+								<br>※一時的に知覚過敏が起こることがあります。
+							</p>
+						</div>
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service10.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="blog__row" id="service_11">
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service11.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInLft">
+							<h3>マウスピース製作</h3>
+							<ul class="blog__cnt__list">
+								<li>オーダーメイドのスポーツマウスガードを作りたい</li>
+								<li>睡眠時無呼吸症候群の治療をしたい</li>
+								<li>顎関節症や歯ぎしり・食いしばりを緩和したい　など</li>
+							</ul>
+							<p>各種マウスピースを製作しています。
+								<br><br>
+								●スポーツマウスガード
+								<br>スポーツ時に装着することで、ケガの予防、集中力やパフォーマンスの向上が期待できます。完全オーダーメイドですので、市販品よりもぴったりフィットします。
+								<br><br>※自由診療です
+								<br>※装着中はむし歯リスクが高まります。適切な口腔ケアを心がけましょう。
+								<br><br>
+								●スリープスプリント
+								<br>睡眠時無呼吸症候群の治療用です。就寝中に装着することで、舌が引き上げられて気道が広がり、いびきが緩和されます。
+								<br><br>※保険適用で製作を希望される場合は、耳鼻咽喉科・医科からの紹介状をお持ちください。紹介状がない場合は自由診療です。
+								<br><br>
+								●ナイトガード
+								<br>顎関節症、歯ぎしり・食いしばりの症状の緩和用です。
+								<br>就寝中や日中に装着することで、顎関節にかかる負担を軽減することができます。
+							</p>
+						</div>
+					</div>
+					<div class="blog__row" id="service_12">
+						<div class="blog__cnt animation fadeInRgt">
+							<h3>マタニティ歯科診療</h3>
+							<ul class="blog__cnt__list">
+								<li>つわりで歯磨きができない</li>
+								<li>妊娠中にお口のケアをしたい</li>
+								<li>妊娠中でもむし歯の治療がしたい　など</li>
+							</ul>
+							<p>妊娠中は、つわりや食生活の変化、ホルモンバランスの乱れから、むし歯・歯周病にかかりやすくなります。特に、妊娠中の歯周病は歯周病の細菌がお口から血管に入り込んで全身をめぐり、早産や低出生体重児といった影響を及ぼす可能性があるため、注意が必要です。当院では身体に障りがない範囲で、妊娠中のお口ケアの指導、クリーニング、治療を行っています。
+							</p>
+						</div>
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service12.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+					</div>
+					<div class="blog__row" id="service_13">
+						<div class="blog__img animation fadeInRgt">
+							<div class="blog__img__mask">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/main/service13.jpg" alt="">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInLft">
+							<h3>各種歯科検診</h3>
+							<ul class="blog__cnt__list">
+								<li>歯科検診のお知らせが来た</li>
+								<li>歯のチェックを受けたい</li>
+								<li>お口で心配なことがある　など</li>
+							</ul>
+							<p>むし歯や歯周病といった歯のトラブルは、早期発見・早期治療が大切です。特にトラブルを感じていなくても、定期的な検診を受けることで、大切なご自身の歯を守るほか、肉体的にも金銭的にも負担を軽減できます。歯のことで気になることや困っていることなどがある方や、長い間歯科検診を受けていない方などは、お気軽にご来院ください。
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end Content-->
+		</main>
+		<?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+	</div>
+	<?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+	<script></script>
+</body>
+
+</html>
