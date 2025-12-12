@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include_once(__DIR__."/../init.php"); ?>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		<?= $init['meta']['staff']['title'] ?>
+	</title>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+	<meta name="description" content="<?= $init['meta']['staff']['description'] ?>">
+	<meta name="keywords" content="<?= $init['meta']['staff']['keyword'] ?>">
+	<meta property="og:title" content="<?= $init['meta']['staff']['title'] ?>">
+	<meta property="og:description" content="<?= $init['meta']['staff']['description'] ?>">
+	<meta property="og:url" content="<?= $init['clinic']['url'] ?>staff/">
+	<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+	<meta property="og:type" content="article">
+	<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+	<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>staff/",
+							"name": "<?= $init['meta']['staff']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+</head>
+
+<body id="p-staff">
+	<div class="wrapper" id="wrapper">
+		<?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+		<main class="main__contents" id="main">
+			<!-- headding-->
+			<h1 class="headding">
+				<?= $init['meta']['staff']['h1'] ?>
+			</h1>
+			<!-- mainvisual-->
+			<header class="banner_sub">
+				<div class="banner_sub__img">
+					<picture>
+						<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+					</picture>
+				</div>
+				<div class="banner_sub__ttl">
+					<p class="animation fadeInLft">院長紹介</p>
+					<p class="is-en sub_ttl animation fadeInLft">STAFF</p>
+				</div>
+			</header>
+			<!-- breadcrumbs-->
+			<div class="pankuzu">
+				<div class="container">
+					<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　院長紹介
+					</p>
+				</div>
+			</div>
+			<!-- philosophy-->
+			<!--<section class="staff_first">
+					<div class="container">
+						<div class="staff_first__inner">
+							<div class="staff_first__cnt animation fadeInLft">
+								<h2 class="is-ttl">コミュニケーションを重視し<br>患者さまファーストな診療を</h2>
+								<p>当院は父と私の2代にわたり、この地域の患者さまとの信頼関係を何よりも大切に診療してまいりました。<br>おかげさまで3世代、4世代にわたってご家族で通ってくださる患者さまが多く、親しまれております。<br>今後も地域の皆さまに寄り添った歯科医療をご提供していくことで、ご期待以上の歯科治療をお届けできるように努めてまいります。</p>
+							</div>
+							<div class="staff_first__img animation fadeInRgt">
+								<div class="staff_first__img__mask">
+									<picture>
+										<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/main/nap_img_1.jpg" alt="">
+									</picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>-->
+			<!-- director-->
+			<section class="staff_md">
+				<div class="container">
+					<div class="section__ttl pc__mb__85 sp__mb__30">
+						<p class="animation fadeInLft"><div class="title_pc pc_only">DENTIST</div></p>
+						<p class="animation fadeInLft"><div class="title_sp sp_only">DENTIST</div></p>
+						<h2 class="is-en sub_ttl animation fadeInLft">院長紹介</h2>
+					</div>
+					<div class="blog__row blog__row--staff">
+						<div class="blog__img animation fadeInLft">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/doc2.jpg" width="501" height="601">
+								</picture>
+							</div>
+						</div>
+						<div class="blog__cnt animation fadeInRgt greeting">
+							<div class="blog__cnt__name"><span>院長</span></div>
+							<h3 class="color_black">北川 幸郎 <span class="label label--white">きたがわ　ゆきろう</span></h3>
+							<h4 class="sp_align_center blog__cnt__heading">あらゆる世代のお口の健康を<br class="pc_only">お守りします</h4>
+								<p>皆さま、こんにちは。 <br>
+									鳥栖市の【きたがわ歯科クリニック】院長の北川幸郎です。 <br>
+									当院では、「見てわかりやすい説明」を心がけ、皆さまに安心して治療を受けていただけるようにしております。 <br>
+									治療前のカウンセリングを丁寧に行い、必要に応じ、治療ついての説明を記載した用紙をお渡ししておりますのでご自宅でゆっくりご確認いただけます。 <br>
+									また、私は多くの被せ物や入れ歯製作に携わってきましたが、その中で「予防ケア」の重要性を痛感しております。 <br>
+									特に幼少期から予防ケアを続けていると、将来歯を失うリスクは低くなります。 <br>
+									そのため、歯科医院は「歯が悪くなる前に予防に来るところ」という意識を広めてまいりたいと考えております。 <br>
+									歯が生えたての赤ちゃんからシニア世代の方まで、どうぞご家族皆さまでお越しください。
+								</p>
+								
+						</div>
+						<div class="blog__list pc__mt__80 animation fadeInUp">
+								<h3 class="align_center">経歴</h3>
+								<ul class="w700">
+									<li>
+										<p>昭和53年生まれ
+											<br>長崎県出身
+											<br>・北海道医療大学歯学部卒業
+											<br>・長崎大学病院義歯補綴治療室入局
+											<br>・長崎大学大学院医歯薬総合研究科博士課程修了
+											<br>・佐賀県、福岡県内の歯科医院にて勤務
+											<br>きたがわ歯科クリニック開業。</p>
+											
+									</li>
+								</ul>
+							</div>
+							<!--<div class="blog__list pc__mt__80 animation fadeInUp">
+								<h3 class="align_center">資格・所属</h3>
+								<ul class="w700">
+									<li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+									<li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+									<li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+									<li>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</li>
+								</ul>
+							</div>-->
+					</div>
+				</div>
+			</section>
+			<!-- doctor-->
+			<!-- recruit-->
+		</main>
+		<?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+	</div>
+	<?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+	<script></script>
+</body>
+
+</html>
