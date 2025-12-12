@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['dentures']['title'] ?></title>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['dentures']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['dentures']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['dentures']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['dentures']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>dentures/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article">
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "https://hoge.com",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "https://hoge.com/dentures/",
+							"name": "<?= $init['meta']['dentures']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-pattern">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['dentures']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="animation fadeInLft">入れ歯</p>
+						<p class="is-en sub_ttl animation fadeInLft">DENTURES</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a href="/<?= $dir; ?>">top > </a> 入れ歯 </p>
+					</div>
+				</div>
+				<!-- type-->
+				<div class="endpart">
+					<div class="container">
+						<section class="block-cnt no-order">
+							<div class="section__ttl pc__mb__20 sp__mb__30">
+								<p class="is-jp animation fadeInLft">快適な入れ歯で、楽しくお食事や会話を</span></p>
+								<h2 class="sub_ttl animation fadeInLft">このようなお悩み・ご要望のある方は、当院までご相談ください。</h2>
+							</div>
+							<div class="blog__row pc__mb__105 sp__mb__50 sp__pt__20">
+								<div class="blog__img animation fadeInLft custom_order_2">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/1.jpg" width="450">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pl__0 animation fadeInRgt">
+									<ul class="blog__cnt__list mb__25">
+										<li>歯が抜けたままになっている</li>
+										<li>入れ歯がズレやすい</li>
+										<li>新しく入れ歯を作りたい</li>
+										<li>かみ合わせが気になる</li>
+									</ul>
+								</div>
+								<div class="blog__notice pc__mt__20 sp__mt__20 custom_order_3">
+									<div class="blog__notice__ttl">入れ歯(義歯)とは？</div>
+									<p>失った歯の機能を、取り外しが可能な人工の義歯で補うのが「入れ歯」です。歯が抜けたまま放置していると、噛みづらい・話しづらいなど、日常生活にも支障をきたします。快適な毎日を送るために、当院では入れ歯をお一人お一人に合わせてオーダーメイドでお作りしています。新しく入れ歯を作りたい方はもちろん、いまお使いの入れ歯を調整したい方も、まずはご相談ください。
+                                    </p>
+								</div>
+							</div>
+						</section>
+					</div>
+					<section class="service_list pc__mb__205">
+						<div class="container">
+							<div class="service_list__cnt animation fadeInUp show">
+								<ul class="is-three">
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_1">入れ歯が必要な理由</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_2">入れ歯の種類</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_3">快適な入れ歯を製作するために</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_4">入れ歯製作の流れ</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<div class="container">
+						<section class="block-cnt sp__pt__50" id="block_1">
+							<h2 class="block-cnt__ttl align_center">入れ歯が必要な理由</h2>
+							<p class="block-cnt__desc align_center pc__mb__50">Reason</p>
+							<div class="blog__row pc__mb__85 sp__pt__30">
+								<div class="blog__cnt pc__pr__50 pl__0 animation fadeInLft">
+									<p>歯は絶妙なバランスで支え合っています。そのため1本でも歯が抜けると、周りの歯が空いたスペースを埋めようと少しずつ移動して、かみ合わせのバランスが悪くなっていきます。その結果、顎の関節を痛めたり、頭痛や肩こりなど全身の不調につながったりすることもありますので、歯を失ったらすぐに入れ歯で補うことが必要です。</p>
+								</div>
+								<div class="blog__img pc__pl__50 pr__0 animation fadeInRgt">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/2.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+							</div>
+						</section>
+                        <section class="block-cnt --background-blue pc__pt__80 pc__mb__160" id="custom_block">
+							<h2 class="block-cnt__ttl align_center mb__20 pc__pl__50 pc__pr__50 sp__fz22"><span class="sp_display">入れ歯(義歯)をしないと、</span>このような症状が現れることも……</h2>
+							<style>
+							    #custom_block:after {
+							        content: '';
+							        display: table;
+							        clear: both;
+							    }
+							    #custom_block .blog__cnt__list {
+							        float: left;
+							        width: 50%;
+							        align-items: baseline;
+							    }
+                                @media screen and (max-width: 768px) {
+                                    #custom_block .blog__cnt__list {
+                                        float: none;
+                                        width: 100%;
+                                        align-items: baseline;
+                                        margin: 0;
+                                    }
+                                }
+							</style>
+							<ul class="blog__cnt__list --flex">
+								<li class="fz20">顔のゆがみ</li>
+								<li class="fz20">頬が痩せて、老けた印象になる</li>
+							</ul>
+							<ul class="blog__cnt__list --flex">
+								<li class="fz20">原因不明の肩こり</li>
+								<li class="fz20">身体全体のバランスが崩れる</li>
+							</ul>
+						</section>
+                        <section class="block-cnt pt__40 pc__mb__180 sp__mb__80 sp__pt__50" id="block_2">
+							<h2 class="block-cnt__ttl align_center">入れ歯の種類</h2>
+							<p class="block-cnt__desc align_center pc__mb__50">Type</p>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/3.png" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">レジン床義歯(保険適用の総入れ歯)</h3>
+									<p>歯ぐきに触れる「床」部分が、歯科用プラスチックの「レジン」で作られた入れ歯です。ほとんどの症例で使用でき、保険適用なので安価で製作できる点がメリットです。一方、強度を保つため「床」が厚く大きめなので、違和感がある、話しづらい、食べ物の温度が伝わりにくいなどのデメリットもあります。
+                                        </p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/4.png" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">金属床義歯(自由診療の総入れ歯)</h3>
+									<p>歯ぐきに触れる「床」の部分が、金属で作られた入れ歯です。床を金属で薄く仕上げることで、食べ物の温度を感じやすくなり、お食事をより楽しめるようになります。また、話しやすく、他の歯への負担が少ないことも特徴です。自由診療のため、比較的高価になります。
+                                        </p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/5.png" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">ノンクラスプデンチャー<br>(自由診療の部分入れ歯)</h3>
+									<p>部分入れ歯を固定する「クラスプ」と呼ばれる金属バネの部分が、歯ぐきのような色の樹脂で作られた入れ歯です。金属を使っていないので部分入れ歯であることが周囲にわかりづらく、審美性が高いのが特徴です。自由診療なので、比較的高価になります。</p>
+								</div>
+							</div>
+						</section>
+                        <section class="block-cnt --background-blue pc__pt__70 pc__mb__200 sp__mb__100 sp__pt__50" id="block_3">
+							<h2 class="block-cnt__ttl align_center sp__fz22">快適な入れ歯を製作するためには</h2>
+							<p class="block-cnt__desc align_center pc__mb__50">Comfortable dentures</p>
+							<div class="blog__row sp__pt__30 mb__0 pb__0">
+								<div class="blog__col blog__col--md5 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45 align_center" style="display: block">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/6.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10 sp__fz20">まずは精密検査から</h3>
+										<p>すでに入れ歯をお使いの場合は、違和感を調べるための精密な検査が必要です。かみ合わせや顎の構造・バランスなど計測してデータ化して、問題点を洗い出します。このデータをもとにカウンセリングを行い、患者さまの理想に近い入れ歯を製作します。
+										</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md5 animation fadeInUp show">
+									<div class="blog__img__mask mb__10 --radius45 align_center" style="display: block">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/7.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10 sp__fz20">かみ合わせが一番大切</h3>
+										<p>基礎や土台がしっかりしていないと頑丈な建物ができないように、歯の土台となるかみ合わせが悪いままでは、快適な入れ歯は作れません。まずお口全体のかみ合わせを調整してから、入れ歯を製作します。当院では「ゴシックアーチ法」で精密にかみ合わせを検査します。
+                                            </p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md5 animation fadeInUp show">
+									<div class="blog__img__mask mb__10 --radius45 align_center" style="display: block">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/7かたどり.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10 sp__fz20">「ゴシックアーチ法」による<br>入れ歯製作</h3>
+										<p>当院の入れ歯製作は、「ゴシックアーチ法」という方法を採用しています。最初に、患者さまの顎の前後左右の動きや動かし方を計測して、適切なかみ合わせの位置を確認します。そして、噛み癖や顎のズレを補正できる入れ歯を製作します。この方法により、より快適な入れ歯をご提供することが可能です。
+                                            </p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt pc__mb__130 sp__pt__50" id="block_4">
+							<h2 class="block-cnt__ttl align_center">入れ歯製作の流れ</h2>
+							<p class="block-cnt__desc align_center pc__mb__50">Flow</p>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">1</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/8.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 01</span></p>
+									<h3 class="sub__ttl --no-line">精密検査・カウンセリング</h3>
+									<p>かみ合わせや顎のバランスを詳しく調べて、お悩みやご希望をじっくりとうかがいます。そのうえで総合的に判断して、適した入れ歯の種類や素材、費用、治療方法についてご説明します。治療内容にご了承いただいたら、治療を開始いたします。</p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">2</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/9.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 02</span></p>
+									<h3 class="sub__ttl --no-line">初期治療</h3>
+									<p>土台となるお口の状態が整っていなければ、どんなによい入れ歯を製作しても、その機能を十分に発揮させることはできません。むし歯や歯周病などがあれば、先に治療を始めます。　
+                                        </p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">3</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/10.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 03</span></p>
+									<h3 class="sub__ttl --no-line">型取り</h3>
+									<p>1回目：個人トレーの製作
+										<br>お口の大きさ・歯並びに合わせた、型取り用の「個人トレー」を作ります。</p>
+									<p>2回目：個人トレーによる精密な型取り
+										<br>1回目の型取りでできあがった「個人トレー」を用いて、さらに精密な歯型を取ります。</p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">4</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/11.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 04</span></p>
+									<h3 class="sub__ttl --no-line">かみ合わせの調整</h3>
+									<p>専用の装置を使用して、患者さまの上下の顎の位置関係を記録します。患者さまごとに異なる快適なかみ合わせの位置を調整していきます。</p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">5</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/12.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 05</span></p>
+									<h3 class="sub__ttl --no-line">入れ歯の試着・調整</h3>
+									<p>人工歯を仮並べした入れ歯を試着します。そこで再度、かみ合わせの高さ・バランス・見た目・痛みの有無などをチェックして調整します。調整が終わったら、実際に人工歯を並べます。
+                                        </p>
+								</div>
+							</div>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<p class="block-cnt__number">6</p>
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/dentures/13.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<p class="introduce__col__number"><span>Step 06</span></p>
+									<h3 class="sub__ttl --no-line">完成・メンテナンス</h3>
+									<p>調節を終えた入れ歯で違和感がなければ、入れ歯の完成です。入れ歯を使い続けるとお口の中に変化が生じてきますので、快適な装着感を保つためにも、3ヶ月に1回程度の定期的なメンテナンスが必要です。違和感や痛みなどがありましたら調整を行いますので、我慢せずにいつでもお気軽にご相談ください。
+                                        </p>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!-- end Content-->
+				</div>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script></script>
+	</body>
+</html>
