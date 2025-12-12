@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include_once(__DIR__."/../init.php"); ?>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        <?= $init['meta']['sitemap']['title'] ?>
+    </title>
+    <?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+    <?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+    <meta name="description" content="<?= $init['meta']['sitemap']['description'] ?>">
+    <meta name="keywords" content="<?= $init['meta']['sitemap']['keyword'] ?>">
+    <meta property="og:title" content="<?= $init['meta']['sitemap']['title'] ?>">
+    <meta property="og:description" content="<?= $init['meta']['sitemap']['description'] ?>">
+    <meta property="og:url" content="<?= $init['clinic']['url'] ?>sitemap/">
+    <meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+    <meta property="og:type" content="article">
+    <?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+    <script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>sitemap/",
+							"name": "<?= $init['meta']['sitemap']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+        <link rel="stylesheet" href="/<?= $dir; ?>assets/css/sitemap.css">
+</head>
+
+<body id="p-sitemap">
+    <div class="wrapper" id="wrapper">
+        <?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+        <main class="main__contents" id="main">
+            <!-- headding-->
+            <h1 class="headding">
+                <?= $init['meta']['sitemap']['h1'] ?>
+            </h1>
+            <!-- mainvisual-->
+            <header class="banner_sub">
+                <div class="banner_sub__img">
+                    <picture>
+                        <source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+                    </picture>
+                </div>
+                <div class="banner_sub__ttl">
+                    <p class="animation fadeInLft">サイトマップ</p>
+                    <p class="is-en sub_ttl animation fadeInLft">SITEMAP</p>
+                </div>
+            </header>
+            <!-- breadcrumbs-->
+            <div class="pankuzu">
+                <div class="container">
+                    <p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　 サイトマップ
+                    </p>
+                </div>
+            </div>
+
+            <!-- サイトマップここから -->
+            <section class="p-sitemap">
+                <div class="p-sitemap_inner p-sitemap_inner-s">
+                    <p class="p-sitemap_border wow fadeInUp">当サイトのコンテンツ一覧です</p>
+                    <h2 class="p-sitemap_ttl wow fadeInUp">きたがわ歯科クリニックの<br class="is-sp">コンテンツ一覧</h2>
+                    <ul class="p-sitemap_list wow fadeInUp">
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>">トップ</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>services/">診療案内</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>child/">小児歯科</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>periodontal/">歯周病</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>dentures/">入れ歯</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>staff/">院長紹介</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>facilities/">院内紹介</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>equipments/">設備紹介</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>access/">アクセス</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="/<?= $dir; ?>_cms/">コラム</a></p></li>
+                        <li class="wow fadeInUp"><p><a href="https://www.v-apo.net/kitagawa-shika/login" target="_blank">Web予約</a></p></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- サイトマップここまで -->
+
+            <!-- end Content-->
+        </main>
+        <?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+    </div>
+    <?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+    <script></script>
+</body>
+
+</html>
