@@ -1,0 +1,46 @@
+
+
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_START
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /_cms/
+    RewriteRule ^wp-signup\.php 404-siteguard [L]
+    RewriteRule ^wp-activate\.php 404-siteguard [L]
+    RewriteRule ^login_36627(.*)$ wp-login.php$1 [L]
+</IfModule>
+#==== SITEGUARD_RENAME_LOGIN_SETTINGS_END
+#==== SITEGUARD_ADMIN_FILTER_SETTINGS_START
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /_cms/
+    RewriteRule ^404-siteguard - [L]
+    RewriteRule ^wp-admin/css - [L]
+    RewriteRule ^wp-admin/images - [L]
+    RewriteRule ^wp-admin/admin-ajax\.php - [L]
+    RewriteRule ^wp-admin/load-styles\.php - [L]
+    RewriteRule ^wp-admin/site-health\.php - [L]
+    RewriteCond %{REMOTE_ADDR} !^163\.43\.113\.11$
+    RewriteCond %{REMOTE_ADDR} !^157\.7\.100\.19$
+    RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+    RewriteCond %{REMOTE_ADDR} !^::1$
+    RewriteRule ^wp-admin 404-siteguard [L]
+</IfModule>
+#==== SITEGUARD_ADMIN_FILTER_SETTINGS_END
+#SITEGUARD_PLUGIN_SETTINGS_END
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /_cms/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /_cms/index.php [L]
+</IfModule>
+
+# END WordPress
