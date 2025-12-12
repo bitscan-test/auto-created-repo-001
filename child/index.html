@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja"><?php include_once(__DIR__."/../init.php"); ?>
+	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title><?= $init['meta']['child']['title'] ?></title>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+		<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+		<meta name="description" content="<?= $init['meta']['child']['description'] ?>">
+		<meta name="keywords" content="<?= $init['meta']['child']['keyword'] ?>">
+		<meta property="og:title" content="<?= $init['meta']['child']['title'] ?>">
+		<meta property="og:description" content="<?= $init['meta']['child']['description'] ?>">
+		<meta property="og:url" content="<?= $init['clinic']['url'] ?>child/">
+		<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+		<meta property="og:type" content="article">
+		<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "https://hoge.com",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "https://hoge.com/child/",
+							"name": "<?= $init['meta']['child']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+	</head>
+	<body id="p-pattern">
+		<div class="wrapper" id="wrapper"><?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+			<main class="main__contents" id="main">
+				<!-- headding-->
+				<h1 class="headding"><?= $init['meta']['child']['h1'] ?></h1>
+				<!-- mainvisual-->
+				<header class="banner_sub">
+					<div class="banner_sub__img">
+						<picture>
+							<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+						</picture>
+					</div>
+					<div class="banner_sub__ttl">
+						<p class="animation fadeInLft">小児歯科</p>
+						<p class="is-en sub_ttl animation fadeInLft">CHILD</p>
+					</div>
+				</header>
+				<!-- breadcrumbs-->
+				<div class="pankuzu">
+					<div class="container">
+						<p><a href="/<?= $dir; ?>">top > </a> 小児歯科</p>
+					</div>
+				</div>
+				<!-- type-->
+				<div class="endpart">
+					<div class="container">
+						<section class="block-cnt no-order">
+							<div class="section__ttl pc__mb__20 sp__mb__30">
+								<p class="is-jp animation fadeInLft">お子さまの大切な歯を守るために</p>
+								<h2 class="sub_ttl animation fadeInLft">このようなお悩みのある方は、当院までご相談ください。</h2>
+							</div>
+							<div class="blog__row pc__mb__105 sp__mb__50 sp__pt__20">
+								<div class="blog__img animation fadeInLft custom_order_2">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/1.jpg" width="450">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pl__0 animation fadeInRgt">
+									<ul class="blog__cnt__list mb__25">
+										<li>子どもがむし歯になってしまった</li>
+										<li>子どもの歯で気になることがある</li>
+										<li>正しいブラッシング、仕上げ磨きの方法が知りたい</li>
+									</ul>
+								</div>
+								<div class="blog__notice pc__mt__20 sp__mt__20 custom_order_3">
+									<div class="blog__notice__ttl">小児歯科とは？</div>
+									<p>乳歯のむし歯を放置していると、その後生え替わってくる永久歯までむし歯になりやすく、その結果、歯並びや顎の成長に悪い影響を与えることがあります。むし歯の治療はもちろん、再発しないように予防ケアを継続して、子どものうちから予防の習慣を身に付けていただくことが小児歯科の役割です。
+                                    </p>
+								</div>
+							</div>
+						</section>
+					</div>
+					<section class="service_list pc__mb__205">
+						<div class="container">
+							<div class="service_list__cnt animation fadeInUp show">
+								<ul class="is-three">
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_1">歯医者デビューは生後6カ月を目安に</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_2">子どものむし歯を防ぐには</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_3">子どものむし歯の特徴 </a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_4">子どものむし歯と発育の関係</a></li>
+									<li><a class="btn__arrow btn__arrow--circle" href="#block_5">むし歯予防に効果的な方法</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<div class="container">
+						<section class="block-cnt pc__mb__245 sp__mb__100 sp__pt__50" id="block_1">
+							<div class="blog__row">
+								<div class="blog__img pt__20 pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/2.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pr__0 animation fadeInRgt">
+									<h2 class="block-cnt__ttl">歯医者デビューは<br><span class="pc_display">生後6カ月を目安に </span></h2>
+									<p class="block-cnt__desc pc__mb__35">Time of debut</p>
+									<p>生後間もない赤ちゃんのお口の中には、むし歯菌はまだ存在しません。むし歯菌への感染は、同居家族によるものが多いとされています。むし歯になるリスクを抑えるためにも、歯科医院に通う習慣を作っていくことが大切です。前歯が生え始めた生後6ヶ月ぐらいは、人見知りも少なく雰囲気にも慣れやすいので、歯医者デビューにおすすめの時期です。</p>
+								</div>
+							</div>
+						</section>
+                        <section class="block-cnt --background-blue pc__pt__70 pc__mb__200 sp__mb__100 sp__pt__50" id="block_2">
+							<h2 class="block-cnt__ttl align_center">子どものむし歯を防ぐには</h2>
+							<p class="block-cnt__desc align_center mb__10">Prevention method</p>
+							<div class="blog__row sp__pt__30 mb__0 pb__0">
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/3.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">毎日の食事回数・時間をきちんと決める</h3>
+										<p>お口の中に食べ物がある状態が続くと、お口の中が酸性に変化して歯の表面が溶かされ、むし歯へと進行してしまいます。そのため、食事の回数・時間をきちんと決めておきましょう。</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/4.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">甘い物の「量」や「質」に注意</h3>
+										<p>むし歯菌のエサは、食べ物や飲み物に含まれる「糖分」です。そのため、チョコレートなど砂糖を使ったお菓子や甘いジュースを摂りすぎないようにしましょう。フルーツやさつまいもなど、自然の甘味やキシリトール配合のお菓子であれば、むし歯のリスクを軽減できます。</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/5.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">毎食後、歯を磨く</h3>
+										<p>お食事後は、むし歯の原因となる「歯垢（プラーク）」とお口の中に残った「糖質」を取り除くために、歯磨きするようにしましょう。乳幼児はもちろん、小学校低学年までは自分では歯をしっかり磨くことができませんので、ご家族の方が「仕上げ磨き」をしてあげてください。　
+                                            </p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="block-cnt sp__pt__50" id="block_3">
+							<h2 class="block-cnt__ttl align_center">子どものむし歯の特徴</h2>
+							<p class="block-cnt__desc align_center mb__10">Feature</p>
+							<div class="blog__row pc__mb__85 sp__pt__30">
+								<div class="blog__cnt pc__pr__50 pl__0 animation fadeInLft">
+									<p>乳歯は永久歯よりもやわらかく、エナメル質が薄いので、むし歯になりやすいといえます。
+										<br>むし歯に対しての抵抗力も低いので進行が速く、歯の表面に穴を見つけた時には、むし歯が神経まで到達していることも少なくありません。
+                                        </p>
+								</div>
+								<div class="blog__img pc__pl__50 pr__0 animation fadeInRgt">
+									<div class="blog__img__mask blog__img__mask--revert">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/6.jpg" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+							</div>
+						</section>
+                        <section class="block-cnt --background-blue pc__pt__70 pc__mb__200 sp__mb__100 sp__pt__50" id="block_4">
+							<h2 class="block-cnt__ttl align_center">子どものむし歯と発育の関係</h2>
+							<p class="block-cnt__desc align_center mb__10">Causal relationship</p>
+							<div class="blog__row sp__pt__30 mb__0 pb__0">
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/7.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">永久歯までむし歯に<br>なりやすい</h3>
+										<p>乳歯のむし歯は進行が速く、歯根にまで到達して膿が溜まると、その後生え替わってくる永久歯もむし歯になってしまうリスクが高まります。永久歯は再び生え替わることはないので、子どもの頃からしっかりケアをして、大切に使っていきましょう。</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/8.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">歯並びが悪くなる<br>可能性がある</h3>
+										<p>乳歯には、永久歯を生えるべき場所へと誘導する働きがあります。そのため乳歯がむし歯になって早く抜けてしまうと、永久歯が正しい位置に生えず、歯並びが乱れてしまうことがあります。また、しっかり噛むことができず、顎がきちんと発達しないで歯並びに影響が出るケースもあります。</p>
+									</div>
+								</div>
+								<div class="blog__col blog__col--md3 animation fadeInLft show">
+									<div class="blog__img__mask mb__10 --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/9.jpg" width="300" height="187">
+										</picture>
+									</div>
+									<div class="blog__cnt blog__cnt--full">
+										<h3 class="sub__ttl --no-line align_center mb__10">全身の発育にも<br>リスクを及ぼす</h3>
+										<p>むし歯で痛みがあったり歯が抜けたりしてしまうと、しっかり噛むことが難しく、やわらかいものばかり食べるなどの偏食になりがちです。幼少期に栄養を食事からバランスよく摂取できないと、身体や脳の発達に影響が出ることがあります。
+                                            </p>
+									</div>
+								</div>
+							</div>
+						</section>
+                        <section class="block-cnt pt__40 pc__mb__180 sp__mb__80 sp__pt__50" id="block_5">
+							<h2 class="block-cnt__ttl align_center">むし歯予防に効果的な方法</h2>
+							<p class="block-cnt__desc align_center mb__10">Effective method</p>
+							<div class="blog__row sp__pt__30 mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/11.png" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">フッ素塗布</h3>
+									<p>フッ素は自然界に存在する成分で、お茶や魚介類など身近な食品にも含まれています。フッ素には「溶けた歯を治す・酸に溶けにくい歯にする・むし歯菌の働きを弱める」という3つの効果があります。歯科医院で定期的にフッ素塗布したり、ご自宅でもフッ素配合の歯磨き剤を使用したりするなど、積極的に活用しましょう。
+                                    </p>
+								</div>
+							</div>
+							<div class="blog__row mb__0">
+								<div class="blog__img pc__pr__50 pl__0 animation fadeInLft">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/12.png" width="450" height="281">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt pc__pl__50 pt__15 pr__0 animation fadeInRgt">
+									<h3 class="sub__ttl">シーラント</h3>
+									<p>シーラントとは、奥歯の溝を歯科用プラスチックで埋めて、むし歯菌を入り込ませないようにする処置です。奥歯は特に磨きにくく、食べ残しが溜まりやすい場所なので、乳歯の奥歯が生え始めたらシーラントでの予防をおすすめしています。ただし、シーラントがはがれると、その隙間からむし歯菌が入り込みやすくなるので、定期的にメンテナンスが必要です。
+                                        </p>
+								</div>
+							</div>
+						</section>
+                        <section class="block-cnt mb__0 no-order sp__pt__50" id="block_9">
+							<div class="blog__row pt__10">
+								<div class="blog__img --full pr__0 pl__0 animation fadeInLft show">
+									<div class="blog__img__mask --radius45">
+										<picture>
+											<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/child/10.jpg" width="1000" height="300">
+										</picture>
+									</div>
+								</div>
+								<div class="blog__cnt--full --position-top animation fadeInRgt show">
+									<h3 class="align_center blog__ttl mb__15">むし歯ができる前に<span class="sp_display">歯医者さんに通いましょう</span></h3>
+									<p>お子さまが「歯医者さん嫌い」になって治療の機会を失わないためにも、まずはむし歯にならないうちに、歯科医院で「予防ケア」を受けていただくことが大切です。予防ケアであれば痛くないので、お子さまも取り組みやすくなります。当院では、天井にモニターを設置して、お子さまが好きな動画を流しながら治療を行ったり、治療後にご褒美のカプセルトイ（ガチャガチャ）をご用意したりしていますので、楽しく通院していただけます。
+                                        </p>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!-- end Content-->
+				</div>
+				<!-- end Content-->
+			</main><?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+		</div><?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+		<script></script>
+	</body>
+</html>
