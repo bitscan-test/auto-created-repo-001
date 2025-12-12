@@ -1,0 +1,23 @@
+#### html上でのPHP起動 ####
+# lolipop版の場合：
+AddType application/x-httpd-lsphp .html
+
+##### rewrite setteing #####
+RewriteEngine On
+Options +FollowSymLinks
+RewriteBase /
+
+##### httpsに統一 #####
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+##### wwwに統一 #####
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#### index.html 無に統一 ####
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://www.kitagawa-shika.jp/$1 [R=301,L]
+
+#### 404 ####
+ErrorDocument 404 https://www.kitagawa-shika.jp/index.html
