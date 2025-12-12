@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------
+ * ページネーション ※記事詳細
+ * ------------------------------------------------------------ */
+.m-pager
+	// max-width: 1200px
+	margin: $sectionMarginPC auto 0
+.m-pager_list
+	display: flex
+	justify-content: space-between
+	li
+		span
+			font-size: 1.0rem
+		&.is-prev span
+			// padding-left: 1.8rem
+			// +iconFontAbsolute(before, angle-left, 50%, null, 50%, 0, 2.0rem, #fff)
+		&.is-next span
+			// padding-right: 1.8rem
+			// +iconFontAbsolute(before, angle-right, 50%, 0, 50%, null, 2.0rem, #fff)
+		&.is-disable
+			visibility: hidden
+.m-pager_item
+	a,.is-none
+		display: inline-block
+		text-align: center
+		min-width: 220px
+		padding: 15px 30px
+		transition: all .3s
+		// border-radius: 10px
+	&.is-prev, &.is-next
+		a
+			background-color: $keyColor
+			color: #fff
+			&.is-hover,&:hover
+				background-color: rgba($keyColor,0.75);
+		.is-none
+			background-color: rgba($keyColor,0.4)
+			color: #fff
+	&.is-index
+		a
+			border: 1px solid $keyColor
+			color: $keyColor
+			&.is-hover,&:hover
+				background-color: $keyColor
+				color: #fff
+@media (max-width: 1024px)
+	.m-pager
+		padding: 0 $sectionMargin/10*3 $sectionMargin/5
+		margin-left: -#{$sectionMargin/10*3}
+		margin-right: -#{$sectionMargin/10*3}
+@media (max-width: 768px)
+	.m-pager
+		margin-top: $sectionMargin/2
+		margin-left: -15px
+		margin-right: -15px
+		padding: 0 15px $sectionMargin/5
+	.m-pager_list
+		justify-content: space-between
+		li
+			span
+				font-size: .8rem
+			// display: none
+			// &.is-disable
+			// 	visibility: hidden
+			// 	width: 0
+	.m-pager_item
+		a,.is-none
+			padding: 10px 10px
+			// border-radius: 5px
+			min-width: auto

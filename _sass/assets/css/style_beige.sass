@@ -1,0 +1,4026 @@
+@charset "utf-8"
+
+@font-face
+	font-family: 'perpetua'
+	src: url('../fonts/perpeta_font.woff2') format('woff2'), url('../fonts/perpeta_font.woff') format('woff')
+
+/* ---------------キーカラー---------------*/
+$keyColor: #d6cabe
+$color02: #463928
+$color03: $color02
+$color04: #345d7c
+
+$backgroundColor01: #e8e3dd
+$backgroundColor02: #f7f7f7
+$backgroundColor03: #f7f7f7
+$backgroundColor04: #f7f7f7
+$backgroundColor05: #b8aca0
+$backgroundColor06: #f5f3f0
+$backgroundColor07: #f7f4f2
+$backgroundColor08: #f0f0f6
+$backgroundColor09: #57596e
+$pointColor01: #57596e
+$pointColor02: #c6a36b
+$pointColor03: #57596e
+$buttnColor01: #817464
+$buttnColor02: #b8aca0
+$buttnColor03: $buttnColor02
+$buttnColor04: #57596e
+$borderColor01: #817464
+$borderColor02: #57596e
+$borderColor03: #b49f82
+$borderColor04: $borderColor03
+$borderColor05: #c0d3dc
+$borderColor06: #ffffff
+$tableBorder: #90acba
+
+$barColor01: #b8aca0
+$textColor: #333333
+$textColor02: #b8aca0
+$textColor03: #d6cabe
+$textColor04: #303f52
+$textColor05: #817464
+$textColor06: #817464
+$textColor07: #c6a36b
+
+
+@import "../../_mixin/_background"
+@import "../../_mixin/_icon"
+@import "../../_mixin/_mixin"
+@import "../../_mixin/_utility"
+@import "../../_components/_variable"
+@import "../../_components/_reset"
+@import "../../_plugin/slick"
+@import "../../_plugin/animate"
+$colorname: 'beige'
+
+html,body
+	font-size: 100%
+
+.wrapper
+	min-width: 1024px
+	overflow: hidden
+	position: relative
+	z-index: 1
+
+	@media (max-width: $sp)
+		min-width: 320px
+
+.clearfix
+	+clearfix
+
+.sp_only
+	display: none
+
+	@media (max-width: $sp)
+		display: block
+
+.pc_only
+	@media (max-width: $sp)
+		display: none
+
+.align_rgt
+	text-align: right
+
+.align_lft
+	text-align: left
+
+.align_center
+	text-align: center
+
+@media (max-width: $sp)
+	.sp_align_center
+		text-align: center
+
+.container
+	max-width: 1000px
+	@media (max-width: $tb)
+		padding-left: 20px
+		padding-right: 20px
+
+	+mcenter
+
+	@media (max-width: $sp)
+		width: 100%
+		padding-left: 0
+		padding-right: 0
+
+.txt_block
+	display: block
+
+.btn__arrow
+	position: relative
+	display: inline-block
+	padding-right: 39px
+	padding-bottom: 16px
+	overflow: hidden
+	color: $textColor03
+	background: url(../images/icons/arrow-right-#{$colorname}.svg) no-repeat right 7px
+
+	&--circle
+		background: url(../images/icons/arrow-down-circle-#{$colorname}.svg) no-repeat right 6px top 7px
+
+		&:after
+			background: url(../images/icons/arrow-down-circle-#{$colorname}.svg) no-repeat right center
+
+	&:before
+		content: ''
+		width: 0
+		height: 1px
+		position: absolute
+		left: 0
+		bottom: 0
+		background-color: $pointColor01
+
+		+transition(width)
+
+	&:hover,
+	&.active
+		&::before
+			width: 100%
+
+.line
+	position: relative
+
+	&:before
+		content: ''
+		width: 0
+		height: 1px
+		position: absolute
+		left: 0
+		bottom: 0
+		background-color: $pointColor01
+
+		+transition(width)
+
+	&:hover,
+	&.active
+		&::before
+			width: 100%
+
+.border-line-bt-yellow
+	border-bottom: 1px solid #c6a36b
+$i: 0
+$max: 300
+$step: 5
+
+@while $i < $max
+	.mb__#{$i}
+		margin-bottom: ($i * 1px) !important
+
+	.mt__#{$i}
+		margin-top: ($i * 1px) !important
+
+	.ml__#{$i}
+		margin-left: ($i * 1px) !important
+
+	.mr__#{$i}
+		margin-right: ($i * 1px) !important
+
+	.pb__#{$i}
+		padding-bottom: ($i * 1px) !important
+
+	.pt__#{$i}
+		padding-top: ($i * 1px) !important
+
+	.pr__#{$i}
+		padding-right: ($i * 1px) !important
+
+	.pl__#{$i}
+		padding-left: ($i * 1px) !important
+
+	$i: $i + $step
+
+@media (min-width: $sp + 1)
+	.pc
+		$i: 0
+
+		@while $i < $max
+			&__mb__#{$i}
+				margin-bottom: ($i * 1px) !important
+
+			&__mt__#{$i}
+				margin-top: ($i * 1px) !important
+
+			&__ml__#{$i}
+				margin-left: ($i * 1px) !important
+
+			&__mr__#{$i}
+				margin-right: ($i * 1px) !important
+
+			&__pb__#{$i}
+				padding-bottom: ($i * 1px) !important
+
+			&__pt__#{$i}
+				padding-top: ($i * 1px) !important
+
+			&__pr__#{$i}
+				padding-right: ($i * 1px) !important
+
+			&__pl__#{$i}
+				padding-left: ($i * 1px) !important
+
+			$i: $i + $step
+
+@media (max-width: $sp)
+	.sp
+		$i: 0
+
+		@while $i < $max
+			&__mb__#{$i}
+				margin-bottom: ($i * 1px) !important
+
+			&__mt__#{$i}
+				margin-top: ($i * 1px) !important
+
+			&__ml__#{$i}
+				margin-left: ($i * 1px) !important
+
+			&__mr__#{$i}
+				margin-right: ($i * 1px) !important
+
+			&__pb__#{$i}
+				padding-bottom: ($i * 1px) !important
+
+			&__pt__#{$i}
+				padding-top: ($i * 1px) !important
+
+			&__pr__#{$i}
+				padding-right: ($i * 1px) !important
+
+			&__pl__#{$i}
+				padding-left: ($i * 1px) !important
+
+			$i: $i + $step
+
+/* end general *============================================================================
+.header
+	position: fixed
+	width: 22.4%
+	height: 100%
+	max-width: 430px
+	min-width: 305px
+	top: 0
+	left: 0
+	z-index: 10
+	color: $textColor
+	background-color: $backgroundColor01
+
+	@media (min-width: 751px)
+		\::-webkit-scrollbar
+			width: 10px
+
+		\::-webkit-scrollbar-track
+			background: #f1f1f1
+
+		\::-webkit-scrollbar-thumb
+			background: $barColor01
+
+		\::-webkit-scrollbar-thumb:hover
+			background: $keyColor
+
+	@media (max-width: $sp)
+		width: 100%
+		height: 60px
+		max-width: 100%
+		// padding: 18px 0 10px
+
+	&__wrap
+		overflow-y: auto
+		padding: 50px 0
+		height: 100%
+
+		@media (max-width: $sp)
+			overflow: visible
+			padding: 0
+			// height: auto
+
+	.container
+		width: 245px
+
+		+mcenter
+
+		@media (max-width: $sp)
+			width: 100%
+			padding: 0 10px
+			display: flex
+			justify-content: space-between
+			height: 100%
+
+	&__logo
+		text-align: center
+		margin-bottom: 40px
+		display: flex
+		a
+			display: flex
+			align-items: center
+			flex-basis: 100%
+		img,picture
+			max-width: 100%
+			width: 100%
+			// max-height: 50px
+		@media (max-width: $sp)
+			text-align: left
+			margin-bottom: 0
+			flex-basis: calc(100% - 140px)
+			img
+				max-height: 50px
+			// float: left
+			// padding: 2px 0 0
+
+		// h1, p
+			position: relative
+			width: 150px
+			height: 94px
+			+mcenter
+			color: $textColor
+			background: $backgroundColor01 url(../images/header/logo.svg) no-repeat center center
+			background-size: 100% 100%
+			-moz-background-size: 100% 100%
+			-webkit-background-size: 100% 100%
+			@media (max-width: $sp)
+				width: 182px
+				height: 21px
+				background: $backgroundColor01 url(../images/header/logo_01.svg) no-repeat center center
+				background-size: 100% 100%
+				-moz-background-size: 100% 100%
+				-webkit-background-size: 100% 100%
+			a
+				display: block
+				width: 150px
+				height: 94px
+				@media (max-width: $sp)
+					width: 182px
+					height: 21px
+			span
+				width: 150px
+				height: 84px
+				position: relative
+				z-index: -1
+
+	&__nav
+		margin-bottom: 45px
+
+		&_btn
+			@media (max-width: $sp)
+				+flex
+
+			ul
+				+flex
+
+				li
+					flex-basis: 40px
+					font-size: 8px
+					margin-left: 3px
+					+flex
+					align-items: flex-end
+					white-space: nowrap
+					a
+						display: block
+						padding-top: 23px
+						color: $textColor
+
+					&.icon_geo
+						a
+							background: url(../images/icons/geo-alt-fill.svg) no-repeat center top
+
+					&.icon_cal
+						a
+							background: url(../images/icons/table.svg) no-repeat center top
+
+					&.icon_menu
+						width: 35px
+						margin: 0
+
+	&__address
+		margin-bottom: 27px
+
+		address
+			font-style: normal
+			font-size: 15px
+			// white-space: nowrap
+
+			.phone
+				a
+					font-size: 28px
+					font-weight: 100
+					color: $buttnColor01
+					padding-left: 37px
+					background: url(../images/icons/telephone-#{$colorname}.svg) no-repeat left center
+					background-size: 19px 20px
+
+					+transition(opacity)
+
+					cursor: pointer
+
+					&:hover
+						opacity: 0.7
+
+	&__btn
+		+flex
+
+		justify-content: space-between
+		text-align: center
+		margin: 0 -37px 58px
+
+		@media (max-width: 1920px)
+			margin: 0 from-to(-37, -30, 1920, 1366) 58px
+
+		@media (max-width: 1920px)
+			margin: 0 -25px 58px
+
+		a
+			display: block
+			width: 50%
+			margin: 0 5px
+			padding: 12px 5px 11px
+			font-size: 20px
+			color: #ffffff
+			border: 1px solid $borderColor01
+			transition: 0.5s all ease-in-out !important
+			-webkit-transition: 0.5s all ease-in-out !important
+			-moz-transition: 0.5s all ease-in-out !important
+			-ms-transition: 0.5s all ease-in-out !important
+			-o-transition: 0.5s all ease-in-out !important
+			outline: none
+
+			&.line_url
+				background-color: $buttnColor02
+				background: linear-gradient(to left, $buttnColor02 50%, #ffffff 50%) right
+				background-size: 202%
+
+				&:hover
+					border-color: $color02
+					color: $color02
+					background-position: left
+
+			&.web_url
+				background-color: $buttnColor01
+				background: linear-gradient(to left, $buttnColor01 50%, #ffffff 50%) right
+				background-size: 202%
+
+				&:hover
+					border-color: $buttnColor01
+					color: $buttnColor01
+					background-position: left
+
+			&:focus
+				outline: none
+
+		&_menu
+			border: none
+			background: transparent
+			text-transform: uppercase
+			text-align: center
+			position: absolute
+			top: 20px
+			right: 7px
+			z-index: 10
+			outline: none
+
+			&__line
+				display: block
+				margin: 0 auto 4px
+				width: 18px
+				height: 2px
+				background: #3d3f3f
+				transition: all .5s ease-in-out
+
+				.header__btn_menu.active &
+					&:first-child
+						transform: translateY(6px) translateX(0) rotate(45deg)
+
+					&:nth-child(2)
+						opacity: 0
+
+					&:nth-child(3)
+						transform: translateY(-6px) translateX(0) rotate(-45deg)
+						-webkit-transform: translateY(-6px) translateX(0) rotate(-45deg)
+						-moz-transform: translateY(-6px) translateX(0) rotate(-45deg)
+						-ms-transform: translateY(-6px) translateX(0) rotate(-45deg)
+						-o-transform: translateY(-6px) translateX(0) rotate(-45deg)
+
+			&__icon
+				display: block
+				padding-top: 2px
+
+				&.close
+					display: none
+
+				.header__btn_menu.active &
+					&.open
+						display: none
+
+					&.close
+						display: block
+.headding
+	background-color: $keyColor
+	color: #fff
+	padding: 0 15px
+	@media (max-width: $sp)
+		font-size: 8px
+		padding: 2px 10px
+.menu
+	li
+		list-style: none
+		margin-bottom: 16px
+
+		a
+			display: block
+			text-decoration: none
+			font-size: 16px
+			color: $textColor
+			background: url(../images/icons/icon_arrow_r_#{$colorname}.png) no-repeat right center
+
+		&.active
+			a
+				background: url(../images/icons/icon_arrow_r_#{$colorname}_on.png) no-repeat right center
+
+				&:before
+					content: none
+
+.menu_mobile
+	position: fixed
+	height: 100%
+	width: 100%
+	padding-top: 80px
+	top: 0
+	overflow: auto
+	right: -100%
+	background: #ffffff
+
+	+transition(right)
+
+	.menu_mobile__active &
+		right: 0
+
+		&:before
+			content: ''
+			width: 100%
+			height: 65px
+			position: fixed
+			top: 0
+			left: 0
+			background-color: #ffffff
+			z-index: 1
+
+	&__top
+		padding: 0 40px 34px
+
+	&__main_menu
+		margin-bottom: 37px
+
+		.menu
+			li
+				margin-bottom: 0
+				border-bottom: 2px solid #e2e2e2
+
+				a
+					padding: 12px 20px 10px 0
+					background: url(../images/icons/arrow-right-#{$colorname}.svg) no-repeat right center
+
+				&:first-child
+					a
+						border-top: 2px solid #e2e2e2
+
+				&.accordion
+					> a
+						position: relative
+						background: transparent
+
+					.btn
+						position: absolute
+						right: 0
+						top: 0
+						width: 30px
+						height: 100%
+						background: url(../images/icons/plus-circle-#{$colorname}.svg) no-repeat right center
+
+		.sub_menu
+			padding-top: 15px
+			position: relative
+			display: none
+
+	.header
+		&__btn
+			margin: 0
+
+			+flexwrap
+
+			a
+				width: 100%
+				padding: 9px 5px 5px
+				border: none
+				margin-bottom: 14px
+
+				@media (max-width: $sp)
+					width: 220px
+
+					+mcenter
+
+				&.line_url
+					background-color: $pointColor02
+
+		&__logo
+			float: none
+			margin-bottom: 33px
+
+			// p
+				margin: 0
+				// width: 232px
+				// height: 34px
+				background: #ededed url(../images/header/logo_01.svg) no-repeat
+				background-size: 100% 100%
+
+		&__address
+			margin-bottom: 67px
+
+			address
+				font-size: 12px
+
+			.phone
+				margin-top: 7px
+
+				a
+					font-size: 20px
+					padding-left: 25px
+					color: $textColor
+					background: url(../images/icons/telephone-beige03.svg) no-repeat left 5px
+					background-size: 15px 15px
+
+					@media (max-width: $sp)
+						font-size: 30px
+						padding-left: 30px
+						background-size: 20px 20px
+						background-position: left 10px
+
+	&__bottom
+		padding: 45px 40px
+		background-color: #ededed
+
+	.social__btn
+		li
+			margin: 0 28px
+
+		.bi
+			width: 30px
+			height: 30px
+
+.social
+	&--mbt390
+		margin-bottom: 100px
+
+		@media (max-width: $sp)
+			margin-bottom: 100px
+			padding: 0 10px
+
+	&__btn
+		ul
+			+flex
+
+			justify-content: center
+
+			li
+				margin: 0 20px
+
+				a
+					display: block
+					color: $buttnColor01
+
+					+transition(opacity)
+
+					svg
+						vertical-align: top
+
+					&:hover
+						opacity: 0.8
+
+			// &.between
+				justify-content: space-between
+				@media (max-width: $sp)
+					+flexwrap
+					justify-content: center
+				li
+					width: 30.2%
+					margin: 0
+					@media (max-width: $sp)
+						width: 100%
+						text-align: center
+						margin-bottom: 15px
+			&.social__list
+				justify-content: space-between
+				@media (max-width: $sp)
+					+flexwrap
+					justify-content: center
+				li
+					flex-basis: 31%
+					margin: 0
+					@media (max-width: $sp)
+						flex-basis: 100%
+						& + li
+							margin-top: 20px
+					a
+						min-height: 100px
+						display: flex
+						align-items: center
+						padding: 20px
+						border-radius: 10px
+						border: 2px solid $borderColor01
+						@media (max-width: $sp)
+							min-height: 70px
+							padding: 10px 20px
+					span
+						margin-left: 20px
+.main__contents
+	padding-left: 430px
+
+	@media (max-width: 1920px)
+		// padding-left: from-to(430,305,1920,1366);
+		padding-left: 22.4%
+
+	@media (max-width: 1366px)
+		padding-left: 305px
+
+	@media (max-width: $sp)
+		padding: 60px 0 0
+
+.main_visual
+	position: relative
+	margin-bottom: 155px
+
+	@media (max-width: $sp)
+		background-color: $backgroundColor01
+		padding-bottom: 28px
+		margin-bottom: 83px
+
+	&__image
+		mask-image: url(../images/main/mask_main_vs.png)
+		-webkit-mask-image: url(../images/main/mask_main_vs.png)
+		mask-size: 100% auto
+		-webkit-mask-size: 100% auto
+		mask-repeat: no-repeat
+		-webkit-mask-repeat: no-repeat
+
+		@media (max-width: $sp)
+			mask-image: url(../images/main/mask_main_sp.png)
+			-webkit-mask-image: url(../images/main/mask_main_sp.png)
+
+		img
+			width: 100%
+			height: auto
+
+	.main_visual__lead
+		position: absolute
+		top: 50%
+		right: 67px
+		margin-top: -102px
+		letter-spacing: -2px
+		color: $textColor
+		font-size: 60px
+		font-style: italic
+
+		@media (max-width: 1920px)
+			margin-top: from-to(-102, -200, 1920, 1366)
+
+		@media (max-width: 1366px)
+			margin-top: -70px
+			font-size: 4vw
+		@media (max-width: $sp)
+			margin-top: from-to(-480, -400, 750, 320)
+			font-size: 24px
+			font-style: normal
+			right: inherit
+			left: 29px
+			top: 100%
+			font-family: $fontsp
+
+.table
+	&__schedule
+		position: absolute
+		bottom: 33px
+		right: 50px
+
+		@media (max-width: $tb)
+			bottom: -110px
+			right: 20px
+		@media (max-width: $sp)
+			position: static
+			padding: 17px 10px
+
+		table
+			margin-bottom: 15px
+			border: 15px solid rgba(255, 255, 255, 0.8)
+			border-bottom-width: 10px
+			color: #000000
+			background-color: rgba(255, 255, 255, 0.8)
+			font-size: 20px
+
+			@media (max-width: $sp)
+				width: 100%
+				font-size: 16px
+				border-top-width: 8px
+				margin-bottom: 9px
+
+			th
+				width: 38px
+				border: none
+
+				@media (max-width: $sp)
+					width: 35px
+
+				&:first-child
+					width: 190px
+					text-align: left
+
+			td
+				text-align: center
+				color: $textColor02
+
+				&.color_black
+					color: #000000
+
+			thead
+				th
+					height: 55px
+					border-bottom: 2px solid #ececec
+
+					@media (max-width: $sp)
+						height: 36px
+
+					&:first-child
+						padding-left: 23px
+
+						@media (max-width: $sp)
+							padding-left: 18px
+
+			tbody
+				th
+					text-align: left
+					padding: 0 5px
+					height: 45px
+
+					@media (max-width: $sp)
+						height: 36px
+
+	&__note
+		text-align: right
+		font-size: 20px
+		color: #000000
+		padding-right: 33px
+
+		@media (max-width: $sp)
+			font-size: 16px
+			text-align: left
+			padding-left: 15px
+
+		span
+			display: block
+
+.opening
+	margin-bottom: 130px
+
+	@media (max-width: $sp)
+		margin-bottom: 45px
+
+	.container
+		max-width: 1220px
+
+		// @media (max-width: $sp)
+			width: 100%
+			display: flex
+			justify-content: space-between
+	&__inner
+		position: relative
+		text-align: center
+		color: $textColor
+		// background: url(../images/main/mask_1_#{$colorname}.png) no-repeat center center
+		background-color: $backgroundColor07
+		border-radius: 100px 0 100px 0
+		font-weight: 300
+		padding: 105px 0 60px
+
+		@media (max-width: $sp)
+			padding: 47px 25px 70px
+			// background: url(../images/main/mask_1_#{$colorname}_sp.png) no-repeat center center
+			// background-size: 100% 100%
+			border-radius: 60px 0 60px 0
+
+		.is-en
+			position: absolute
+			top: -54px
+			left: 0
+			width: 100%
+			color: $keyColor
+			font-size: 110px
+			font-style: italic
+			line-height: 1
+			font-family: $font2
+
+			@media (max-width: $sp)
+				font-size: 60px
+				top: -33px
+
+		.is-jp
+			font-size: 24px
+			margin-bottom: 22px
+			font-weight: bold
+
+			@media (max-width: $sp)
+				margin-bottom: 10px
+
+		p
+			&.letter
+				@media (max-width: $sp)
+					letter-spacing: -1px
+
+	&__notice
+		width: 500px
+
+		+mcenter
+
+		margin-top: 45px
+		padding: 22px 0 34px
+		background-color: #ffffff
+		font-weight: normal
+
+		@media (max-width: $sp)
+			width: 100%
+			margin-top: 23px
+			padding: 19px 0 27px
+
+		&__ttl
+			font-size: 20px
+			color: $color02
+			font-weight: bold
+			margin-bottom: 10px
+
+			@media (max-width: $sp)
+				margin-bottom: 6px
+
+		&__txt
+			margin-bottom: 10px
+
+			@media (max-width: $sp)
+				margin-bottom: 20px
+
+		&__time
+			font-size: 20px
+			color: $color02
+			font-weight: bold
+
+			@media (max-width: $sp)
+				font-size: 18px
+
+			span
+				display: inline-block
+				margin: 0 10px
+
+				@media (max-width: $sp)
+					display: block
+					margin: 0 5px
+
+.banner
+	margin-bottom: 140px
+
+	@media (max-width: $sp)
+		margin-bottom: 85px
+
+	ul
+		// +flexwrap
+		display: flex
+
+		justify-content: space-between
+		list-style: none
+
+		@media (max-width: $sp)
+			flex-wrap: wrap
+			justify-content: center
+			padding: 0 10px
+
+		li
+			@media (max-width: $tb)
+				margin: 5px
+			@media (max-width: $sp)
+				margin-bottom: 10px
+				width: 100%
+				text-align: center
+
+		a
+			display: block
+
+			+transition(opacity)
+
+			&:hover
+				opacity: 0.7
+
+.news
+	margin-bottom: 132px
+
+	@media (max-width: $sp)
+		margin-bottom: 95px
+
+	&__inner
+		position: relative
+
+		@media (max-width: $sp)
+			padding: 0 10px
+	&__head
+		text-align: center
+		margin-bottom: 65px
+
+		.sub_ttl
+			font-size: 16px
+			color: $textColor
+			font-weight: 300
+
+		.is-en
+			font-style: italic
+			font-size: 48px
+			font-family: $font2
+			color: $color02
+
+			@media (max-width: $sp)
+				font-size: 40px
+				line-height: 1.1
+	&__ttl
+		ul
+			+flex
+
+			li
+				margin-right: 33px
+
+				@media (max-width: $sp)
+					margin-right: 29px
+
+				a
+					position: relative
+					display: block
+					font-size: 17px
+					color: $textColor
+					padding-right: 12px
+					padding-bottom: 15px
+
+					+transition(color, opacity)
+
+					@media (max-width: $sp)
+						font-size: 16px
+						padding-right: 14px
+						padding-bottom: 9px
+
+					&:before
+						content: ''
+						width: 0
+						height: 2px
+						position: absolute
+						left: 0
+						bottom: 0
+						background-color: $pointColor01
+
+						+transition(width)
+
+					&:hover
+						opacity: 0.7
+
+				&.active
+					a
+						color: $buttnColor01
+
+						&:before
+							width: 100%
+
+	&__cnt
+		position: relative
+		padding: 28px 0
+
+		@media (max-width: $sp)
+			padding: 36px 0
+
+		&__tab
+			position: absolute
+			top: 0
+			left: 0
+			display: none
+
+			&.active
+				display: block
+				position: static
+
+			li
+				width: 100%
+				display: table
+				font-size: 17px
+				position: relative
+				padding: 20px 0
+				border-bottom: 2px solid #d9d9d9
+
+				@media (max-width: $sp)
+					display: block
+					padding: 7px 0 10px 0
+					border-color: #f4f4f4
+
+				// &:after
+					content: ''
+					width: 16px
+					height: 16px
+					position: absolute
+					right: 22px
+					top: 31px
+					background: url(../images/icons/arrow-right-circle-#{$colorname}.svg) no-repeat center center
+					background-size: 100% 100%
+					-moz-background-size: 100% 100%
+					-webkit-background-size: 100% 100%
+
+					// @media (max-width: $sp)
+						top: 50%
+						right: 8px
+
+				.date
+					display: table-cell
+					width: 150px
+					color: $color03
+
+					@media (max-width: $sp)
+						font-size: 14px
+						width: 95px
+
+				.label
+					display: table-cell
+					width: 115px
+					color: $color03
+
+					@media (max-width: $sp)
+						font-size: 14px
+
+				.link
+					display: table-cell
+
+					@media (max-width: $sp)
+						display: block
+						font-size: 16px
+
+					a
+						color: $textColor
+
+	&__view_more
+		position: absolute
+		right: 0
+		top: 0
+
+		@media (max-width: $sp)
+			position: static
+			text-align: right
+
+		a
+			position: relative
+			display: block
+			padding-right: 39px
+			padding-bottom: 16px
+			color: $textColor05
+			background: url(../images/icons/arrow-right-#{$colorname}.svg) no-repeat right 7px
+
+			@media (max-width: $sp)
+				display: inline-block
+				padding-right: 29px
+				padding-bottom: 8px
+
+			&:before
+				content: ''
+				width: 100%
+				height: 1px
+				position: absolute
+				left: 0
+				bottom: 0
+				background-color: $pointColor01
+
+				+transition(Width)
+
+			&:hover
+				&:before
+					width: 0
+
+.calendar
+	margin-bottom: 180px
+
+	@media (max-width: $sp)
+		padding: 0 25px
+		margin-bottom: 79px
+
+	&__ttl
+		text-align: center
+		margin-bottom: 65px
+
+		.sub_ttl
+			font-size: 16px
+			color: $textColor
+			font-weight: 300
+
+		.is-en
+			font-style: italic
+			font-size: 48px
+			font-family: $font2
+			color: $textColor03
+
+			@media (max-width: $sp)
+				font-size: 40px
+				line-height: 1.1
+
+	&__cnt
+		+flex
+
+		justify-content: space-between
+		margin-bottom: 20px
+		@media (max-width: $sp)
+			+flexwrap
+
+	&__col
+		width: 48%
+		@media (max-width: $sp)
+			width: 100%
+			margin-bottom: 20px
+
+	iframe
+		@media (max-width: $tb)
+			width: 100%
+			height: 330px
+
+.address
+	margin-bottom: 150px
+
+	@media (max-width: $sp)
+		margin-bottom: 88px
+
+	&__inner
+		+flex
+
+		padding: 43px 40px 53px 58px
+		border: 2px solid $borderColor02
+		color: $textColor
+		background-color: $backgroundColor08
+
+		@media (max-width: $sp)
+			border: none
+
+			+flexwrap
+
+			justify-content: center
+			text-align: center
+			padding: 32px 10px 52px
+
+	&__col
+		width: 50%
+
+		@media (max-width: $sp)
+			width: 100%
+
+		&:first-child
+			@media (max-width: $sp)
+				padding-bottom: 35px
+				margin-bottom: 29px
+				border-bottom: 2px solid #e3d6bc
+
+	&__ttl
+		font-size: 30px
+		margin-bottom: 5px
+
+		@media (max-width: $tb)
+			font-size: 24px
+
+	&__phone
+		margin-bottom: 12px
+
+		@media (max-width: $sp)
+			margin-bottom: 2px
+
+		a
+			display: inline-block
+			padding-left: 50px
+			font-size: 40px
+			color: $textColor
+			background: url(../images/icons/telephone-#{$colorname}02.svg) no-repeat 2px 24px
+
+			+transition(opacity)
+
+			cursor: pointer
+
+			@media (max-width: $sp)
+				font-size: 30px
+				padding-left: 30px
+				background-size: 17px 17px
+				background-position: 2px 17px
+
+			&:hover
+				opacity: 0.7
+
+	&__time
+		font-size: 18px
+		padding-left: 50px
+		background: url(../images/icons/icon_clock_#{$colorname}.png) no-repeat 2px 2px
+
+		@media (max-width: $sp)
+			display: inline-block
+			padding-left: 40px
+			font-size: 16px
+			background-size: 21px 21px
+
+		span
+			display: block
+
+	&__qrcode
+		margin: 12px 0 21px
+		font-size: 18px
+		padding: 0 0 5px 82px
+		background: url(../images/main/qr.jpg) no-repeat left center
+		background-size: 63px 63px
+		-moz-background-size: 63px 63px
+		-webkit-background-size: 63px 63px
+
+		@media (max-width: $sp)
+			display: none
+
+		span
+			display: block
+
+		a
+			display: inline-block
+			color: #000000
+
+	&__btn
+		+flex
+
+		@media (max-width: $sp)
+			justify-content: center
+
+		a
+			width: 200px
+			display: inline-block
+			padding: 14px 12px 13px 15px
+			border: 1px solid #ffffff
+			font-size: 18px
+			color: #ffffff
+
+			+transition(all)
+
+			transition-duration: 0.5s
+
+			@media (max-width: $sp)
+				width: 50%
+				display: block
+				padding: 13px 4px 9px 6px
+				font-size: 16px
+
+			&:after
+				content: ''
+				display: inline-block
+				width: 14px
+				height: 10px
+				margin-left: 10px
+				background: url(../images/icons/arrow-right-wh.png) no-repeat
+				background-size: 100% 100%
+
+			&:first-child
+				margin-right: 14px
+				background-color: $buttnColor01
+				background: linear-gradient(to left, $buttnColor01 50%, #ffffff 50%) right
+				background-size: 202%
+
+				&:hover
+					color: $buttnColor01
+					border-color: $buttnColor01
+					background-position: left
+
+					&:after
+						width: 16px
+						height: 15px
+						margin-bottom: -3px
+						background: url(../images/icons/arrow-right-#{$colorname}.svg) no-repeat
+						background-size: 100% 100%
+
+			&:nth-child(2)
+				background-color: $buttnColor03
+				background: linear-gradient(to left, $buttnColor03 50%, #ffffff 50%) right
+				background-size: 202%
+
+				&:hover
+					color: $buttnColor03
+					border-color: $buttnColor03
+					background-position: left
+
+					&:after
+						width: 16px
+						height: 15px
+						margin-bottom: -3px
+						background: url(../images/icons/arrow-right-#{$colorname}.svg) no-repeat
+						background-size: 100% 100%
+
+.section
+	&__ttl
+		color: $textColor
+		position: relative
+
+		@media (max-width: $sp)
+			padding: 0 10px
+
+		.is-en
+			margin-bottom: 5px
+			font-size: 110px
+			font-family: $font2
+			color: $keyColor
+			font-style: italic
+			line-height: 1
+
+			@media (max-width: $sp)
+				font-size: 60px
+				margin-bottom: 0
+		&.align_rgt .is-en
+			padding-right: 10px
+		&--fz100
+			.is-en
+				font-size: 100px
+
+				@media (max-width: $sp)
+					font-size: 60px
+
+		.sub_ttl
+			@media (max-width: $sp)
+				font-size: 14px
+
+		&.is-edge
+			.container
+				display: flex
+				align-items: center
+				position: relative
+				padding-bottom: 30px
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					bottom: 0
+					width: 160px
+					height: 2px
+					background-color: $color03
+				.is-en
+					font-family: $font2
+					font-style: normal
+					font-size: 40px
+					color: $textColor03
+					letter-spacing: 2px
+					span
+						color: $color03
+				.sub_ttl
+					margin-left: 80px
+		// &.is-vertical
+			.container
+				position: relative
+			&.align_lft
+				h2
+					position: absolute
+					left: 0
+					top: 0
+					transform-origin: left bottom
+					transform: rotate(90deg) translate(-1em, 1em)
+					z-index: 1
+			&.align_rgt
+				h2
+					position: absolute
+					right: 0
+					top: 0
+					transform-origin: right top
+					transform: rotate(90deg) translate(100%, -1em)
+	&__ttl_type01
+		max-width: 1000px
+		margin: 0 auto 140px
+		@media (max-width: $sp)
+			margin: 0 15px 50px
+		&.is-nomgbtm
+			margin-bottom: 0
+		&.is-center
+			text-align: center
+		&.is-vertical
+			display: flex
+			align-items: center
+			.sub_ttl
+				margin-left: 40px
+		.sub_ttl
+			font-size: 16px
+		.is-en
+			padding: 20px 0
+			font-size: 40px
+			font-family: $font2
+			letter-spacing: 3px
+			color: $keyColor
+			position: relative
+			line-height: 1.6
+			span
+				display: inline-block
+			em
+				color: $textColor04
+			&::before
+				content: ''
+				width: 150px
+				height: 3px
+				background-color: $keyColor
+				position: absolute
+				left: 50%
+				bottom: 0
+				transform: translateX(-50%)
+	&__ttl_type02
+		overflow: hidden
+		text-align: center
+		position: relative
+		max-width: 1000px
+		margin: 0 auto 100px
+		min-height: 200px
+		@media (max-width: $sp)
+			margin: 0 15px 10px
+			min-height: 100px
+		&.is-nomgbtm
+			margin-bottom: 0
+		.is-en
+			font-size: 150px
+			font-family: $font2
+			letter-spacing: 5px
+			line-height: 1.2
+			background: linear-gradient( to right,  rgba(241,239,237,1) 25%, rgba(215,217,232,1) 75% )
+			-webkit-background-clip: text
+			color: transparent
+			@media (max-width: $sp)
+				font-size: 20vw
+				letter-spacing: 3px
+		.sub_ttl
+			position: absolute
+			top: 50%
+			left: 50%
+			font-size: 30px
+			transform: translate(-50%,-50%)
+			line-height: 1.6
+			span
+				display: inline-block
+			@media (max-width: $sp)
+				font-size: 5vw
+.message
+	.section__ttl
+		margin-bottom: 140px
+
+		@media (max-width: $sp)
+			margin-bottom: 35px
+			padding-right: 10px
+
+	&__inner
+		background-color: #f6f6f6
+
+		@media (max-width: $sp)
+			background-color: #ffffff
+
+	&__cnt
+		padding-top: 303px
+		padding-bottom: 65px
+		position: relative
+
+		@media (max-width: $sp)
+			padding-top: 0
+			padding-bottom: 61px
+			background-color: #f6f6f6
+
+		&__img
+			position: absolute
+			right: 0
+			top: -115px
+			height: 417px
+			mask-image: url(../images/main/mask_2.png)
+			-webkit-mask-image: url(../images/main/mask_2.png)
+			mask-size: 100% 100%
+			-webkit-mask-size: 100% 100%
+			mask-repeat: no-repeat
+			-webkit-mask-repeat: no-repeat
+
+			@media (max-width: $sp)
+				position: static
+				height: auto
+				margin-bottom: 22px
+				mask-image: url(../images/main/mask_2_.png)
+				-webkit-mask-image: url(../images/main/mask_2_sp.png)
+
+			img
+				max-width: none
+
+				@media (max-width: $sp)
+					max-width: 100%
+
+		&__ttl
+			color: $textColor
+			font-size: 26px
+			margin-bottom: 25px
+
+			@media (max-width: $sp)
+				font-size: 20px
+				text-align: center
+				margin-bottom: 20px
+
+		&__txt
+			font-size: 18px
+			color: $textColor
+
+			@media (max-width: $sp)
+				font-size: 16px
+				padding: 0 40px
+
+			.text
+				line-height: 2
+
+				@media (max-width: $sp)
+					line-height: 1.8
+
+.introduce
+	padding: 160px 0 8px
+	color: $textColor
+
+	@media (max-width: $sp)
+		padding: 67px 0 20px
+
+	.news__view_more
+		position: static
+		text-align: right
+
+		a
+			display: inline-block
+
+	&__row
+		margin-bottom: 180px
+
+		@media (max-width: $sp)
+			padding: 0 10px
+			margin-bottom: 98px
+
+		&:first-child
+			@media (max-width: $sp)
+				// background: url(../images/main/mask_greet_#{$colorname}_sp.png) no-repeat center top
+				// background-size: 100% 100%
+				background-color: $backgroundColor07
+				border-radius: 60px 0 60px 0
+
+			.news__view_more
+				@media (max-width: $sp)
+					text-align: center
+
+			.sp_top_pos
+				position: relative
+				top: -30px
+
+		&__inner
+			+flex
+
+			margin-bottom: 123px
+
+			@media (max-width: $sp)
+				+flexwrap
+
+				margin-bottom: 83px
+
+			&--r150
+				margin-right: -150px
+				margin-bottom: 0
+
+				@media (max-width: $tb)
+					margin-right: 0
+
+	&__col
+		&__ttl
+			font-size: 26px
+			margin-bottom: 45px
+
+			@media (max-width: $sp)
+				font-size: 20px
+				margin-bottom: 19px
+
+			&--fz24
+				line-height: 1.7
+				font-size: 24px
+				margin-bottom: 35px
+
+				@media (max-width: $sp)
+					font-size: 22px
+					margin-bottom: 17px
+
+		&__cnt
+			p
+				line-height: 1.9
+				margin-bottom: 30px
+
+				@media (max-width: $sp)
+					line-height: 1.8
+					margin-bottom: 28px
+
+		&__number
+			margin-bottom: 17px
+			padding-left: 9px
+
+			@media (max-width: $sp)
+				font-size: 20px
+				margin-bottom: 13px
+
+			span
+				display: inline-block
+
+				&:after
+					content: ''
+					width: 150px
+					height: 2px
+					display: inline-block
+					margin-top: -5px
+					margin-left: 30px
+					background-color: $borderColor03
+					vertical-align: middle
+
+					@media (max-width: $sp)
+						margin-left: 20px
+						width: 106px
+
+	&__text
+		width: 50%
+
+		@media (max-width: $sp)
+			width: 100%
+			order: 2
+			padding: 0 25px
+
+		.introduce__row__inner:nth-child(odd) &
+			padding-left: 50px
+
+			@media (max-width: $sp)
+				padding: 0 25px
+
+		.introduce__row__inner:nth-child(even) &
+			padding-right: 50px
+
+			@media (max-width: $sp)
+				padding: 0 25px
+
+		.caption
+			text-align: right
+			margin-bottom: 30px
+
+			.txt_big
+				font-size: 24px
+				margin-left: 20px
+
+	&__img
+		width: 50%
+		position: relative
+
+		@media (max-width: $sp)
+			width: 100%
+			order: 1
+
+	&__mask
+		text-align: center
+		&--mtop30
+			margin-top: -30px
+
+			@media (max-width: $sp)
+				margin-top: 0
+
+		img
+			margin-bottom: 27px
+			mask-image: url(../images/main/mask_3.png)
+			-webkit-mask-image: url(../images/main/mask_3.png)
+			mask-size: 100% 100%
+			-webkit-mask-size: 100% 100%
+			mask-repeat: no-repeat
+			-webkit-mask-repeat: no-repeat
+
+			@media (max-width: $sp)
+				margin-bottom: 34px
+
+			&.mask_small
+				mask-image: url(../images/main/mask_4.png)
+				-webkit-mask-image: url(../images/main/mask_4.png)
+
+		figcaption
+			text-align: center
+
+			@media (max-width: $sp)
+				display: none
+
+			.txt_big
+				font-size: 24px
+				margin-left: 25px
+
+	&__news
+		width: 585px
+		margin-top: -8px
+
+		@media (max-width: $tb)
+			width: 100%
+			margin-top: 0
+			padding: 0 14px 105px
+
+		&__inner
+			@media (max-width: $sp)
+				width: 100%
+				padding: 15px
+				border: 1px solid $borderColor02
+				background-color: #ffffff
+				margin-bottom: 52px
+
+		&__ttl
+			font-size: 18px
+			color: $textColor03
+			margin-bottom: 24px
+
+			@media (max-width: $sp)
+				font-size: 20px
+				margin-bottom: 11px
+
+		&__cnt
+			margin-bottom: 51px
+
+			ul
+				li
+					display: table
+					width: 100%
+					margin-bottom: 14px
+
+					@media (max-width: $sp)
+						margin-bottom: 6px
+
+					.date
+						display: table-cell
+						width: 130px
+						color: $textColor04
+
+						@media (max-width: $sp)
+							font-size: 14px
+							width: 93px
+
+					margin-bottom: 16px
+
+					.link
+						a
+							color: $textColor
+							letter-spacing: -2px
+
+.service
+	padding: 35px 0 63px
+	margin-bottom: 180px
+	// background: url(../images/main/mask_1_#{$colorname}.png) no-repeat right top
+	color: $textColor
+	// background-size: 1360px 100%
+	background-color: $backgroundColor07
+	border-radius: 100px 0 100px 0
+
+	@media (max-width: $sp)
+		padding: 23px 0 77px
+		margin-bottom: 83px
+		// background: url(../images/main/mask_1_#{$colorname}_sp.png) no-repeat right 53px
+		// background-size: 100% auto
+		border-radius: 60px 0 60px 0
+
+	.section__ttl
+		margin-bottom: 35px
+
+		@media (max-width: $sp)
+			margin-bottom: 30px
+			padding-left: 10px
+
+	&__list
+		+flexwrap
+
+		// justify-content: space-between
+		padding: 50px 50px 30px
+		margin: 30px 0 20px 40px
+		background-color: #ffffff
+
+		@media (max-width: $sp)
+			padding: 30px
+			margin: 0
+			background-color: transparent
+
+		li
+			width: 25%
+			font-size: 18px
+			margin-bottom: 10px
+			padding-right: 10px
+
+			@media (max-width: $sp)
+				width: 50%
+				font-size: 14px
+				margin-bottom: 16px
+				padding-right: 15px
+
+			.btn__arrow
+				min-width: 100px
+				padding-bottom: 11px
+				padding-right: 26px
+				color: $textColor
+
+				@media (max-width: $sp)
+					display: block
+					padding-right: 15px
+
+	.btn__arrow
+		padding-bottom: 8px
+		color: $textColor05
+
+		@media (max-width: $sp)
+			padding-bottom: 10px
+
+	.see_more
+		.btn__arrow
+			&::before
+				width: 100%
+			&:hover::before
+				width: 0
+		@media (max-width: $sp)
+			text-align: center
+.gallery
+	overflow: hidden
+	margin-bottom: 163px
+
+	@media (max-width: $sp)
+		margin-bottom: 80px
+
+	.section__ttl
+		margin-bottom: 20px
+
+		@media (max-width: $sp)
+			margin-bottom: 45px
+			padding-right: 20px
+
+	.slick
+		&-list
+			overflow: visible
+			margin-bottom: 68px
+
+			@media (max-width: $sp)
+				margin-bottom: 20px
+
+		&-control
+			text-align: center
+
+		&-arrow
+			display: inline-block
+
+			button
+				width: 9px
+				height: 14px
+				border: none
+				padding: 0
+				text-indent: -9999px
+				cursor: pointer
+
+				@media (max-width: $sp)
+					width: 5px
+					height: 10px
+
+		&-prev
+			margin-right: 28px
+
+			@media (max-width: $sp)
+				margin-right: 15px
+
+			button
+				background: url(../images/icons/icon__prev.png) no-repeat center center
+				background-size: 100% 100%
+
+		&-next
+			margin-left: 28px
+
+			@media (max-width: $sp)
+				margin-left: 15px
+
+			button
+				background: url(../images/icons/icon__next.png) no-repeat center center
+				background-size: 100% 100%
+
+		&-dots
+			display: inline-block
+
+			li
+				display: inline-block
+				margin: 0 7px
+
+				@media (max-width: $sp)
+					margin: 0 6px
+
+				button
+					border: none
+					width: 11px
+					height: 11px
+					border-radius: 50%
+					-webkit-border-radius: 50%
+					-moz-border-radius: 50%
+					-ms-border-radius: 50%
+					-o-border-radius: 50%
+					text-indent: -9999px
+					background-color: $textColor02
+					padding: 0
+					cursor: pointer
+
+					@media (max-width: $sp)
+						width: 9px
+						height: 9px
+
+				&.slick-active
+					button
+						background-color: $pointColor03
+
+	&__item
+		padding: 0 35px
+
+		@media (max-width: $sp)
+			padding: 0 8px
+
+	&__img
+		mask-image: url(../images/main/mask_5.png)
+		-webkit-mask-image: url(../images/main/mask_5.png)
+		mask-size: 100% 100%
+		-webkit-mask-size: 100% 100%
+		mask-repeat: no-repeat
+		-webkit-mask-repeat: no-repeat
+		margin-bottom: 13px
+
+		@media (max-width: $sp)
+			mask-size: 100% 100%
+			-webkit-mask-size: 100% 100%
+
+		img
+			width: 100%
+
+	&__ttl
+		font-size: 23px
+		text-align: center
+
+		@media (max-width: $sp)
+			font-size: 24px
+			margin-bottom: 15px
+
+		a
+			display: inline-block
+			color: $textColor
+
+	&__txt
+		padding-left: 10px
+		color: $textColor
+		font-size: 18px
+
+		@media (max-width: $sp)
+			font-size: 16px
+	.see_more
+		.btn__arrow
+			&::before
+				width: 100%
+			&:hover::before
+				width: 0
+		@media (max-width: $sp)
+			margin-right: 20px
+.information
+	margin-bottom: 161px
+
+	@media (max-width: $sp)
+		padding-top: 200px
+		margin-bottom: 79px
+
+	&__inner
+		margin: 0 -95px
+		padding: 106px 95px 89px
+		// background: url(../images/main/mask_table_#{$colorname}.png) no-repeat center center
+		// background-size: 100% 100%
+		background-color: $backgroundColor07
+		border-radius: 100px 0 100px 0
+
+		@media (max-width: $sp)
+			position: relative
+			padding: 0 0 0
+			margin: 0
+			// background: url(../images/main/mask_table_#{$colorname}_sp.png) no-repeat center center
+			// background-size: 100% 100%
+			border-radius: 60px 0 60px 0
+
+	&__table
+		+flex
+
+		padding-bottom: 70px
+		margin-bottom: 65px
+		min-height: 462px
+
+		@media (max-width: $sp)
+			+flexwrap
+
+			padding-bottom: 0
+			margin-bottom: 3px
+			min-height: 100%
+
+	&__cnt
+		position: relative
+		width: 50%
+
+		@media (max-width: $sp)
+			width: 100%
+			order: 2
+			padding: 40px 20px 40px 24px
+
+		table
+			th
+				width: 100px
+				padding: 8px 0 7px
+				text-align: left
+				color: $textColor05
+				vertical-align: top
+
+				@media (max-width: $sp)
+					padding: 10px 0 7px
+
+			td
+				padding: 8px 45px 7px 0
+				color: $textColor
+				vertical-align: top
+
+				@media (max-width: $sp)
+					padding: 8px 0 7px
+
+				a
+					color: $textColor
+
+	&__img
+		position: relative
+		width: 50%
+
+		@media (max-width: $sp)
+			width: 100%
+			order: 1
+			height: 210px
+			position: absolute
+			top: -195px
+			z-index: -1
+
+	&__img_inside
+		position: absolute
+		top: -61px
+		left: 0
+		right: -187px
+		mask-image: url(../images/main/mask_6.png)
+		-webkit-mask-image: url(../images/main/mask_6.png)
+		mask-size: 100% 100%
+		-webkit-mask-size: 100% 100%
+		mask-repeat: no-repeat
+		-webkit-mask-repeat: no-repeat
+
+		@media (max-width: $tb)
+			right: 0
+		@media (max-width: $sp)
+			top: 0
+			height: 210px
+			mask-image: none
+			-webkit-mask-image: none
+			overflow: hidden
+
+	&__case
+		+flex
+
+		justify-content: space-between
+
+		@media (max-width: $sp)
+			+flexwrap
+
+			padding: 0 10px 45px
+
+		&__item
+			width: 30%
+			padding: 25px 8px 0
+			border-top: 3px solid $buttnColor01
+
+			@media (max-width: $sp)
+				width: 100%
+				padding: 22px 13px 0
+				margin-bottom: 29px
+				border-top-width: 2px
+				// border-top-color: #99b2c2
+
+		&__ttl
+			margin-bottom: 5px
+			text-align: center
+			font-size: 22px
+			color: $textColor
+
+			@media (max-width: $sp)
+				font-size: 20px
+				margin-bottom: 12px
+
+		&__txt
+			color: $textColor
+
+			a
+				color: $textColor
+	.see_more
+		margin-right: 20px
+.footer
+	padding-left: 22.4%
+	background-color: $backgroundColor02
+	color: $textColor
+
+	@media (max-width: $tb)
+		padding-left: 305px
+	@media (max-width: $sp)
+		padding-left: 0
+
+	&__inner
+		+flex
+
+		justify-content: space-between
+		padding: 115px 45px 0 0
+		margin-bottom: 121px
+		@media (max-width: $tb)
+			padding: 115px 0 0 0
+		@media (max-width: $sp)
+			+flexwrap
+
+			padding: 53px 10px 0
+			margin-bottom: 40px
+
+	&__left
+		width: 355px
+		@media (max-width: $tb)
+			padding-right: 10px
+		@media (max-width: $sp)
+			width: 100%
+			padding-right: 0
+
+	&__right
+		@media (max-width: $sp)
+			width: 100%
+
+	&__logo
+		padding-left: 28px
+		padding-top: 29px
+		margin-bottom: 97px
+
+		@media (max-width: $sp)
+			padding: 0
+			text-align: center
+			margin-bottom: 40px
+
+		img
+			@media (max-width: $sp)
+				width: 181px
+				height: 76px
+
+	&__address
+		padding-left: 35px
+		margin-bottom: 26px
+
+		@media (max-width: $sp)
+			padding: 0
+			margin-bottom: 14px
+			text-align: center
+
+		address
+			font-style: normal
+
+		p
+			@media (max-width: $sp)
+				line-height: 1.6
+
+	&__contact
+		padding: 16px 35px 15px
+		border: 2px solid $buttnColor04
+		text-align: center
+		background-color: #ffffff
+
+		@media (max-width: $sp)
+			margin-bottom: 50px
+
+		&__ttl
+			font-size: 26px
+			margin-bottom: 3px
+
+			@media (max-width: $sp)
+				font-size: 20px
+				margin-bottom: 0
+
+		&__number
+			font-size: 33px
+			text-align: left
+			margin-bottom: 7px
+
+			@media (max-width: $sp)
+				font-size: 30px
+				margin-bottom: 1px
+				text-align: center
+
+			a
+				display: inline-block
+				padding-left: 37px
+				color: $textColor
+				background: url(../images/icons/telephone-#{$colorname}02.svg) no-repeat left center
+				background-size: 25px 24px
+				cursor: pointer
+
+				+transition(opacity)
+
+				@media (max-width: $sp)
+					padding-left: 30px
+					background-size: 18px 19px
+
+				&:hover
+					opacity: 0.8
+
+		&__link
+			a
+				width: 272px
+				display: inline-block
+				font-size: 22px
+				padding: 11px 0 8px
+				color: #ffffff
+				background-color: $buttnColor04
+				background: linear-gradient(to left, $buttnColor04 50%, #ffffff 50%) right
+				background-size: 202%
+				border: 1px solid transparent
+
+				+transition(all)
+
+				transition-duration: 0.5s
+
+				@media (max-width: $sp)
+					font-size: 18px
+
+				&:hover
+					border-color: $buttnColor01
+					color: $buttnColor01
+					background-position: left
+
+					&:after
+						width: 16px
+						height: 15px
+						margin-bottom: -3px
+						background: url(../images/icons/arrow-right-#{$colorname}.svg) no-repeat
+						background-size: 100% 100%
+
+				&:after
+					content: ''
+					display: inline-block
+					width: 14px
+					height: 10px
+					margin-left: 25px
+					background: url(../images/icons/arrow-right-wh.png) no-repeat
+					background-size: 100% 100%
+
+	.table
+		&__schedule
+			position: static
+			margin-bottom: 50px
+
+			@media (max-width: $sp)
+				padding: 10px 0
+				margin-bottom: 27px
+
+			table
+				float: right
+				margin-bottom: 5px
+				background-color: transparent
+				border-color: transparent
+
+				@media (max-width: $sp)
+					font-size: 14px
+					background-color: #ffffff
+					border: none
+
+				td
+					width: 49px
+
+				thead
+					th
+						height: 60px
+
+						@media (max-width: $sp)
+							height: 45px
+							padding: 0
+							text-align: center
+
+				tbody
+					tr
+						&:first-child
+							td, th
+								padding-top: 20px
+								padding-bottom: 6px
+
+								@media (max-width: $sp)
+									padding-top: 0
+									padding-bottom: 0
+
+					th, td
+						@media (max-width: $sp)
+							text-align: center
+
+		&__note
+			font-size: 16px
+
+			@media (max-width: $sp)
+				font-size: 14px
+				padding-left: 0
+				padding-right: 0
+
+			span
+				display: inline-block
+				margin-left: 15px
+
+				@media (max-width: $sp)
+					margin-left: 0
+
+	&__map
+		height: 0
+		overflow: hidden
+		padding-bottom: 66.25%
+		position: relative
+		iframe
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 100%
+			filter: grayscale(100%)
+		@media (max-width: $sp)
+			padding-bottom: 80%
+
+	&__bottom
+		padding: 0 80px 56px 126px
+
+		@media (max-width: $sp)
+			padding: 0 0 95px
+
+	&__fnavi
+		text-align: right
+		margin-bottom: 56px
+
+		@media (max-width: $sp)
+			display: none
+
+		li
+			display: inline-block
+			list-style: none
+			margin-left: 40px
+			margin-bottom: 10px
+
+			a
+				color: $textColor
+				font-size: 20px
+				padding-bottom: 10px
+				@media (max-width: $tb)
+					font-size: 16px
+			&.active
+				a
+					&:before
+						width: 100%
+
+	&__copyright
+		+flex
+
+		justify-content: space-between
+
+		@media (max-width: $sp)
+			+flexwrap
+
+			text-align: center
+			justify-content: center
+
+		.copyright
+			text-align: right
+			font-size: 14px
+
+			@media (max-width: $sp)
+				font-size: 12px
+
+	&__social
+		@media (max-width: $sp)
+			margin-bottom: 34px
+
+		.social
+			&__btn
+				li
+					margin: 0 37px
+
+					@media (max-width: $sp)
+						margin: 0 27px
+
+					&:first-child
+						margin-left: 0
+
+					&:last-child
+						margin-right: 0
+
+		.bi
+			width: 42px
+			height: 42px
+
+			@media (max-width: $sp)
+				width: 32px
+				height: 32px
+
+	&__btn_contact
+		position: fixed
+		bottom: 0
+		left: 0
+		width: 100%
+
+		ul
+			+flex
+
+			li
+				width: 33.33%
+
+				a
+					display: inline-block
+					width: 100%
+					padding: 14px 0 11px
+					text-align: center
+					color: #ffffff
+					font-size: 14px
+
+					&:before
+						content: ''
+						width: 17px
+						height: 17px
+						display: inline-block
+						vertical-align: middle
+						margin-right: 10px
+						margin-top: -5px
+
+				&:first-child
+					a
+						background-color: $backgroundColor05
+
+						&:before
+							background: url(../images/icons/telephone-wh.svg) no-repeat center center
+							background-size: 100% 100%
+
+				&:nth-child(2)
+					a
+						background-color: $buttnColor01
+
+						&:before
+							background: url(../images/icons/phone-fill-wh.svg) no-repeat center center
+
+				&:nth-child(3)
+					a
+						background-color: $backgroundColor09
+
+						&:before
+							background: url(../images/icons/line_a.svg) no-repeat center center
+							background-size: 100%
+
+#pnavi
+	position: relative
+	text-align: right
+	padding-left: 22.4%
+
+.ptop
+	position: absolute
+	right: 50%
+	z-index: 9
+	margin-right: -830px
+
+	@media (max-width: 1920px)
+		margin-right: from-to(-830, -650, 1920, 1366)
+
+	@media (max-width: 1366px)
+		margin-right: -47vw
+
+	@media (max-width: 750px)
+		margin-right: 0
+		right: 10px
+
+	#pnavi.fixed &
+		position: fixed
+		bottom: 20px
+
+		@media (max-width: 750px)
+			bottom: 60px
+
+	a
+		display: block
+
+		+transition(opacity)
+
+		img
+			@media (max-width: $sp)
+				width: 52px
+				height: 52px
+
+		&:hover
+			opacity: 0.6
+
+.animation
+	transition-duration: 1s
+	&.fadeInLft
+		opacity: 0
+		+transform(translate3d(-1em, 0, 0))
+		+transition(opacity, transform)
+		&.show
+			opacity: 1
+			+transform(translate3d(0, 0, 0))
+	&.fadeInRgt
+		opacity: 0
+		+transform(translate3d(1em, 0, 0))
+		+transition(opacity, transform)
+		&.show
+			opacity: 1
+			+transform(translate3d(0, 0, 0))
+	&.fadeInUp
+		opacity: 0
+		+transform(translate3d(0, 1em, 0))
+		+transition(opacity, transform)
+		&.show
+			opacity: 1
+			+transform(translate3d(0, 0, 0))
+	&.fadeInDown
+		opacity: 0
+		+transform(translate3d(0, -1em, 0))
+		+transition(opacity, transform)
+		&.show
+			opacity: 1
+			+transform(translate3d(0, 0, 0))
+
+// Sub-page
+.pankuzu
+	margin-bottom: 42px
+	color: $color03
+
+	@media (max-width: $sp)
+		padding: 0 10px
+
+	a
+		color: $textColor
+		display: inline-block
+
+.banner_sub
+	position: relative
+	margin-bottom: 33px
+
+	&__img
+		mask-image: url(../images/main/mask_banner.png)
+		// -webkit-mask-image: url(../images/main/mask_banner.png)
+		mask-size: 100% auto
+		// -webkit-mask-size: 100% auto
+		mask-repeat: no-repeat
+		// -webkit-mask-repeat: no-repeat
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($keyColor, .5)
+		img
+			width: 100%
+		@media (max-width: $sp)
+			mask-image: url(../images/main/mask_banner_sp.png)
+
+	&__ttl
+		position: absolute
+		top: 50%
+		left: 90px
+		margin-top: -10px
+		transform: translateY(-50%)
+		-webkit-transform: translateY(-50%)
+		-moz-transform: translateY(-50%)
+		-ms-transform: translateY(-50%)
+		-o-transform: translateY(-50%)
+
+		@media (max-width: $sp)
+			left: 10px
+			margin-top: 0
+
+		.is-en
+			font-size: 120px
+			color: #ffffff
+			font-family: $font2
+			line-height: 1
+			font-style: italic
+
+			@media (max-width: $sp)
+				font-size: 60px
+
+		.sub_ttl
+			font-size: 24px
+			color: #ffffff
+
+			@media (max-width: $sp)
+				font-size: 18px
+				line-height: 1
+
+.service_list
+	padding: 58px 0 74px
+	margin-bottom: 92px
+	color: $textColor
+	background-color: #f6f6f6
+
+	@media (max-width: $sp)
+		padding: 30px 10px 80px
+		margin-bottom: 12px
+
+	&__ttl
+		text-align: center
+		margin-bottom: 40px
+
+		h2
+			position: relative
+			display: inline-block
+			font-size: 30px
+			padding-bottom: 6px
+			color: $color02
+			@media (max-width: $sp)
+				font-size: 26px
+
+			&:after
+				content: ''
+				width: 134px
+				height: 2px
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				-webkit-transform: translateX(-50%)
+				-moz-transform: translateX(-50%)
+				-ms-transform: translateX(-50%)
+				-o-transform: translateX(-50%)
+				background-color: $borderColor03
+
+	&__cnt
+		background-color: #ffffff
+		margin: 0 -20px
+		padding: 35px 20px 5px
+
+		@media (max-width: $sp)
+			margin: 0
+			padding-left: 5px
+			padding-right: 5px
+
+		ul
+			+flexwrap
+
+			li
+				width: 25%
+				padding-right: 10px
+				margin-bottom: 20px
+
+				@media (max-width: $sp)
+					width: 50%
+					padding: 0 5px
+
+				&:nth-child(4n)
+					padding-right: 0
+
+				&:nth-child(2n)
+					@media (max-width: $sp)
+						padding: 0 5px
+
+				a
+					display: block
+					font-size: 18px
+					padding-left: 15px
+					padding-bottom: 10px
+					color: $textColor
+					background: transparent
+
+					@media (max-width: $sp)
+						padding-left: 0
+						padding-right: 25px
+						font-size: 13px
+
+					&:before
+						@media (max-width: $sp)
+							content: none
+
+					&:after
+						content: ''
+						width: 16px
+						height: 16px
+						position: absolute
+						right: 6px
+						top: 7px
+						@media (max-width: $sp)
+							top: 5px
+
+						+transition(top)
+
+					&:hover
+						&:after
+							top: 10px
+
+.service_blog
+	color: $textColor
+	margin-bottom: 150px
+
+	@media (max-width: $sp)
+		padding: 0 10px
+		margin-bottom: 200px
+
+.blog
+	&__row
+		+flexwrap
+
+		justify-content: space-between
+		margin-bottom: 118px
+		padding: 50px 0
+
+		@media (max-width: $sp)
+			margin-bottom: 20px
+			padding: 80px 0 0
+
+		&--staff
+			@media (max-width: $sp)
+				padding: 0
+		&::after
+			content: ""
+			display: block
+			width: 33.33%
+	&__col
+		&--md3
+			width: 33.33%
+			margin-bottom: 30px
+			@media (max-width: $sp)
+				width: 100%
+				text-align: center
+
+
+			&:nth-child(3n+1)
+				padding-right: 35px
+
+				@media (max-width: $sp)
+					padding: 0
+
+			&:nth-child(3n-1)
+				padding: 0 17px
+
+				@media (max-width: $sp)
+					padding: 0
+
+			&:nth-child(3n)
+				padding-left: 35px
+
+				@media (max-width: $sp)
+					padding: 0
+
+		&--md5
+			width: 50%
+			margin-bottom: 30px
+			@media (max-width: $sp)
+				width: 100%
+				text-align: center
+
+
+			&:nth-child(2n+1)
+				padding-right: 20px
+
+				@media (max-width: $sp)
+					padding: 0
+
+			&:nth-child(2n)
+				padding-left: 20px
+
+				@media (max-width: $sp)
+					padding: 0
+
+
+	&__cnt
+		width: 50%
+		color: $textColor
+
+		@media (max-width: $sp)
+			width: 100%
+			order: 2
+
+			& + .blog__list,
+			& + .blog__list__row
+				order: 3
+
+				& + .blog__list__row
+					order: 4
+
+		.blog__row:nth-child(even) &
+			padding-left: 20px
+
+			@media (max-width: $sp)
+				padding-left: 0
+
+		.blog__row:nth-child(odd) &
+			padding-right: 20px
+
+			@media (max-width: $sp)
+				padding-right: 0
+
+		.blog__row.blog__row--staff &
+			padding-left: 40px
+
+			@media (max-width: $sp)
+				padding: 0 10px
+				margin-bottom: 50px
+
+		.facility &
+			padding: 25px 30px
+
+		&--full
+			width: 100%
+
+			&.--position-top
+				padding: 23px 115px !important
+				margin: -50px 80px 0
+				background-color: #ffffff
+
+				@media (max-width: $sp)
+					margin: -50px 15px 20px
+					padding: 10px 15px !important
+
+			.blog__row:nth-child(even) &
+				padding: 0
+
+			.blog__row:nth-child(odd) &
+				padding: 0
+
+			.equipment .blog__row &
+				padding: 30px 10px 30px 0
+
+				@media (max-width: $sp)
+					padding: 15px 20px 30px 20px
+
+			p
+				@media (max-width: $sp)
+					text-align: left
+
+		h3
+			font-size: 30px
+			line-height: 1.5
+			color: $buttnColor01
+			border-bottom: 2px solid $borderColor03
+			padding-bottom: 30px
+			margin-bottom: 45px
+
+			@media (max-width: $sp)
+				font-size: 26px
+				padding-bottom: 10px
+				margin-bottom: 45px
+				&.sub__ttl
+					font-size: 22px !important
+
+			&.fz24
+				font-size: 24px
+				margin-bottom: 30px
+				padding-bottom: 28px
+
+				@media (max-width: $sp)
+					font-size: 22px
+
+				.facility &
+					padding-bottom: 20px
+
+				.equipment &
+					padding-bottom: 0
+					margin-bottom: 10px
+					border: none
+
+					@media (max-width: $sp)
+						margin-bottom: 0
+
+				@media (max-width: $sp)
+					margin-bottom: 10px
+					padding-bottom: 15px
+
+			&.color_black
+				color: $textColor
+
+			.label
+				display: inline-block
+				background-color: $backgroundColor09
+				color: #ffffff
+				font-size: 14px
+				padding: 5px 13px 4px
+				vertical-align: middle
+				margin-top: -7px
+				margin-left: 42px
+
+				@media (max-width: $sp)
+					margin-left: 20px
+					padding: 0 5px
+					margin-top: 0
+
+				&--white
+					padding: 0
+					background-color: transparent
+					color: $textColor
+
+				.staff_third &
+					margin-left: 30px
+
+			&.sub__ttl
+				line-height: 1.6
+				color: $textColor
+				font-size: 28px
+				padding-bottom: 15px
+				margin-bottom: 25px
+				border-bottom: 1px solid $color04
+				&.--no-line
+					line-height: 1.8
+					padding-bottom: 0
+					margin-bottom: 25px
+					border: none
+					color: $buttnColor01
+
+					@media (max-width: $sp)
+						margin-bottom: 10px
+						line-height: 1.6
+
+				&.--blue
+					color: $textColor06
+
+		&__list
+			padding-left: 10px
+			margin-bottom: 38px
+
+			@media (max-width: $sp)
+				margin-bottom: 20px
+
+			li
+				margin-bottom: 4px
+				font-size: 24px
+				color: $textColor
+				padding-left: 28px
+				letter-spacing: -1px
+				background: url(../images/icons/icon_check_#{$colorname}.png) no-repeat left 18px
+
+				@media (max-width: $sp)
+					font-size: 16px !important
+					background-position: left 11px
+
+				&.fz20
+					font-size: 20px
+					margin-bottom: 13px
+
+			&.--dot
+				li
+					background: url(../images/icons/icon__dot_#{$colorname}.png) no-repeat left 18px
+
+			&.--flex
+				display: flex
+				flex-flow: column
+				align-items: center
+				@media (max-width: $sp)
+					margin-top: 25px
+		&__name
+			margin-bottom: 28px
+
+			.staff_third &
+				margin-bottom: 18px
+
+				@media (max-width: $sp)
+					margin-bottom: 10px
+
+			span
+				color: $buttnColor01
+				font-size: 18px
+
+		span.date
+			color: $textColor04
+
+		span.text
+			margin-left: 25px
+			letter-spacing: -2px
+
+		&.--block-custom
+			width: 58.5%
+
+			@media (max-width: $sp)
+				width: 100%
+
+	&__ttl
+		line-height: 1.6
+		color: $color03
+		font-size: 24px
+
+	&__img
+		width: 50%
+
+		@media (max-width: $sp)
+			width: 100%
+			margin-bottom: 20px
+			text-align: center
+			order: 1
+
+		&.--full
+			width: 100%
+
+		.blog__row:nth-child(even) &
+			padding-right: 50px
+
+			@media (max-width: $sp)
+				padding-right: 0
+
+		.blog__row:nth-child(odd) &
+			padding-left: 50px
+
+			@media (max-width: $sp)
+				padding-left: 0
+
+		.blog__row.blog__row--staff &
+			padding: 0
+
+		&__mask
+			display: inline-block
+			// mask-image: url(../images/main/mask_4.png)
+			// -webkit-mask-image: url(../images/main/mask_4.png)
+			mask-size: 100% 100%
+			-webkit-mask-size: 100% 100%
+			mask-repeat: no-repeat
+			-webkit-mask-repeat: no-repeat
+			border-radius: 0 100px 0 100px
+			overflow: hidden
+			@media (max-width: $sp)
+				margin-left: auto
+				margin-right: auto
+				border-radius: 0 60px 0 60px
+			&--revert
+				border-radius: 45px 0 45px 0
+				// mask-image: url(../images/main/mask_5.png)
+				// -webkit-mask-image: url(../images/main/mask_5.png)
+
+				@media (max-width: $sp)
+					// mask-image: url(../images/main/mask_3.png)
+					// -webkit-mask-image: url(../images/main/mask_3.png)
+
+			&.--radius45
+				border-radius: 0 45px 0 45px
+				overflow: hidden
+				position: relative
+				@media (max-width: $sp)
+					left: auto
+
+			&.--sub_img
+				position: absolute
+				bottom: -50px
+				right: -80px
+
+				@media (max-width: $sp)
+					left: auto
+					right: -5px
+					max-width: 200px
+
+			.staff_third &
+				margin-bottom: 40px
+
+				@media (max-width: $sp)
+					margin-bottom: 20px
+		&.--block-custom
+			width: 41.5%
+
+			@media (max-width: $sp)
+				width: 100%
+
+	&__thumb
+		width: 100%
+		padding: 40px 50px 50px
+		margin: 60px 0 13px
+
+		+flex
+
+		background-color: $backgroundColor07
+
+		@media (max-width: $sp)
+			order: 3
+			padding: 20px
+
+			+flexwrap
+
+		&__cnt
+			width: 580px
+			padding-right: 45px
+
+			@media (max-width: $sp)
+				width: 100%
+				padding-right: 0
+				margin-bottom: 15px
+
+			h3
+				margin-bottom: 19px
+				font-size: 24px
+				color: $buttnColor01
+
+		&__img
+			mask-image: url(../images/main/mask_thumb.png)
+			-webkit-mask-image: url(../images/main/mask_thumb.png)
+			mask-size: 100% auto
+			-webkit-mask-size: 100% auto
+			mask-repeat: no-repeat
+			-webkit-mask-repeat: no-repeat
+
+	&__list
+		width: 100%
+		color: $textColor
+		// background: url(../images/main/staff_mask_2.png) no-repeat center center
+		// background-size: 100% 100%
+		background-color: $backgroundColor07
+		border-radius: 60px 0 60px 0
+		overflow: hidden
+		padding: 22px 0 37px
+		// margin-bottom: 52px
+		display: flex
+		flex-direction: column
+
+		@media (max-width: $sp)
+			padding: 10px
+			// background: url(../images/main/mask_1_sp.png) no-repeat left top
+			// background-size: 100% 100%
+			border-radius: 30px 0 30px 0
+
+		ul
+			&.w700
+				width: 700px
+
+				+mcenter
+
+				@media (max-width: $sp)
+					width: 100%
+
+			li
+				margin-bottom: 13px
+
+		h3
+			margin-bottom: 22px
+			font-size: 30px
+			color: $color02
+
+		h4
+			font-size: 24px
+			color: $color02
+			margin-bottom: 18px
+
+		.date
+			width: 110px
+			display: table-cell
+			color: $textColor02
+
+			@media (max-width: $sp)
+				display: block
+
+		.link
+			display: table-cell
+
+			a
+				color: $textColor
+				// letter-spacing: -2px
+
+		&__row
+			width: 100%
+
+			+flex
+
+			justify-content: space-between
+
+			.facility &
+				margin-bottom: 33px
+
+			@media (max-width: $sp)
+				+flexwrap
+
+				margin-bottom: 80px
+
+		&__col
+			width: 50%
+
+			@media (max-width: $sp)
+				width: 100%
+				margin-bottom: 20px
+
+			&:nth-child(odd)
+				padding-right: 20px
+
+				@media (max-width: $sp)
+					padding: 0 10px
+
+			&:nth-child(even)
+				padding-left: 20px
+
+				@media (max-width: $sp)
+					padding: 0 10px
+
+			.facility &:nth-child(odd)
+				padding-right: 40px
+
+				@media (max-width: $sp)
+					padding: 0
+
+			.facility &:nth-child(even)
+				padding-left: 40px
+
+				@media (max-width: $sp)
+					padding: 0
+
+			.blog__list
+				padding: 34px 30px 41px 35px
+				margin-bottom: 0
+
+				@media (max-width: $sp)
+					padding: 25px 10px
+
+	&__notice
+		padding: 42px 95px 44px 100px
+		background-color: $backgroundColor07
+
+		@media (max-width: $sp)
+			padding: 25px 20px
+
+	&__clinic_block
+		display: flex
+	&__clinic_cnt
+		min-height: 447px
+		padding: 47px 29px 20px 40px
+		// background: url(../images/main/mask_clinic_cnt.png) no-repeat center top
+		// background-size: 100% 100%
+		background-color: $backgroundColor07
+		border-radius: 100px 0 100px 0
+
+		@media (max-width: $sp)
+			padding: 47px 20px 40px 20px
+			// background: url(../images/main/mask_main_sp_rever.png) no-repeat center top
+			// background-size: 100% 100%
+			border-radius: 60px 0 60px 0
+
+		&--gray
+			background-color: $backgroundColor02
+			// background: url(../images/main/mask_clinic_cnt_1.png) no-repeat center top
+			// background-size: 100% 100%
+
+			@media (max-width: $sp)
+				// background: url(../images/main/mask_main_sp_rever_gray.png) no-repeat center top
+				// background-size: 100% 100%
+
+		h3
+			position: relative
+			font-size: 30px
+			text-align: center
+			color: $buttnColor01
+			padding-bottom: 13px
+			margin-bottom: 40px
+
+			&.fz24
+				font-size: 24px
+				padding-bottom: 24px
+				margin-bottom: 45px
+
+				@media (max-width: $sp)
+					margin-bottom: 20px
+
+				&:after
+					width: 200px
+				.txt_block
+					font-size: 18px
+			&:after
+				content: ''
+				width: 150px
+				height: 2px
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				-webkit-transform: translateX(-50%)
+				-moz-transform: translateX(-50%)
+				-ms-transform: translateX(-50%)
+				-o-transform: translateX(-50%)
+				bottom: 0
+				background-color: $borderColor03
+
+		h4
+			font-size: 24px
+			color: $textColor
+			margin-bottom: 24px
+
+.staff
+	&_first
+		margin-top: 100px
+		color: $textColor
+		position: relative
+
+		@media (max-width: $sp)
+			width: 100%
+
+		&__inner
+			+flex
+
+			margin: 0 -130px
+			padding-left: 130px
+			padding-bottom: 107px
+			margin-bottom: 195px
+			@media (max-width: $tb)
+				margin: 0
+				padding-left: 0
+			@media (max-width: $sp)
+				+flexwrap
+
+				margin: 0 0 50px
+				padding: 60px 0
+				// background: url(../images/main/mask_1_sp.png) no-repeat left top
+				// background-size: 100% 100%
+				background-color: $backgroundColor04
+				border-radius: 60px 0 60px 0
+
+			&::before
+				content: ''
+				height: 100%
+				position: absolute
+				top: 0
+				left: 130px
+				right: 0
+				z-index: -1
+				// background: url(../images/main/staff_mask.png) no-repeat left top
+				// background-size: 100% 100%
+				background-color: $backgroundColor02
+				border-radius: 100px 0 100px 0
+
+
+				@media (max-width: 1920px)
+					left: from-to(130, 0, 1920, 1366)
+
+				@media (max-width: 1366px)
+					left: 0
+
+				@media (max-width: $sp)
+					// background: url(../images/main/mask_1_sp.png) no-repeat left top
+					// background-size: 100% 100%
+					border-radius: 60px 0 60px 0
+
+		&__cnt
+			width: 440px
+			padding-right: 50px
+			padding-top: 70px
+
+			@media (max-width: $sp)
+				width: 100%
+				order: 2
+				padding: 0 10px
+
+			.is-ttl
+				font-size: 24px
+				border-bottom: 1px solid $pointColor02
+				padding-bottom: 37px
+				margin-bottom: 37px
+
+				@media (max-width: $sp)
+					text-align: center
+
+		&__img
+			margin-top: -80px
+
+			@media (max-width: $sp)
+				width: 100%
+				margin-bottom: 30px
+
+			&__mask
+				mask-image: url(../images/main/mask_6.png)
+				-webkit-mask-image: url(../images/main/mask_6.png)
+				mask-size: 100% auto
+				-webkit-mask-size: 100% auto
+				mask-repeat: no-repeat
+				-webkit-mask-repeat: no-repeat
+	&_md
+		.blog__list__col
+			display: flex
+		.blog__list + .blog__list
+			@media (max-width: $sp)
+				margin-top: 20px
+				order: 3
+		@media (max-width: $sp)
+			.blog__row--staff
+				margin-bottom: 100px
+				.blog__list
+					margin-left: 10px
+					margin-right: 10px
+				& + .blog__row--staff
+					margin-bottom: 20px
+					.blog__list
+						margin-left: 0
+						margin-right: 0
+		.blog__list
+			@media (max-width: $sp)
+				h3
+					font-size: 24px
+					text-align: left
+.mask_image
+	display: inline-block
+	text-align: center
+	.slick-slide img
+		mask-image: url(../images/main/mask_7.png)
+		mask-size: 100% 100%
+		mask-repeat: no-repeat
+
+.mask_small
+	display: inline-block
+	text-align: center
+	img
+		mask-image: url(../images/main/mask_small.png)
+		mask-size: 100% 100%
+		mask-repeat: no-repeat
+		@media (max-width: $sp)
+			mask-size: 100% auto
+
+.gallery_clinic
+	margin-top: 90px
+	margin-bottom: 210px
+	color: $textColor
+
+	@media (max-width: $sp)
+		padding: 0
+		margin-bottom: 50px
+
+	&__gallery
+		position: relative
+		margin-bottom: 28px
+		overflow: hidden
+		padding: 0 70px
+
+		@media (max-width: $sp)
+			padding: 0 10px
+
+		.mask_image
+			display: block
+			// height: 490px
+			overflow: hidden
+
+			@media (max-width: $sp)
+				height: auto
+				mask-size: 100% 100%
+				-webkit-mask-size: 100% 100%
+				overflow: visible
+
+				// img
+					height: 100%
+
+		.slick
+			&-list
+				margin-bottom: 0
+				overflow: hidden
+
+			&-control
+				position: absolute
+				bottom: 20px
+				left: 0
+				width: 100%
+
+				@media (max-width: $sp)
+					bottom: 0
+
+			&-prev
+				button
+					background: url(../images/icons/icon__prev_wh.png) no-repeat center center
+					background-size: 100% 100%
+
+			&-next
+				button
+					background: url(../images/icons/icon__next_wh.png) no-repeat center center
+					background-size: 100% 100%
+
+	&__cnt
+		h3
+			font-size: 24px
+			color: $textColor
+			text-align: center
+			margin-bottom: 22px
+
+			span
+				padding-bottom: 5px
+				display: inline-block
+				border-bottom: 2px solid $borderColor04
+
+	&__thumb
+		ul
+			padding: 0 10px
+			margin-top: 40px
+			margin-bottom: 160px
+
+			@media (max-width: $sp)
+				margin-bottom: 30px
+				padding: 0
+
+			li
+				text-align: center
+				padding: 0 10px
+
+				@media (max-width: $sp)
+					margin-bottom: 10px
+					padding: 0 3px
+
+				a
+					display: inline-block
+
+.equipment
+	margin-bottom: 257px
+
+	@media (max-width: $sp)
+		margin-bottom: 100px
+	.blog__row
+		padding: 0
+	&__inner
+		margin: 0 -150px
+		padding: 50px 150px
+		// background: url(../images/main/staff_mask.png) no-repeat center center
+		// background-size: 100% 100%
+		background-color: $backgroundColor07
+		border-radius: 100px 0 100px 0
+
+		@media (max-width: $sp)
+			margin: 0
+			padding: 30px 15px 0
+			// background: url(../images/main/mask_blue.png) no-repeat center center
+			// background-size: 100% 100%
+			border-radius: 60px 0 60px 0
+
+		&__ttl
+			margin-bottom: 37px
+			color: $textColor
+			.is-ttl
+				font-size: 30px
+				color: $buttnColor01
+				@media (max-width: $sp)
+					font-size: 24px
+
+				span
+					display: inline-block
+					border-bottom: 2px solid $borderColor03
+					padding-bottom: 10px
+					margin-bottom: 35px
+			p
+				text-align: center
+				@media (max-width: $sp)
+					text-align: left
+			h3 span
+				font-size: 20px
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&:after
+			content: ""
+			display: block
+			width: 30%
+			@media (max-width: $sp)
+				flex-basis: 48%
+	&__item
+		flex-basis: 30%
+		&:nth-child(n+4)
+			margin-top: 30px
+		@media (max-width: $sp)
+			flex-basis: 48%
+			&:nth-child(n+3)
+				margin-top: 20px
+.facility
+	margin-bottom: 146px
+
+	.section__ttl
+		padding: 0
+
+	@media (max-width: $sp)
+		padding: 0 10px
+
+.access
+	margin-top: 65px
+	margin-bottom: 150px
+
+	@media (max-width: $sp)
+		padding: 0 10px
+
+	.section__ttl
+		padding: 0
+
+	.mcenter
+		width: 600px
+		height: 650px
+
+		+mcenter
+
+		@media (max-width: $sp)
+			width: 100%
+			height: auto
+
+	&__infor
+		padding: 43px 88px 41px
+		margin-bottom: 163px
+		color: $textColor
+		// background: url(../images/main/staff_mask.png) no-repeat center center
+		// background-size: 100% 100%
+		background-color: $backgroundColor07
+		border-radius: 100px 0 100px 0
+
+		@media (max-width: $sp)
+			padding: 30px
+			margin: 0 -10px 80px
+			// background: url(../images/main/mask_1_sp.png) no-repeat center center
+			// background-size: 100% 100%
+			border-radius: 60px 0 60px 0
+
+		h3
+			margin-bottom: 37px
+			font-size: 30px
+			color: $textColor03
+			text-align: center
+
+		ul
+			li
+				margin-bottom: 37px
+
+				h4
+					font-size: 24px
+					color: $buttnColor01
+					border-bottom: 2px solid $borderColor04
+					padding-left: 53px
+					padding-bottom: 1px
+					margin-bottom: 23px
+
+					@media (max-width: $sp)
+						font-size: 22px
+
+					&.icon_car
+						background: url(../images/icons/icon_car_#{$colorname}.png) no-repeat 8px 10px
+
+					&.icon_train
+						background: url(../images/icons/icon_train_#{$colorname}.png) no-repeat 11px 9px
+
+					&.icon_bus
+						background: url(../images/icons/icon_bus_#{$colorname}.png) no-repeat 10px 6px
+
+				p
+					padding-left: 53px
+					letter-spacing: -2px
+
+	&__list
+		h3
+			color: $buttnColor01
+			font-size: 30px
+			text-align: center
+			margin-bottom: 80px
+
+			span
+				padding-bottom: 10px
+				display: inline-block
+				border-bottom: 2px solid $borderColor04
+
+		ul
+			+flexwrap
+
+			justify-content: space-between
+			margin: 0 -25px
+
+			@media (max-width: $sp)
+				margin: 0
+
+			li
+				margin-bottom: 58px
+				width: 33.33%
+				padding: 0 25px
+
+				@media (max-width: $sp)
+					width: 100%
+					padding: 0 10px
+
+		&__cnt
+			position: relative
+			overflow: hidden
+
+		&__number
+			width: 80px
+			height: 80px
+			padding-top: 40px
+			padding-right: 15px
+			text-align: right
+			position: absolute
+			top: -40px
+			left: -40px
+			z-index: 1
+			font-size: 18px
+			color: #ffffff
+			background-color: $backgroundColor05
+			border-radius: 50%
+
+			@media (max-width: $sp)
+				font-size: 14px
+				width: 40px
+				height: 40px
+				padding-top: 13px
+				padding-right: 10px
+				top: -15px
+				left: -15px
+
+		&__img
+			display: inline-block
+			text-align: center
+			mask-image: url(../images/main/mask_5.png)
+			mask-size: 100% 100%
+			mask-repeat: no-repeat
+
+			img
+				@media (max-width: $sp)
+					width: 100%
+					height: auto
+
+		&__txt
+			padding: 24px 20px 10px
+			color: $textColor
+
+			@media (max-width: $sp)
+				padding: 10px 0
+
+.error
+	.error_ttl
+		font-size: 40px
+		font-family: $font1
+		line-height: 1.6
+	@media (max-width: 750px)
+		padding: 0 10px
+		.error_ttl
+			font-size: 30px
+
+.endpart
+	@media (max-width: $sp)
+		padding: 10px
+
+.block-cnt.no-order
+	.blog__img
+		@media (max-width: $sp)
+			order: unset !important
+	.blog__cnt
+		@media (max-width: $sp)
+			order: unset !important
+.block-cnt
+	position: relative
+
+	@media (max-width: $sp)
+		margin-bottom: 80px
+
+	&.--background-blue
+		margin: 0 -110px
+		padding: 50px 110px
+		background-color: $backgroundColor07
+		border-radius: 150px 0 150px 0
+		@media (max-width: $tb)
+			margin: 0 -10px
+			padding: 50px
+			border-radius: 60px 0 60px 0
+		@media (max-width: $sp)
+			margin: 0 -10px
+			padding: 50px 10px
+			border-radius: 60px 0 60px 0
+	&.--no-radius
+		border-radius: 0
+		margin: 0
+		padding: 0 50px
+
+		@media (max-width: $sp)
+			padding: 0 20px
+	&__ttl
+		font-size: 30px
+		color: $color02
+
+		@media (max-width: $sp)
+			font-size: 26px
+			width: 100%
+
+		&.fz24
+			font-size: 24px
+
+	&__desc
+		font-size: 16px
+		color: $color04
+		&.fz30
+			@media (min-width: $sp + 1px)
+				font-size: 30px
+
+	&__number
+		width: 50px
+		height: 50px
+		padding-top: 0
+		padding-right: 0
+		text-align: center
+		padding: 6px
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		font-size: 18px
+		color: #ffffff
+		background-color: $backgroundColor05
+		border-radius: 0 0 25px 0
+	&__table
+		margin: 0 -115px
+		padding-left: 130px
+
+		@media (max-width: $tb)
+			max-width: 100%
+			overflow-x: auto
+			table
+				width: 100%
+				// min-width: 960px
+
+		@media (max-width: $sp)
+			padding-left: 0
+			padding-bottom: 20px
+			margin: 0
+			overflow-x: scroll
+
+		&:before
+			content: ''
+			height: 100%
+			position: absolute
+			top: 0
+			left: -115px
+			right: calc((100vw - 22.4vw - 1000px)/2*-1)
+			z-index: -1
+			background-color: $backgroundColor07
+			border-radius: 150px 0 150px 0
+
+			@media (max-width: 1920px)
+				left: from-to(-115, 0, 1920, 1366)
+
+			@media (max-width: 1366px)
+				left: 0
+
+			@media (max-width: $tb)
+				right: 10px
+
+			@media (max-width: $sp)
+				border-radius: 60px 0 60px 0
+				left: -12px
+				right: -12px
+		table
+			min-width: 800px
+			border-collapse: collapse
+			thead
+				th
+					border: 1px solid $borderColor06
+					color: $textColor
+					font-size: 19px
+					width: 250px
+					&:first-child
+						border: none
+						width: 225px
+						@media (max-width: $sp)
+							width: 160px
+					p
+						padding: 8px
+						background-color: $keyColor
+			tbody
+				tr
+					&:first-child
+						td
+							border: 1px solid $keyColor
+							border-bottom-style: solid
+					&:last-child
+						th
+							&:after
+								display: none
+						td
+							border: 1px solid $keyColor
+							border-top-style: solid
+				th
+					position: relative
+					padding: 10px 18px
+					background-color: $backgroundColor05
+					color: #ffffff
+					font-size: 19px
+					border: 1px solid $keyColor
+					@media (max-width: $sp)
+						border: none
+						border-right: 1px solid $keyColor
+					&:after
+						content: '';
+						position: absolute
+						width: 100%
+						height: 1px
+						left: 0
+						bottom: -1px
+						border-top: 1px solid $keyColor
+						@media (max-width: $sp)
+							bottom: 0
+
+				td
+					padding: 17px 18px 13px
+					font-size: 17px
+					color: $textColor
+					border: 1px dashed $keyColor
+					border-right-style: solid
+					background-color: #ffffff
+
+#block_11
+	@media (max-width: $sp)
+		margin-top: 100px
+		padding: 50px 20px 20px
+		.blog__row
+			margin-bottom: 0
+			.blog__cnt
+				margin-bottom: 20px
+				opacity: 1
+				transform: none
+#block_9
+	.blog__img__mask.--radius45
+		@media (max-width: $sp)
+			left: auto
+			margin-top: 100px
+
+@import "single-wiziwig"
+@import "m-pagination"
+@import "m-pager"

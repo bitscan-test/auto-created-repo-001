@@ -1,0 +1,86 @@
+
+/* ------------------------------------------------------------
+ * ページネーション
+ * ------------------------------------------------------------ */
+.m-pagination
+	margin-top: $sectionMargin/2
+	// background-color: #fff
+	// border-radius: 40px
+	// padding: 20px 40px
+	// padding-bottom: $sectionMargin/5
+	// border-bottom: 1px solid #bebebe
+
+.m-pagination_list
+	display: flex
+	align-items: center
+	justify-content: center
+	ul
+		margin: 0 6px
+		display: flex
+		align-items: center
+		justify-content: center
+	a,.btn
+		cursor: pointer
+		margin: 0 3px
+		display: block
+		padding: 11px 15px
+		color: $keyColor
+		border: 1px solid $keyColor
+		border-radius: 2em
+		font-size: 1.0rem
+		transition: all .3s
+		line-height: 1
+		&.is-hover,&:hover,&.is-active
+			background-color: $keyColor
+			color: #fff
+	span.is-pageCount
+		color: $keyColor
+		display: block
+		padding: 3px 10px
+		font-size: 1.8rem
+		letter-spacing: 5px
+		display: none
+	.is-disabled
+		opacity: .3
+		pointer-events: none
+	// .is-first
+	// 	+iconFontInline(before, angle-double-left, 2.0rem, .4em)
+	// .is-prev
+	// 	+iconFontInline(before, angle-left, 2.0rem, .4em)
+	// .is-next
+	// 	+iconFontInline(after, angle-right, 2.0rem, .4em)
+	// .is-last
+	// 	+iconFontInline(after, angle-double-right, 2.0rem, .4em)
+// +media (max-width: 1024px)
+@media (max-width: 768px)
+	.m-pagination
+		margin-top: $sectionMargin/2
+		padding: 10px
+	.m-pagination_list
+		flex-grow: 1
+		>ul
+			display: none
+		a,.btn
+			padding: 8px 8px;
+			font-size: 0.8rem;
+		span.is-pageCount
+			flex-grow: 1
+			display: block
+			text-align: center
+		// .is-first,.is-prev,.is-next,.is-last
+			flex-basis: 15%
+			font-size: 0
+			text-align: center
+			&::before,&::after
+				font-size: 1.6rem
+
+
+.page-link
+	color: $keyColor
+	border: 1px solid $keyColor
+	border-radius: 10px
+	width: 35px
+	height: 35px
+.page-item.active .page-link
+	background-color: $keyColor
+	// border: none

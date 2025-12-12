@@ -1,0 +1,351 @@
+@charset "utf-8"
+
+/* ---------------------------------------------------------
+ *	navi
+ *----------------------------------------------------------
+.m-blog_navi
+	// flex-basis: $baseSideColumn + 40px
+	display: flex
+	justify-content: space-between
+	margin-top: $sectionMarginPC*.3
+	margin-bottom: $sectionMarginPC*.3
+	padding-top: $sectionMarginPC*.3
+	border-top: 3px solid $textColor05
+	.m-blog_naviBlk
+		flex-basis: 48%
+	.m-blog_naviTtl
+		font-size: 1.6rem
+		font-weight: bold
+		position: relative
+		letter-spacing: 2px
+		color: $textColor05
+	.m-blog_naviList
+		// margin-top: 20px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		>li
+			margin-top: 5px
+			font-size: 1.0rem
+			flex-basis: 46%
+			a
+				display: block
+				padding: 5px 0
+				padding-right: 1.5rem
+				color: $textColor05
+				transition: all .3s
+				background: url(../images/icons/icon_arrow_r_#{$colorname}.png) no-repeat right center
+				&::before
+					transition: all .3s
+				span
+					font-size: 0.8rem
+	@media (max-width: $tb)
+		display: block
+		.m-blog_naviBlk + .m-blog_naviBlk
+			margin-top: $sectionMargin
+		.m-blog_naviList
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			>li
+				flex-basis: 48%
+	@media (max-width: $sp)
+		padding: $sectionMargin*.5 15px $sectionMargin*.5
+		.m-blog_naviBlk + .m-blog_naviBlk
+			margin-top: $sectionMargin*.5
+		.m-blog_naviTtl
+			font-size: 1.6rem
+			padding-bottom: 0px
+		.m-blog_naviList
+			margin-top: 10px
+			display: block
+			>li
+				margin-top: 0
+				font-size: 1rem
+				a
+					padding: 10px 0
+
+.m-blog_main
+	@media (max-width: $sp)
+		padding: 0 15px
+/* ---------------------------------------------------------
+ *	タイトル
+ *----------------------------------------------------------
+.m-blog_heading
+	// max-width: $baseWidth
+	// margin: 0 auto
+.m-blog_title
+	font-size: 1.6rem
+	font-weight: 700
+	max-width: $baseWidth
+	margin: 0 auto $sectionMarginPC*.5
+	line-height: 1.4
+	// font-family: $fontFamilyMinchoDefault
+	// @media (max-width: $tb)
+	@media (max-width: $sp)
+		font-size: 1.5rem
+		margin: 0 auto $sectionMargin*.3
+.m-blog_option
+	display: flex
+	margin-bottom: 30px
+.m-blog_category
+	display: flex
+	span
+		display: flex
+		align-items: center
+		font-size: 0.8rem
+		color: #fff
+		padding: 5px 20px
+		background-color: $textColor05
+	// @media (max-width: $tb)
+	@media (max-width: $sp)
+		span
+			font-size: 0.6rem
+			&::before
+				font-size: 0.4rem
+.m-blog_date
+	display: flex
+	border: 1px solid $textColor05
+	span
+		font-size: 0.7rem
+		display: flex
+		align-items: center
+		padding: 5px 20px
+		letter-spacing: 2px
+		color: $textColor05
+	// @media (max-width: $tb)
+	@media (max-width: $sp)
+		span
+			font-size: 0.6rem
+			padding: 5px 10px
+.m-blog_catch
+	text-align: center
+	margin-bottom: $sectionMarginPC*.5
+	@media (max-width: $sp)
+		margin: 0 auto $sectionMargin*.5
+.m-blog_text
+	@media (max-width: 768px)
+		display: none
+.m-blog_frame
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+.m-blog_pic
+	flex-basis: 200px
+	// position: relative
+	// z-index: 0
+	// padding: 5px
+	@media (max-width: $sp)
+		flex-basis: 150px
+.m-blog_cont
+	flex-basis: calc(100% - 230px)
+	@media (max-width: 768px)
+		flex-basis: calc(100% - 160px)
+/* ---------------------------------------------------------
+ *	一覧
+ *----------------------------------------------------------
+.m-blog_archiveTtl
+	text-align: center
+	margin-bottom: 30px
+	// @media (max-width: $sp)
+		margin-bottom: 15px
+	.sub_ttl
+		font-size: 16px
+		color: $textColor
+		font-weight: 300
+		display: block
+	.is-en
+		font-style: italic
+		font-size: 48px
+		font-family: $font2
+		color: $color02
+		display: block
+		@media (max-width: $sp)
+			font-size: 40px
+			line-height: 1.1
+
+.m-blog_article
+	max-width: $baseWidth
+	margin: 0 auto
+	article
+		& + article
+			margin-top: $sectionMarginPC*.1
+		// &:nth-of-type(odd)
+			background-color: rgba($textColor05, .1)
+		a
+			// display: flex
+			// padding: 30px 40px
+			// display: block
+			padding-bottom: $sectionMarginPC*.1
+			// border-bottom: 1px solid #fff
+			transition: all .3s
+			&.is-hover,&:hover
+				opacity: .7
+				.m-blog_title
+					text-decoration: underline
+	.m-blog_option
+		justify-content: flex-start
+		margin-bottom: 15px
+		// align-items: flex-end
+		// @media (max-width: $sp)
+			// justify-content: space-between
+	.m-blog_title
+		flex-basis: 100%
+		font-size: 1.2rem
+		margin-bottom: 0
+		line-height: 1.6
+		// @media (max-width: $tb)
+		@media (max-width: $sp)
+			font-size: 1.0rem
+/* ---------------------------------------------------------
+ *	記事
+ *----------------------------------------------------------
+.m-blog_body
+	// max-width: 810px
+	max-width: $baseWidth
+	margin: $sectionMarginPC*.2 auto 0
+	font-size: 1.0rem
+	p,div,table,img,ul,ol
+		margin-bottom: 30px
+		font-size: 1.0rem
+	table
+		border-top: 1px solid $baseBorderColor
+		border-left: 1px solid $baseBorderColor
+		th
+			background-color: #adadad
+		td,th
+			font-size: 0.6rem
+			padding: 5px 10px
+			border-bottom: 1px solid $baseBorderColor
+			border-right: 1px solid $baseBorderColor
+	h1,h2,h3,h4,h5,h6
+		font-weight: 700
+		margin-bottom: 3rem
+		line-height: 1.4
+	h1
+		font-size: 1.6rem
+		border-bottom: 3px solid $textColor05
+		background-color: rgba($textColor05, .1)
+		position: relative
+		padding: 10px
+		color: $textColor05
+		// &::before
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -3px
+			width: 200px
+			height: 3px
+			background-color:  $textColor05
+	h2
+		font-size: 1.5rem
+		border-bottom: 2px solid $borderColor03
+		position: relative
+		padding-bottom: 10px
+		color: $textColor05
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -2px
+			width: 200px
+			height: 2px
+			background-color:  $barColor01
+	h3
+		font-size: 1.4rem
+		padding: 10px
+		color: $textColor05
+		border-bottom: 2px solid $borderColor03
+		background-color: rgba($textColor05, .05)
+	h4
+		font-size: 1.3rem
+		padding-bottom: 10px
+		border-bottom: 2px solid $baseBorderColor
+	h5
+		font-size: 1.2rem
+		padding-bottom: 10px
+		border-bottom: 2px solid $textColor05
+	h6
+		font-size: 1.2rem
+		padding-bottom: 5px
+		border-bottom: 1px dashed $textColor05
+	a
+		text-decoration: underline
+		color: #0070c9
+		&:hover
+			text-decoration: none
+	.aligncenter
+		margin-left: auto
+		margin-right: auto
+		display: block
+	.alignleft
+		display: block
+	.alignright
+		margin-left: auto
+		display: block
+	ul
+		li
+			list-style-type: disc
+			list-style-position: inside
+	ol
+		li
+			list-style-type: decimal
+			list-style-position: inside
+	.googlemap
+		max-width: 960px
+		margin-left: auto
+		margin-right: auto
+		height: 0
+		overflow: hidden
+		padding-bottom: 45.75%
+		position: relative
+		iframe
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 100%
+	.youtube
+		max-width: 960px
+		margin-left: auto
+		margin-right: auto
+		position: relative
+		width: 100%
+		padding-top: 45.75%
+		iframe
+			position: absolute
+			top: 0
+			right: 0
+			width: 100% !important
+			height: 100% !important
+	@media (max-width: $tb)
+		.googlemap
+			padding-top: 50%
+		.youtube
+			padding-top: 56.25%
+	@media (max-width: $sp)
+		margin: $sectionMargin*.2 auto 0
+		overflow: hidden
+		h1,h2,h3,h4,h5,h6
+			margin-bottom: 2rem
+		h1
+			font-size: 1.4rem
+			// padding-bottom: 10px
+			&::before
+				width: 100px
+		h2
+			font-size: 1.3rem
+			&::before
+				width: 50px
+		h3
+			font-size: 1.2rem
+			// padding-bottom: 5px
+		h4
+			font-size: 1.1rem
+			padding-bottom: 5px
+		h5
+			font-size: 1rem
+			padding-bottom: 5px
+		h6
+			font-size: 1rem
+			padding-bottom: 5px
