@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include_once(__DIR__."/../init.php"); ?>
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<?php include_once(ROOTPATH."assets/inc/gtm_head.html"); ?>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		<?= $init['meta']['equipments']['title'] ?>
+	</title>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_name.html"); ?>
+	<?php include_once(ROOTPATH."assets/inc/head_meta_property.html"); ?>
+	<meta name="description" content="<?= $init['meta']['equipments']['description'] ?>">
+	<meta name="keywords" content="<?= $init['meta']['equipments']['keyword'] ?>">
+	<meta property="og:title" content="<?= $init['meta']['equipments']['title'] ?>">
+	<meta property="og:description" content="<?= $init['meta']['equipments']['description'] ?>">
+	<meta property="og:url" content="<?= $init['clinic']['url'] ?>equipments/">
+	<meta property="og:image" content="<?= $init['clinic']['url'] ?>images/common/og-image.jpg">
+	<meta property="og:type" content="article">
+	<?php include_once(ROOTPATH."assets/inc/head_link.html"); ?>
+	<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>",
+							"name": "HOME"
+						}
+					}
+				]
+			},
+			{
+				"@context": "http://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"item": {
+							"@id": "<?= $init['clinic']['url'] ?>equipments/",
+							"name": "<?= $init['meta']['equipments']['title'] ?>"
+						}
+					}
+				]
+			}
+		</script>
+</head>
+
+<body id="p-equipments">
+	<div class="wrapper" id="wrapper">
+		<?php include_once(ROOTPATH."/assets/inc/header.html"); ?>
+		<main class="main__contents" id="main">
+			<!-- headding-->
+			<h1 class="headding">
+				<?= $init['meta']['equipments']['h1'] ?>
+			</h1>
+			<!-- mainvisual-->
+			<header class="banner_sub">
+				<div class="banner_sub__img">
+					<picture>
+						<source media="(max-width:1024px)" srcset="/<?= $dir; ?>assets/images/main/banner_1_sp.jpg"><img
+							src="/<?= $dir; ?>assets/images/main/banner_1.jpg">
+					</picture>
+				</div>
+				<div class="banner_sub__ttl">
+					<p class="animation fadeInLft">設備紹介</p>
+					<p class="is-en sub_ttl animation fadeInLft">EQUIPMENTS</p>
+				</div>
+			</header>
+			<!-- breadcrumbs-->
+			<div class="pankuzu">
+				<div class="container">
+					<p><a class="line" href="/<?= $dir; ?>">TOP</a>　>　設備紹介
+					</p>
+				</div>
+			</div>
+			<!-- inside-->
+			<!-- device-->
+			<section class="facility">
+				<div class="container">
+					<div class="blog__list__row animation fadeInUp">
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ1.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">歯科用CT/デジタルレントゲン</h3>
+								<p>歯や顎の骨の状態を3D(立体)で撮影できる「CT」、2D(平面)で撮影する「デジタルパノラマレントゲン」の2役を1台でこなす装置です。なかでもCTは精密な診査・診断ができ、治療をより的確に行うことに役立ちます。
+								</p>
+							</div>
+						</div>
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ2.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">クラスB滅菌器</h3>
+								<p>治療器具に付着したウイルスや細菌を死滅できる滅菌器の中でも、当院では「クラスB」と呼ばれる世界的に高水準のものを導入しています。使用した器具はこの滅菌器で滅菌し、患者さまごとに交換して院内感染防止に努めています。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="blog__list__row animation fadeInUp">
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ3.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">口腔外バキューム</h3>
+								<p>治療中に飛び散った唾液や血液、歯や詰め物・被せ物などの修復物を削った際に生じる粉塵などを、瞬時に吸い込む機械です。診療室内を清潔に保ち、院内感染のリスクを低減することができます。
+								</p>
+							</div>
+						</div>
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ4.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">ミーレジェットウォッシャー</h3>
+								<p>使い捨てできない器具は、洗浄・超音波洗浄、滅菌といったステップで衛生管理を行いますが、当院ではミーレ社のジェットウォッシャーで洗浄を行っています。複雑な構造をした器具も含めて汚れを徹底的に洗浄することができ、最後のすすぎは水温を93℃まで上げるので、消毒・除菌も可能です。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="blog__list__row animation fadeInUp">
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ5.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">オゾン水生成器</h3>
+								<p>治療やうがい、手洗いの水まで「オゾン水」を使用しています。オゾン水には洗浄・除菌作用があるので、口臭の解消、細菌感染による歯周病の予防や進行を抑える効果があります。
+								</p>
+							</div>
+						</div>
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ6a.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">歯面清掃用器具</h3>
+								<p>専用のパウダーをジェット噴射で歯に吹き付けるクリーニングです。歯磨きだけでは落とせない着色汚れを効果的に落とすことができるほか、歯や歯周ポケット内のむし歯や歯周病の原因となる「バイオフィルム」の除去にも効果的です。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="blog__list__row animation fadeInUp">
+						<div class="blog__list__col">
+							<div class="blog__img__mask blog__img__mask--revert">
+								<picture>
+									<source media="(max-width:750px)" srcset=""><img
+										src="/<?= $dir; ?>assets/images/equ7.jpg" alt="">
+								</picture>
+							</div>
+							<div class="blog__cnt blog__cnt--full">
+								<h3 class="color_black align_center fz24">説明用モニター/DentalX</h3>
+								<p>診療台ごとにモニターを設置。お口の中の画像やレントゲン画像などを映し、症状や治療経過を患者さまとご一緒に確認しながら、視覚的にもわかりやすいご説明を心がけています。また、「DentalX」と呼ばれる、一目でわかるイラストや写真のついた診断書を製作して、お口の中の状態を患者さまにしっかりと把握していただけます。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- gairai-->
+			<section class="equipment">
+				<div class="container">
+					<div class="equipment__inner">
+						<div class="equipment__inner__ttl">
+							<h2 class="is-ttl align_center animation fadeInUp"><span>緊急対応設備</span></h2>
+							<p class="align_center animation fadeInUp">医療現場では、緊急事態への備えが必要です。<br>当院では万が一の場合に備えて、AED、酸素ボンベ、血圧計、パルスオキシメーターを設置しております。</p>
+						</div>
+						<div class="blog__row mb__0">
+							<div class="blog__col blog__col--md3 animation fadeInLft">
+								<div class="blog__img__mask">
+									<picture>
+										<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/equ8.jpg" alt="">
+									</picture>
+								</div>
+								<div class="blog__cnt blog__cnt--full">
+									<h3 class="color_black align_center fz24">AED</h3>
+									<p>AEDは、不整脈による心停止の際に、心臓に電気ショックを与えて正常なリズムに戻すための医療機器です。</p>
+								</div>
+							</div>
+							<div class="blog__col blog__col--md3 animation fadeInUp">
+								<div class="blog__img__mask">
+									<picture>
+										<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/equ9.jpg" alt="">
+									</picture>
+								</div>
+								<div class="blog__cnt blog__cnt--full">
+									<h3 class="color_black align_center fz24">酸素ボンベ</h3>
+									<p>救急車や医師を待つ間の応急用として、簡単に使える酸素吸入器です。呼吸困難は、迅速な応急処置が容体を大きく左右するため、いつでもすぐに使用できるように備えています。</p>
+								</div>
+							</div>
+							<div class="blog__col blog__col--md3 animation fadeInUp">
+								<div class="blog__img__mask">
+									<picture>
+										<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/equ10.jpg" alt="">
+									</picture>
+								</div>
+								<div class="blog__cnt blog__cnt--full">
+									<h3 class="color_black align_center fz24">血圧計</h3>
+									<p>最高血圧と最低血圧を測る機器で、身体の状態の把握のために重要です。緊急時の初期対応に欠かせない医療機器です。</p>
+								</div>
+							</div>
+							<div class="blog__col blog__col--md3 animation fadeInRgt">
+								<div class="blog__img__mask">
+									<picture>
+										<source media="(max-width:750px)" srcset=""><img src="/<?= $dir; ?>assets/images/equ11.jpg" alt="">
+									</picture>
+								</div>
+								<div class="blog__cnt blog__cnt--full">
+									<h3 class="color_black align_center fz24">パルスオキシメーター</h3>
+									<p>指にはめるだけで、動脈の血中酸素飽和度と脈拍数が測定できる医療機器です。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="equipment">
+				<div class="container">
+					<div class="equipment__inner">
+						<div class="equipment__inner__ttl">
+							<h2 class="is-ttl align_center animation fadeInUp"><span>外来環</span></h2>
+							<p class="align_center animation fadeInUp">
+								当院は偶発症などの緊急事態の初期対応、機器の滅菌対策の徹底、感染症予防対策の実施など、<br>定められた基準をすべてクリアした歯科医院です。<br>AEDを始めとする緊急対応設備、口腔外バキュームなどの機器も万全に整えております。
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end Content-->
+		</main>
+		<?php include_once(ROOTPATH."/assets/inc/footer.html"); ?>
+	</div>
+	<?php include_once(ROOTPATH."/assets/inc/script.html"); ?>
+</body>
+
+</html>
